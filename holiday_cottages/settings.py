@@ -33,7 +33,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = ['8000-donald-macritchie-holida-klnjz8fej0.us2.codeanyapp.com',
-                'holiday-cottages.herokuapp.com',]
+                    'holiday-cottages.herokuapp.com',]
 
 
 # Application definition
@@ -92,7 +92,7 @@ WSGI_APPLICATION = 'holiday_cottages.wsgi.application'
 # }
 
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("DATABASE_URL")) 
+    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
 
