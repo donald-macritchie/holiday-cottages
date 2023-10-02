@@ -104,6 +104,24 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+ /*Own Css Modifications/Overrides  */
+ 
+ /* Navigation  */
+
+ navbar {
+    background-color: #cbc3ba;
+ }
+
+.hero-image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+
+ /* Bootstrap theme CSS */
+
 hr {
   margin: 1rem 0;
   color: inherit;
