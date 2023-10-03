@@ -1,3 +1,7 @@
 from django.contrib import admin
+from .models import Cottage, CottageImages, Amenities
 
-# Register your models here.
+admin.site.register(Cottage)
+admin.site.register(CottageImages)
+admin.site.register(Amenities)
+
