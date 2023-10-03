@@ -6,6 +6,8 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+
+/* Hero Image */
 .hero-image {
     width: 100%;
     height: 100vh;
@@ -15,13 +17,35 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-}
 
-.hero-image-text {
     display: flex;
+    align-items: center;
     justify-content: center;
 }
 
+
 .jumbotron {
-    background-color: rgba(255,240,219, 0.5);
+    background-color: rgba(255,240,219, 0.7);
+}
+
+
+/* Navigation */
+
+.navigation {
+    margin: 0;
+    background-color: rgba(255,240,219, 0.7);
+    position: fixed;
+}
+
+.navbar {
+    margin-bottom: 0;
+    border: 0;
+    width: 100%;
+
+}
+
+.nav-item {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
 }
