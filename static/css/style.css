@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;600&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100vh;
+
+    background: url("../img/peak-district.jpeg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.hero-image-text {
+    display: flex;
+    justify-content: center;
+}
+
+.jumbotron {
+    background-color: rgba(255,240,219, 0.5);
+}
