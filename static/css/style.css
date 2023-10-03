@@ -36,6 +36,7 @@ body {
     margin: 0;
     background-color: rgba(255,240,219, 0.7);
     position: fixed;
+    z-index: 1;
 }
 
 .navbar {
@@ -112,3 +113,13 @@ body {
     background-repeat: no-repeat;
     background-position: center center;
 }
+
+/* Welcome Message */
+
+.welcome-message {
+    background-color: rgba(255,240,219, 0.7);
+}
+
+
+/* Reviews Section */
+
