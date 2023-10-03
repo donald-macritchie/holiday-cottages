@@ -6,6 +6,7 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+/* Home Page */
 
 /* Hero Image */
 .hero-image {
@@ -48,4 +49,66 @@ body {
     display: flex;
     text-decoration: none;
     align-items: center;
+}
+
+
+
+/* Site Links */
+
+.site-links-container {
+    padding: 20px;
+}
+
+.site-link {
+    height: 200px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+ 
+}
+
+
+.site-link a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    
+}
+
+
+.site-link button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.site-link button:hover {
+    background-color: #0056b3;
+}
+
+#site-contact-link {
+    background-image: url('../img/peak-2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#site-cottages-link {
+    background-image: url('../img/generic-cottage-1.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#site-more-info-link {
+    background-image: url('../img/peak-3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
