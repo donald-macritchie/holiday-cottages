@@ -34,7 +34,7 @@ body {
 
 .navigation {
     margin: 0;
-    background-color: rgba(255,240,219, 0.7);
+    background-color: rgb(255,240,219);
     position: fixed;
     z-index: 1;
 }
@@ -57,13 +57,14 @@ body {
 /* Site Links */
 
 .site-links-container {
-    padding: 20px;
+    padding: 50px 15px;
+    background-color: rgba(255, 240, 219, 0.7);
 }
 
 .site-link {
     height: 200px;
     background-color: #f0f0f0;
-    border: 1px solid #ccc;
+    border: 3px solid black;
  
 }
 
@@ -117,9 +118,55 @@ body {
 /* Welcome Message */
 
 .welcome-message {
-    background-color: rgba(255,240,219, 0.7);
+    padding: 50px 0;
 }
 
 
 /* Reviews Section */
+.reviews-container {
+    width: 100%;
+    height: 100%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    background: url("../img/peak-district.jpeg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.review-title {
+    display: flex;
+    align-items: center;
+    padding-right: 100px;
+    padding-left: 100px;
+    justify-content: center;
+}
+
+.review-title h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    background-color: rgb(255,240,219);
+    border-radius: 5%;
+    text-align: center;
+}
+
+.card-body {
+    background-color: rgb(255,240,219);
+}
+
+/* Footer */
+footer {
+    background-color: rgb(255,240,219);
+    padding: 20px 0;
+}
+
+
 
