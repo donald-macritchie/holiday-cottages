@@ -6,5 +6,5 @@ def index(request):
     return render(request, "index.html")
 
 
-def cottages(request):
-    return render(request, "cottages.html")
+def homestead_cottage(request):
+    return render(request, 'homestead_cottage.html')

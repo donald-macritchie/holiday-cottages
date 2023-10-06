@@ -11,17 +11,22 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
         crossorigin="anonymous"></script>
+    <!-- Drowpdown Functionality -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- CSS link -->
     <link rel="stylesheet" href="static/css/style.css" type="text/css">
 
     <title>Hill Cottages</title>
 </head>
+
 <body>
     <!-- Navigation -->
     <div class="container-fluid navigation">
         <nav class="navbar navbar-light navbar-expand-sm">
             <div class="container">
-                <a class="navbar-brand" href="index.html">Hill Cottages</a>
+                <a class="navbar-brand" href="{% url 'index' %}">Hill Cottages</a>
             </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
                 aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,10 +35,14 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item mr-2">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="{% url 'index' %}">Home</a>
                     </li>
-                    <li class="nav-item mr-2">
-                        <a class="nav-link" href="cottages.html">Cottages</a>
+                    <li class="nav-item mr-2 dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">Cottages</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="{% url 'homestead_cottage' %}">Homestead</a>
+                            <a class="dropdown-item" href="#">Marketview</a>
+                        </div>
                     </li>
                     <li class="nav-item mr-2">
                         <a class="nav-link" href="#">Contact</a>
@@ -51,8 +60,6 @@
     </div>
 
     
-    
-
     {% block content %}
 
     {% endblock %}
@@ -60,7 +67,7 @@
     <!-- Footer -->
     <footer>
 <footer class="footer text-center">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <!-- Footer Location-->
             <div class="col-lg-4 mb-5 mb-lg-0">

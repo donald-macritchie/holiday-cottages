@@ -6,7 +6,37 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-/* Home Page */
+/* Navigation */
+
+.navigation {
+    margin: 0;
+    background-color: rgb(255, 240, 219);
+    position: fixed;
+    z-index: 1;
+}
+
+.navbar {
+    margin-bottom: 0;
+    border: 0;
+    width: 100%;
+
+}
+
+.nav-item {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+}
+
+/* Footer */
+footer {
+    background-color: rgb(255, 240, 219);
+    padding: 20px 0;
+}
+
+
+
+/* index.html **************/
 
 /* Hero Image */
 .hero-image {
@@ -28,30 +58,6 @@ body {
 .jumbotron {
     background-color: rgba(255,240,219, 0.7);
 }
-
-
-/* Navigation */
-
-.navigation {
-    margin: 0;
-    background-color: rgb(255,240,219);
-    position: fixed;
-    z-index: 1;
-}
-
-.navbar {
-    margin-bottom: 0;
-    border: 0;
-    width: 100%;
-
-}
-
-.nav-item {
-    display: flex;
-    text-decoration: none;
-    align-items: center;
-}
-
 
 
 /* Site Links */
@@ -160,12 +166,6 @@ body {
 
 .card-body {
     background-color: rgb(255,240,219);
-}
-
-/* Footer */
-footer {
-    background-color: rgb(255,240,219);
-    padding: 20px 0;
 }
 
 
