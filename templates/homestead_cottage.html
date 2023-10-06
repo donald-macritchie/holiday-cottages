@@ -76,8 +76,33 @@
 
 <!-- Location -->
 
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div id="map"></div>
+        </div>
+    </div>
+</div>
+
 <!-- General Details and Rules -->
 
+
+
+<!-- script -->
+<script>
+    // var APIKey = "AIzaSyCwHKmjBwi6DvEYld2g_xW4uPC9W4ZTfsE";
+    function initMap() {
+        var map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 3,
+            center: {
+                lat: 46.619261,
+                lng: -33.134767
+            }
+        });
+    }
+</script>
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwHKmjBwi6DvEYld2g_xW4uPC9W4ZTfsE&callback=initMap"></script>
 
 
 {% endblock %}
