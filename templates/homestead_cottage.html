@@ -138,6 +138,24 @@
 
 <div class="container">
     <div class="row">
+        <div class="col-12">
+            <h2>Things to Know</h2>
+            <p>General Rules</p>
+                <ul>
+                    {% for thing in things_to_know %}
+                    <li>
+                        <strong>{{ thing.name }}</strong>
+                        <p>{{ thing.description }}</p>
+                    </li>
+                    {% endfor %}
+                </ul>
+
+        </div>
+    </div>
+</div>
+
+<!-- <div class="container">
+    <div class="row">
         <div class="col-12 things_to_know">
             <h2>Things to Know</h2>
             <p>General Rules:</p>
@@ -173,7 +191,7 @@
             </ul>
         </div>
     </div>
-</div>
+</div> -->
 
 
 
