@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-12 cottage-intro text-center">
             <h1>Marketview</h1>
-            <p>"Lovely cottage which has everything you need, in the most beautiful of surroundings."</p>
+            <p>"Beautiful and spotlessly clean cottage in a picturesque location."</p>
         </div>
     </div>
 </div>
@@ -77,7 +77,10 @@
             <h2>Amenities</h2>
             <ul>
                 {% for amenity in amenities %}
-                <li>{{ amenity.name }}</li>
+                <li>
+                    <strong>{{ amenity.name }}</strong>
+                    <p>{{ amenity.description }}</p>
+                </li>
                 {% endfor %}
             </ul>
         </div>

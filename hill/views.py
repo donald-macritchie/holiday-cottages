@@ -20,9 +20,8 @@ def homestead_cottage(request):
 
     return render(request, 'homestead_cottage.html', content)
 
-
 def marketview_cottage(request):
-    marketview_cottage = get_object_or_404(Cottage, name='Homestead')
+    marketview_cottage = get_object_or_404(Cottage, name='Marketview')
     amenities = marketview_cottage.amenities.all()
     description = marketview_cottage.description
 
@@ -33,3 +32,4 @@ def marketview_cottage(request):
     }
 
     return render(request, 'marketview_cottage.html', content)
+
