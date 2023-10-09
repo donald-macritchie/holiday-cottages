@@ -6,10 +6,6 @@ def index(request):
     return render(request, "index.html")
 
 
-# def homestead_cottage(request):
-#     amenities = homestead_cottage.amenities.all()
-#     return render(request, 'homestead_cottage.html')
-
 
 def homestead_cottage(request):
     homestead_cottage = get_object_or_404(Cottage, name='Homestead')
@@ -23,3 +19,17 @@ def homestead_cottage(request):
     }
 
     return render(request, 'homestead_cottage.html', content)
+
+
+def marketview_cottage(request):
+    marketview_cottage = get_object_or_404(Cottage, name='Homestead')
+    amenities = marketview_cottage.amenities.all()
+    description = marketview_cottage.description
+
+    content = {
+        'marketview_cottage': marketview_cottage,
+        'amenities': amenities,
+        'description': description,
+    }
+
+    return render(request, 'marketview_cottage.html', content)
