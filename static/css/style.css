@@ -198,8 +198,12 @@ footer {
 
 /* Location */
 
+.map-container {
+    padding-bottom: 100px;
+}
+
 #map {
-    width: 100px;
-    height: 100px;
-    padding-bottom: 500px;
+    width: 90%;
+    height: 700px;
+    margin: 50px auto;
 }
