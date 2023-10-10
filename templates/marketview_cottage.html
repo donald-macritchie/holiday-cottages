@@ -72,13 +72,17 @@
 <!-- Amenitites -->
 
 <div class="container">
+    <h2>Amemities</h2>
     {% for category, amenities in amenities_by_category.items %}
     <div class="row">
         <div class="col-12">
             <h2>{{ category }}</h2>
             <ul>
                 {% for amenity in amenities %}
-                <li>{{ amenity.name }}</li>
+                <li>
+                    <strong>{{ amenity.name }}</strong><br>
+                    {{ amenity.description }}
+                </li>
                 {% endfor %}
             </ul>
         </div>
@@ -104,17 +108,21 @@
                 <h2>Directions</h2>
                 <div>
                     <h3>From Buxton: </h3>
-                    <p>From Ashbourne Road/A515, continue for 2.2 Miles. Turn right on to Buxton Road and Continue to follow
+                    <p>
+                        From Ashbourne Road/A515, continue for 2.2 Miles. Turn right on to Buxton Road and Continue to follow
                         B5053 for 3.3
                         Miles. Upon arriving in Longnor, continue on to the village square and at the crossroads, turn right onto Leek Road.
-                        Marketview Cotttage is approximately 200ft on the right with the green door.</p>
+                        Marketview Cotttage is approximately 200ft on the right with the green door.
+                    </p>
                     </div>
                     <div>
                         <h3>From Leek: </h3>
-                        <p>From Buxton Road/A53, continue for 5.3 Miles. Take the first left just after the Winking Man Pub on
+                        <p>
+                            From Buxton Road/A53, continue for 5.3 Miles. Take the first left just after the Winking Man Pub on
                             you rleft hand
                             side and continue on. After 4.4 Miles, you will arivve in Longnor and Marketview Cottage is situated on the left
-                            hand side with the green door just after the junction to Gauledge Lane.</p>
+                            hand side with the green door just after the junction to Gauledge Lane.
+                        </p>
                 </div>
             </div>
         </div>

@@ -72,20 +72,23 @@
 <!-- Amenitites -->
 
 <div class="container">
+    <h2>Amenities</h2>
     {% for category, amenities in amenities_by_category.items %}
     <div class="row">
         <div class="col-12">
             <h2>{{ category }}</h2>
             <ul>
                 {% for amenity in amenities %}
-                <li>{{ amenity.name }}</li>
+                <li>
+                    <strong>{{ amenity.name }}</strong><br>
+                    {{ amenity.description }}
+                </li>
                 {% endfor %}
             </ul>
         </div>
     </div>
     {% endfor %}
 </div>
-
 
 
 <!-- <div class="container">

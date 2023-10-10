@@ -4,12 +4,15 @@ from cloudinary.models import CloudinaryField
 
 
 class Cottage(models.Model):
-    name = models.CharField(max_length=200, unique=True)
-    slug = models.SlugField(max_length=200, unique=True)
+    id = models.CharField(max_length=50, unique=True, primary_key=True)
+    name = models.CharField(max_length=50, unique=True)
+    slug = models.SlugField(max_length=50, unique=True)
     description = models.TextField()
     location = models.CharField(max_length=300)
     price_per_night = models.DecimalField(max_digits=10, decimal_places=2)
     amenities = models.ManyToManyField('Amenities', blank=True)
+    no_of_bedrooms = models.IntegerField(default=0)
+    no_of_bathrooms = models.IntegerField(default=0)
     things_to_know = models.ManyToManyField('ThingsToKnow', blank=True)
 
     def __str__(self):
