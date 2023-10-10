@@ -34,8 +34,17 @@ class Amenities(models.Model):
 
 
 class ThingsToKnow(models.Model):
+    CATEGORY_CHOICES = (
+        ('Checking in and out', 'Checking in and out'),
+        ('During your stay', 'During your stay'),
+        ('Additional Rules', 'Additional Rules'),
+        ('Before you leave', 'Before you leave'),
+    )
+
     name = models.CharField(max_length=100)
     description = models.TextField(blank=True, null=True)
+    category = models.CharField(max_length=50, choices=CATEGORY_CHOICES, default='')
+
 
     def __str__(self):
         return self.name
