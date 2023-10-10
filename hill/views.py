@@ -24,12 +24,17 @@ def homestead_cottage(request):
         things_to_know_by_category[category] = things_to_know.filter(
             category=category)
 
+    no_of_bedrooms = homestead_cottage.no_of_bedrooms
+    no_of_bathrooms = homestead_cottage.no_of_bathrooms
+
     content = {
         'homestead_cottage': homestead_cottage,
         'amenities_by_category': amenities_by_category,
         'description': description,
         'GOOGLEMAPS_API_KEY': os.environ.get('GOOGLEMAPS_API_KEY', ''),
         'things_to_know_by_category': things_to_know_by_category,
+        'no_of_bedrooms': no_of_bedrooms,
+        'no_of_bathrooms': no_of_bathrooms,
     }
 
     return render(request, 'homestead_cottage.html', content)
@@ -52,12 +57,17 @@ def marketview_cottage(request):
         things_to_know_by_category[category] = things_to_know.filter(
             category=category)
 
+    no_of_bedrooms = marketview_cottage.no_of_bedrooms
+    no_of_bathrooms = marketview_cottage.no_of_bathrooms
+
     content = {
         'marketview_cottage': marketview_cottage,
         'amenities_by_category': amenities_by_category,
         'description': description,
         'GOOGLEMAPS_API_KEY': os.environ.get('GOOGLEMAPS_API_KEY', ''),
         'things_to_know_by_category': things_to_know_by_category,
+        'no_of_bedrooms': no_of_bedrooms,
+        'no_of_bathrooms': no_of_bathrooms,
     }
 
     return render(request, 'marketview_cottage.html', content)

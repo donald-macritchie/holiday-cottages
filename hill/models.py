@@ -70,3 +70,14 @@ class ThingsToKnow(models.Model):
     def __str__(self):
         return self.name
 
+
+class Booking(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    cottage = models.ForeignKey(Cottage, on_delete=models.CASCADE)
+    check_in_date = models.DateField()
+    check_out_date = models.DateField()
+    number_of_guests = models.IntegerField(default=0)
+    guest_name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return f"{self.cottage.name} - {self.check_in_date} to {self.check_out_date}"
