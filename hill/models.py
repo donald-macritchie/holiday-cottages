@@ -26,8 +26,26 @@ class CottageImages(models.Model):
 
 
 class Amenities(models.Model):
+    CATEGORY_CHOICES = (
+        ('Scenic Views', 'Scenic Views'),
+        ('Bathroom', 'Bathroom'),
+        ('Bedroom and Laundry', 'Bedroom and Laundry'),
+        ('Entertainment', 'Entertainment'),
+        ('Family', 'Family'),
+        ('Heating and Cooling', 'Heating and Cooling'),
+        ('Home Saftey', 'Home Saftey'),
+        ('Internet', 'Internet'),
+        ('Kitchen and Dining', 'Kitchen and Dining'),
+        ('Property Features', 'Property Features'),
+        ('Parking', 'Parking'),
+        ('Services', 'Services'),
+        ('Not Included', 'Not Included'),
+    )
+
     name = models.CharField(max_length=100)
     description = models.TextField(blank=True, null=True)
+    category = models.CharField(
+        max_length=50, choices=CATEGORY_CHOICES, default='')
 
     def __str__(self):
         return self.name
