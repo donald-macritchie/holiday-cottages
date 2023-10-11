@@ -47,13 +47,49 @@
 
 <!-- Booking and Price -->
 
-<div class="container">
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-6">
+            <div class="md-form md-outline input-with-post-icon">
+                <input placeholder="Select check-in date" type="date" id="check-in-date"
+                    class="form-control datepicker">
+                <label for="check-in-date">Check-In Date</label>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="md-form md-outline input-with-post-icon">
+                <input placeholder="Select check-out date" type="date" id="check-out-date"
+                    class="form-control datepicker">
+                <label for="check-out-date">Check-Out Date</label>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+<!-- <form method="post">
+    {% csrf_token %}
+    {{ booking_form.as_p }}
+    <button type="submit">Submit Booking</button>
+</form> -->
+
+<!-- <div class="container">
     <div class="row">
         <div class="col-12">
             <h2>Book a Stay in Homestead</h2>
+            <form method="post">
+                {% csrf_token %}
+                <div>
+                    {{ booking_form.cottage }}
+                </div>
+                <div>
+                    {{ booking_form.check_in_date }}
+                </div>
+                <button type="submit">Submit Booking</button>
+            </form>
         </div>
     </div>
-</div>
+</div> -->
 
 <!-- Description -->
 <div class="container-fluid">
@@ -92,22 +128,6 @@
     {% endfor %}
 </div>
 
-
-<!-- <div class="container">
-    <div class="row">
-        <div class="col-12">
-            <h2>Amenities</h2>
-            <ul>
-                {% for amenity in amenities %}
-                    <li>
-                        <strong>{{ amenity.name }}</strong>
-                        <p>{{ amenity.description }}</p>
-                    </li>
-                {% endfor %}
-            </ul>
-        </div>
-    </div>
-</div> -->
 
 <!-- Location -->
 
@@ -196,6 +216,14 @@
 <script async src="https://maps.googleapis.com/maps/api/js?v=weekly
         &key={{GOOGLEMAPS_API_KEY}}&callback=initMap">
         </script>
+
+<script>
+    $('.datepicker').datepicker({
+            inline: true,
+            format: 'yyyy-mm-dd',
+            autoclose: true
+        });
+</script>
 
 
 {% endblock %}

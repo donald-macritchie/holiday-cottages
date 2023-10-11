@@ -81,3 +81,12 @@ class Booking(models.Model):
 
     def __str__(self):
         return f"{self.cottage.name} - {self.check_in_date} to {self.check_out_date}"
+
+
+class ContactMessage(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField()
+    message = models.TextField()
+
+    def __str__(self):
+        return f"Message from {self.name}"
