@@ -82,9 +82,9 @@ def marketview_cottage(request):
     return render(request, 'marketview_cottage.html', content)
 
 
-# ContactMessageForm
+# ContactMessage
 
-def contact_message(request):
+def contact(request):
     if request.method == 'POST':
         form = ContactMessageForm(request.POST)
         if form.is_valid():

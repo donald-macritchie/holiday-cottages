@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Contact Us</h1>
+<div class="row">
+    <div class="col-md-6">
+        <h2>Contact Details</h2>
+        <p>Host Name: </p>
+        <p>Email: </p>
+        <!-- Add more contact details here -->
+    </div>
+    <div class="col-md-6">
+        <h2>Send Us a Message</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}

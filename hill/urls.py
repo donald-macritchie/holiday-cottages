@@ -7,4 +7,5 @@ urlpatterns = [
          name="homestead_cottage"),
     path('marketview-cottage/', views.marketview_cottage,
          name="marketview_cottage"),
+    path('contact/', views.contact, name="contact"),
 ]
