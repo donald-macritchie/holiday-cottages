@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Cottage, CottageImages, Amenities, ThingsToKnow, Booking
+from .models import Cottage, CottageImages, Amenities, ThingsToKnow, Booking, ContactMessage
 from django_summernote.admin import SummernoteModelAdmin
 
 

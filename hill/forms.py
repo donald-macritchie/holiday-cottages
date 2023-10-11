@@ -1,5 +1,5 @@
 from django import forms
-from .models import Booking
+from .models import Booking, ContactMessage
 
 
 class BookingForm(forms.ModelForm):
@@ -13,4 +13,10 @@ class BookingForm(forms.ModelForm):
             'number_of_guests',
             'guest_name',
         ]
+
+
+class ContactMessageForm(forms.ModelForm):
+    class Meta:
+        model = ContactMessage
+        fields = ['name', 'email', 'message']
 

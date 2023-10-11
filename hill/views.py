@@ -1,6 +1,6 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from .models import Cottage, CottageImages, Amenities, ThingsToKnow
-from .forms import BookingForm
+from .forms import BookingForm, ContactMessageForm
 import os
 
 #  Home Page
@@ -80,3 +80,16 @@ def marketview_cottage(request):
     }
 
     return render(request, 'marketview_cottage.html', content)
+
+
+# ContactMessageForm
+
+def contact_message(request):
+    if request.method == 'POST':
+        form = ContactMessageForm(request.POST)
+        if form.is_valid():
+            form.save()
+    else:
+        form = ContactMessageForm()
+
+    return render(request, 'contact.html', {'form': form})
