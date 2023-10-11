@@ -18,7 +18,7 @@
             <p>Alternatively, you can send us a message below</p>
         </div>
         <div class="col-12">
-            <form method="post">
+            <form method="post" id="contact-message-form">
                 {% csrf_token %}
                 {{ form.as_p }}
                 <button type="submit">Submit</button>

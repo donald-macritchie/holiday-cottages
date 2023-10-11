@@ -89,7 +89,13 @@ def contact(request):
         form = ContactMessageForm(request.POST)
         if form.is_valid():
             form.save()
+            return redirect('thank_you_message')
     else:
         form = ContactMessageForm()
 
     return render(request, 'contact.html', {'form': form})
+
+
+def thank_you_message(request):
+    message_success = "Your message has successfully been sent to the host."
+    return render(request, 'message_success.html', {'message_success': message_success})
