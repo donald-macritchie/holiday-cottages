@@ -208,3 +208,10 @@ footer {
     margin: 50px auto;
 }
 
+
+
+/* Message Success */
+
+#message-success-container {
+    padding-top: 150px;
+}

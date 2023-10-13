@@ -1,6 +1,8 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Cottage, CottageImages, Amenities, ThingsToKnow
 from .forms import BookingForm, ContactMessageForm
+from django.views.generic import FormView, TemplateView
+from django.urls import reverse_lazy
 import os
 
 #  Home Page
@@ -83,19 +85,31 @@ def marketview_cottage(request):
 
 
 # ContactMessage
+class contact(FormView):
+    template_name = 'contact.html'
+    form_class = ContactMessageForm
+    success_url = reverse_lazy('contact:success')
 
-def contact(request):
-    if request.method == 'POST':
-        form = ContactMessageForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('thank_you_message')
-    else:
-        form = ContactMessageForm()
-
-    return render(request, 'contact.html', {'form': form})
+    def form_valid(self, form):
+        form.send()
+        return super().form_valid(form)
 
 
-def thank_you_message(request):
-    message_success = "Your message has successfully been sent to the host."
-    return render(request, 'message_success.html', {'message_success': message_success})
+class ContactSuccessView(TemplateView):
+    template_name = 'success.html'
+
+# def contact(request):
+#     if request.method == 'POST':
+#         form = ContactMessageForm(request.POST)
+#         if form.is_valid():
+#             form.save()
+#             return redirect('thank_you_message')
+#     else:
+#         form = ContactMessageForm()
+
+#     return render(request, 'contact.html', {'form': form})
+
+
+# def thank_you_message(request):
+#     message_success = "Your message has successfully been sent to the host."
+#     return render(request, 'message_success.html', {'message_success': message_success})
