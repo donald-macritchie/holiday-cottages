@@ -34,7 +34,7 @@ GOOGLEMAPS_API_KEY = os.environ.get('GOOGLEMAPS_API_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = ['8000-donald-macritchie-holida-klnjz8fej0.us2.codeanyapp.com',
-                 'holiday-cottages-d0c0525a5440.herokuapp.com',]
+                 'holiday-cottages-d0c0525a5440.herokuapp.com']
 
 
 # Application definition
