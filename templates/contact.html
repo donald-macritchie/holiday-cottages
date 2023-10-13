@@ -22,7 +22,7 @@
         <div class="col-12">
             <form action="" method="POST">
                 {% csrf_token %}
-                {{ form | crispy }}
+                {{ form }}
                 <button type="submit">Send Message</button>
             </form>
         </div>
