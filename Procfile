@@ -1,1 +1,1 @@
-web: gunicorn holiday-cottages.wsgi
+web: gunicorn holiday_cottages.wsgi
