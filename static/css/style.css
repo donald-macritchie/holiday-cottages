@@ -10,7 +10,7 @@ body {
 
 .navigation {
     margin: 0;
-    background-color: rgb(255, 240, 219);
+    background-color: #778D45;
     position: fixed;
     z-index: 1;
 }
@@ -26,6 +26,7 @@ body {
     display: flex;
     text-decoration: none;
     align-items: center;
+    color: #fff;
 }
 
 
