@@ -22,10 +22,11 @@ class Cottage(models.Model):
 class CottageImages(models.Model):
     cottage = models.ForeignKey(Cottage, on_delete=models.CASCADE,
                                 related_name='images')
+    title = models.CharField(max_length=100, default='')
     image = CloudinaryField('image')
 
     def __str__(self):
-        return self.image
+        return self.title
 
 
 class Amenities(models.Model):

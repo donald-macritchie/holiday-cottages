@@ -15,6 +15,11 @@ def homestead_cottage(request):
     homestead_cottage = get_object_or_404(Cottage, name='Homestead')
     description = homestead_cottage.description
 
+    # import photos of homestead
+
+    images = CottageImages.objects.all()
+    cloudinary_img = {'images': images}
+
     # Amenities
     amenities = homestead_cottage.amenities.all()
     amenities_by_category = {}
@@ -38,6 +43,7 @@ def homestead_cottage(request):
 
     content = {
         'homestead_cottage': homestead_cottage,
+        'images' : images,
         'amenities_by_category': amenities_by_category,
         'description': description,
         'GOOGLEMAPS_API_KEY': os.environ.get('GOOGLEMAPS_API_KEY', ''),
