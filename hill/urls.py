@@ -1,5 +1,8 @@
 from . import views
-from django.urls import path, include
+from django.urls import path
+
+
+app_name = "hill"
 
 urlpatterns = [
     path('', views.index, name="index"),
