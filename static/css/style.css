@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sail&display=swap');
 
 body {
     margin: 0;
@@ -10,7 +11,7 @@ body {
 
 .navigation {
     margin: 0;
-    background-color: #778D45;
+    background-color: #8e9d61;
     position: fixed;
     z-index: 1;
 }
@@ -22,18 +23,28 @@ body {
 
 }
 
+
 .nav-item {
     display: flex;
     text-decoration: none;
     align-items: center;
-    color: #fff;
+}
+
+.nav-link, .navbar-brand {
+    color: #f5f4f4;
+}
+
+.navbar-brand {
+    font-family: Sail, sans-serif;
+    font-weight: 100;
 }
 
 
 /* Footer */
 footer {
-    background-color: rgb(255, 240, 219);
-    padding: 20px 0;
+    background-color: #8e9d61;
+    padding: 50px 0;
+    color: #f5f4f4;
 }
 
 
@@ -43,7 +54,7 @@ footer {
 /* Hero Image */
 .hero-image {
     width: 100%;
-    height: 100vh;
+    height: 95vh;
 
     background: url("../img/peak-district.jpeg") no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -58,15 +69,46 @@ footer {
 
 
 .jumbotron {
-    background-color: rgba(255,240,219, 0.7);
+    background-color: #8e9d61;
+    border-color: #f5f4f4;
+    color: #f5f4f4;
+    font-family: Sail, sans-serif
 }
+
+/* Welcome Message */
+
+.welcome-message {
+    margin: 50px auto;
+    padding: 50px auto;
+    background-color: #8e9d61;
+
+}
+
+.welcome-message-head {
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #f5f4f4;
+    border-radius: 5%;
+}
+
+.welcome-message-text {
+    margin-bottom: 30px;
+    padding: 30px;
+    background-color: #f5f4f4;
+    border-radius: 5%;
+    font-size: 1.2em;
+}
+
+
 
 
 /* Site Links */
 
 .site-links-container {
+    margin: 50px auto;
     padding: 50px 15px;
-    background-color: rgba(255, 240, 219, 0.7);
+    background-color:#8e9d61;
+    color: #f0f0f0;
 }
 
 .site-link {
@@ -88,9 +130,9 @@ footer {
 
 .site-link button {
     padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
+    background-color: #f5f4f4;
+    color: #242526;
+    border: solid 1px #242526;
     border-radius: 5px;
     cursor: pointer;
     text-decoration: none;
@@ -99,7 +141,8 @@ footer {
 }
 
 .site-link button:hover {
-    background-color: #0056b3;
+    background-color: #8e9d61;
+    color: #f5f4f4;
 }
 
 #site-contact-link {
@@ -121,12 +164,6 @@ footer {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-}
-
-/* Welcome Message */
-
-.welcome-message {
-    padding: 50px 0;
 }
 
 
@@ -161,13 +198,15 @@ footer {
     align-items: center;
     justify-content: center;
     padding: 50px;
-    background-color: rgb(255,240,219);
     border-radius: 5%;
     text-align: center;
+
 }
 
-.card-body {
-    background-color: rgb(255,240,219);
+.review-title h3, .card-body {
+    background-color: #f5f4f4;
+    color: #242526;
+    border: solid 1px #242526;
 }
 
 
