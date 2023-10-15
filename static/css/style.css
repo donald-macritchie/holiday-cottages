@@ -213,11 +213,39 @@ footer {
 
 /* Cottages pages ******************/
 
+/* cottage head and intro */
+
+
+.cottage-intro h1 {
+    font-family: Sail, sans-serif
+}
+
+.cottage-intro p {
+    margin-top: 30px;
+    font-size: 1.2em;
+}
+
+#homestead-title {
+    height: 50vh;
+    background-image: url(../img/house_sign_1_1029x700.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#cottage-intro-container {
+    margin-top: 80px;
+    padding: 20px;
+    background-color: rgba(142, 157, 97, 0.8);
+    color: #f5f4f4;
+    border: solid 1px black;
+    border-radius: 5%;
+}
 
 /* Cottage Image Carousel */
 .image-gallery {
     padding: 30px;
-    background-color: #8e9d61;
+    background-color: #ddddda;
 
 }
 
@@ -235,6 +263,48 @@ footer {
 
 .cottage-intro {
     padding: 100px;
+}
+
+/* Booking Form */
+.cottage-booking-container {
+    background-color: #8e9d61;
+    color: #f5f4f4;
+}
+
+/* Description sections */
+.cottage-description {
+    background-color: #ddddda;
+}
+
+/* Amenities section */
+.amenities-container {
+    padding: 50px;
+    background-color: #8e9d61;
+    color: #f5f4f4;
+    font-family: Sail, sans-serif;
+    font-size: ;
+}
+
+.amenities-container h2 {
+    font-family: Sail, sans-serif;
+    font-size: 60px;
+    font-weight: 100;
+}
+
+.amenities-container .card-header {
+    background-color: #ddddda;
+    font-size: 50px;
+}
+
+.amenities-container button{
+    font-size: 40px;
+    color: #242526;
+}
+
+.amenities-container .card-body {
+    font-size: 30px;
+    font-family: Roboto, sans-serif;
+    font-weight: 100;
 }
 
 /* Location */

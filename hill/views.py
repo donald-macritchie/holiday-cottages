@@ -18,6 +18,7 @@ def homestead_cottage(request):
     # import photos of homestead
 
     images = CottageImages.objects.filter(cottage=homestead_cottage)
+    homestead_image = CottageImages.objects.get(title='house_sign_1')
 
 
     # Amenities
@@ -51,6 +52,7 @@ def homestead_cottage(request):
         'no_of_bedrooms': no_of_bedrooms,
         'no_of_bathrooms': no_of_bathrooms,
         'booking_form': booking_form,
+        'homestead_image_url': homestead_image.image.url,
     }
 
     return render(request, 'homestead_cottage.html', content)

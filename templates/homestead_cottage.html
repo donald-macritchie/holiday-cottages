@@ -4,26 +4,16 @@
 
 <!-- Homestead Title -->
 
-<div class="container-fluid">
+<div class="container-fluid" id="homestead-title">
     <div class="row">
-        <div class="col-12 cottage-intro text-center">
-            <h1>Homestead</h1>
-            <p>"Lovely cottage which has everything you need, in the most beautiful of surroundings."</p>
+        <div class="col-6 cottage-intro text-center mx-auto">
+            <div id="cottage-intro-container">
+                <h1>Homestead</h1>
+                <p>"Lovely cottage which has everything you need, in the most beautiful of surroundings."</p>
+            </div>
         </div>
     </div>
 </div>
-
-<!-- Homestead Gallery -->
-
-
-
-
-
-
-
-
-
-
 
 <!-- Homestead Gallery -->
 <div class="container-fluid image-gallery">
@@ -58,6 +48,14 @@
 
 
 <!-- Booking and Price -->
+
+<div class="container-fluid cottage-booking-container">
+    <div class="row">
+        <div class="col-12">
+            <h1>Booking</h1>
+        </div>
+    </div>
+</div>
 
 <!-- <div class="container">
     <div class="row">
@@ -104,11 +102,10 @@
 </div> -->
 
 <!-- Description -->
-<div class="container-fluid">
+<div class="container-fluid cottage-description">
     <div class="row">
-        <div class="col-12">
-            <h2>Description</h2>
-            <p>
+        <div class="col-12 col-md-10 colo-lg-10 mx-auto">
+            <p class="text-center">
                 {{ description }}
             </p>
             <p>Number of Bedrooms: {{ no_of_bedrooms }}</p>
@@ -121,23 +118,35 @@
 
 <!-- Amenitites -->
 
-<div class="container">
+<div class="container-fluid amenities-container">
     <h2>Amenities</h2>
-    {% for category, amenities in amenities_by_category.items %}
-    <div class="row">
-        <div class="col-12">
-            <h2>{{ category }}</h2>
-            <ul>
-                {% for amenity in amenities %}
-                <li>
-                    <strong>{{ amenity.name }}</strong><br>
-                    {{ amenity.description }}
-                </li>
-                {% endfor %}
-            </ul>
+    <div id="amenitiesAccordion">
+        {% for category, amenities in amenities_by_category.items %}
+        <div class="card">
+            <div class="card-header" id="{{ category|slugify }}">
+                <h2 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse"
+                        data-target="#collapse{{ category|slugify }}">
+                        {{ category }}
+                    </button>
+                </h2>
+            </div>
+            <div id="collapse{{ category|slugify }}" class="collapse" aria-labelledby="{{ category|slugify }}"
+                data-parent="#amenitiesAccordion">
+                <div class="card-body">
+                    <ul>
+                        {% for amenity in amenities %}
+                        <li>
+                            <strong>{{ amenity.name }}</strong><br>
+                            {{ amenity.description }}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
         </div>
+        {% endfor %}
     </div>
-    {% endfor %}
 </div>
 
 
