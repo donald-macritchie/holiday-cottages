@@ -20,13 +20,38 @@ class Cottage(models.Model):
 
 
 class CottageImages(models.Model):
+    COTTAGE_CATEGORIES = [
+        ('Homestead', 'Homestead'),
+        ('Marketview', 'Marketview'),
+    ]
+
+    ROOM_CATEGORIES = [
+        ('Living Room', 'Living Room'),
+        ('Kitchen', 'Kitchen'),
+        ('Dining Room', 'Dining Room'),
+        ('Bedroom', 'Bedroom'),
+        ('Bathroom', 'Bathroom'),
+        ('WC', 'WC'),
+        ('Garden', 'Garden'),
+        ('Parking', 'Parking'),
+        ('Exterior', 'Exterior'),
+        ('House Sign', 'House Sign'),
+        ('Scenic Views', 'Scenic Views'),
+    ]
+
     cottage = models.ForeignKey(Cottage, on_delete=models.CASCADE,
                                 related_name='images')
     title = models.CharField(max_length=100, default='')
     image = CloudinaryField('image')
+    cottage_category = models.CharField(
+        max_length=50, choices=COTTAGE_CATEGORIES, blank=True, null=True)
+    room_category = models.CharField(
+        max_length=50, choices=ROOM_CATEGORIES, blank=True, null=True)
 
     def __str__(self):
         return self.title
+
+
 
 
 class Amenities(models.Model):
