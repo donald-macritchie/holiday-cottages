@@ -218,10 +218,18 @@ footer {
 .image-gallery {
     padding: 30px;
     background-color: #8e9d61;
+
 }
 
 .carousel-inner {
-    max-height: fit-content;
+    margin: auto;
+    max-height: 700px;
+}
+
+.carousel-item {
+    width: fit-content;
+    height: auto;
+   
 }
 
 
