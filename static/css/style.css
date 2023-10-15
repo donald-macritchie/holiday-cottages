@@ -234,6 +234,14 @@ footer {
     background-position: center center;
 }
 
+#marketview-title {
+    height: 50vh;
+    background-image: url(../img/house_sign_1_1029x700.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
 #cottage-intro-container {
     margin-top: 80px;
     padding: 20px;
