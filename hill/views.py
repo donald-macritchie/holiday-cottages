@@ -17,8 +17,8 @@ def homestead_cottage(request):
 
     # import photos of homestead
 
-    images = CottageImages.objects.all()
-    cloudinary_img = {'images': images}
+    images = CottageImages.objects.filter(cottage=homestead_cottage)
+
 
     # Amenities
     amenities = homestead_cottage.amenities.all()

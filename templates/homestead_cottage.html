@@ -1,4 +1,6 @@
-{% extends "base.html" %} {% block content %}
+{% extends "base.html" %}
+
+{% block content %}
 
 <!-- Homestead Title -->
 
@@ -11,24 +13,22 @@
     </div>
 </div>
 
+<!-- Homestead Gallery -->
 
 
 
 
-<div class="container">
-    <div class="row">
-        <div class="col-12">
-            {% for img in images %}
-            <img src="{{ img.image.url }}" alt="bedroom" style="width: 300px; height: 300px;">
-            {% endfor %}
-        </div>
-    </div>
-</div>
+
+
+
+
+
+
 
 <!-- Homestead Gallery -->
-<!-- <div class="container-fluid image-gallery">
+<div class="container-fluid image-gallery">
     <div class="row">
-        <div class="col-12 mx-auto">
+        <div class="col-12 col-md-8 col-lg-8 mx-auto">
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -36,15 +36,11 @@
                     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                 </ol>
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="../static/img/generic-cottage-1.jpeg" class="d-block w-100 img-fluid" alt="...">
+                    {% for image in images %}
+                    <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                        <img class="d-block w-100" src="{{ image.image.url }}" alt="{{ image.title }}">
                     </div>
-                    <div class="carousel-item">
-                        <img src="../static/img/peak-2.jpg" class="d-block w-100 img-fluid" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../static/img/peak-3.jpg" class="d-block w-100 img-fluid" alt="...">
-                    </div>
+                    {% endfor %}
                 </div>
                 <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -57,7 +53,7 @@
             </div>
         </div>
     </div>
-</div> -->
+</div>
 
 <!-- Booking and Price -->
 

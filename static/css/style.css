@@ -213,22 +213,15 @@ footer {
 
 /* Cottages pages ******************/
 
+
+/* Cottage Image Carousel */
 .image-gallery {
-    padding: 50px 20px 20px;
-    width: 100%;
-    height: auto;
+    padding: 30px;
+    background-color: #8e9d61;
 }
 
-.carousel {
-    width: 100%;
-    height: auto;
-}
-
-.carousel-inner img {
-    width: 100%;
-    height: 50vh;
-    object-fit: cover;
- 
+.carousel-inner {
+    max-height: fit-content;
 }
 
 
