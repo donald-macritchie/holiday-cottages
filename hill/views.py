@@ -107,3 +107,12 @@ class ContactSuccessView(TemplateView):
     template_name = 'success.html'
 
 
+
+# More-Info
+
+def things_to_do(request):
+    return render(request, 'things_to_do.html')
+
+
+# User Sign Up
+

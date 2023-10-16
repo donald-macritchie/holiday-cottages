@@ -118,3 +118,25 @@ class ContactMessage(models.Model):
 
     def __str__(self):
         return f"Message from {self.name}"
+
+
+
+# Things to do
+
+class ThingsToDo(models.Model):
+    THINGS_TO_DO_CATEGORY = (
+        ('walks', 'walks'),
+        ('pubs', 'pubs'),
+        ('attractions', 'attractions')
+    )
+
+    name = models.CharField(max_length=100)
+    category = models.CharField(
+        max_length=50, choices=THINGS_TO_DO_CATEGORY, default='')
+    description = models.TextField()
+    location = models.TextField()
+    image = CloudinaryField()
+    site_link = models.URLField(max_length=200, blank=True, null=True)
+
+    def __str__(self):
+        return self.name

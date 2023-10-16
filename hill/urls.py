@@ -9,4 +9,5 @@ urlpatterns = [
          name="marketview_cottage"),
     path('contact/', views.ContactMessage.as_view(), name='contact'),
     path('success/', views.ContactSuccessView.as_view(), name='success'),
+    path('things_to_do/', views.things_to_do, name='things_to_do'),
 ]
