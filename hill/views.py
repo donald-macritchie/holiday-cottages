@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import Cottage, CottageImages, Amenities, ThingsToKnow
+from .models import Cottage, CottageImages, Amenities, ThingsToKnow, ThingsToDo
 from .forms import BookingForm, ContactMessageForm
 from django.views.generic import FormView, TemplateView
 from django.urls import reverse_lazy
@@ -108,10 +108,17 @@ class ContactSuccessView(TemplateView):
 
 
 
-# More-Info
+# Things to do
 
 def things_to_do(request):
-    return render(request, 'things_to_do.html')
+    walks = ThingsToDo.objects.filter(category='walks')
+    pubs = ThingsToDo.objects.filter(category='pubs')
+    attractions = ThingsToDo.objects.filter(category='attractions')
+    return render(
+        request,
+        'things_to_do.html',
+        {'walks': walks, 'pubs': pubs, 'attractions': attractions}
+    )
 
 
 # User Sign Up
