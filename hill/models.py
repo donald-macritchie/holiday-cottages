@@ -57,7 +57,6 @@ class CottageImages(models.Model):
 
 class Amenities(models.Model):
     CATEGORY_CHOICES = (
-        ('Scenic Views', 'Scenic Views'),
         ('Bathroom', 'Bathroom'),
         ('Bedroom and Laundry', 'Bedroom and Laundry'),
         ('Entertainment', 'Entertainment'),

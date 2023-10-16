@@ -154,14 +154,30 @@
     <div class="row">
         <div class="col-12">
             <h2>Things to Know</h2>
-            {% for category, things in things_to_know_by_category.items %}
-            <h3>{{ category }}</h3>
-            <ul>
-                {% for thing in things %}
-                <li>{{ thing.name }}</li>
+            <div id="thingsToKnowAccordion">
+                {% for category, things in things_to_know_by_category.items %}
+                <div class="card">
+                    <div class="card-header" id="{{ category|slugify }}">
+                        <h3 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse"
+                                data-target="#collapse{{ category|slugify }}">
+                                {{ category }}
+                            </button>
+                        </h3>
+                    </div>
+                    <div id="collapse{{ category|slugify }}" class="collapse" aria-labelledby="{{ category|slugify }}"
+                        data-parent="#thingsToKnowAccordion">
+                        <div class="card-body">
+                            <ul>
+                                {% for thing in things %}
+                                <li>{{ thing.name }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
                 {% endfor %}
-            </ul>
-            {% endfor %}
+            </div>
         </div>
     </div>
 </div>
