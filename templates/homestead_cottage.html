@@ -7,7 +7,7 @@
 <div class="container-fluid" id="homestead-title">
     <div class="row">
         <div class="col-6 cottage-intro text-center mx-auto">
-            <div id="cottage-intro-container">
+            <div class="cottage-intro-container">
                 <h1>Homestead</h1>
                 <p>"Lovely cottage which has everything you need, in the most beautiful of surroundings."</p>
             </div>
@@ -46,25 +46,25 @@
     </div>
 </div>
 
-
 <!-- Booking and Price -->
 
 <div class="container-fluid cottage-booking-container">
     <div class="row">
         <div class="col-12">
             <h1>Booking</h1>
-            <button>
-            </button>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Book Now</button>
+            </form>
         </div>
     </div>
 </div>
 
-
-
 <!-- Description -->
-<div class="container-fluid cottage-description">
+<div class="container-fluid cottage-description-container">
     <div class="row">
-        <div class="col-12 col-md-10 colo-lg-10 mx-auto">
+        <div class="col-12 col-md-10 colo-lg-10 mx-auto cottage-description-text">
             <p class="text-center">
                 {{ description }}
             </p>
@@ -75,6 +75,9 @@
 </div>
 
 
+
+
+<hr>
 
 <!-- Amenitites -->
 

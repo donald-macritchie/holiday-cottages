@@ -236,13 +236,13 @@ footer {
 
 #marketview-title {
     height: 50vh;
-    background-image: url(../img/house_sign_1_1029x700.png);
+    background-image: url(../img/house_sign_1.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
 }
 
-#cottage-intro-container {
+.cottage-intro-container {
     margin-top: 80px;
     padding: 20px;
     background-color: rgba(142, 157, 97, 0.8);
@@ -255,7 +255,6 @@ footer {
 .image-gallery {
     padding: 30px;
     background-color: #ddddda;
-
 }
 
 .carousel-inner {
@@ -274,19 +273,30 @@ footer {
     padding: 100px;
 }
 
-/* Booking Form */
-.cottage-booking-container {
-    background-color: #8e9d61;
-    color: #f5f4f4;
-}
 
 /* Description sections */
-.cottage-description {
+.cottage-description-container {
     background-color: #ddddda;
     padding: 50px;
     font-size: 1.1em;
 
 }
+
+.cottage-description-text {
+    background-color: #8e9d61;
+    padding: 20px;
+    border: solid 2px black;
+    color: #f5f4f4;
+}
+
+/* Booking Form */
+.cottage-booking-container {
+    background-color: #8e9d61;
+    color: #f5f4f4;
+    height: 80vh;
+}
+
+
 
 /* Amenities section */
 .amenities-container {
