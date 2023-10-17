@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'django_summernote',
+    'bootstrap_datepicker_plus',
     'crispy_forms',
     'hill',
 ]

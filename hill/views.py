@@ -121,5 +121,4 @@ def things_to_do(request):
     )
 
 
-# User Sign Up
 
