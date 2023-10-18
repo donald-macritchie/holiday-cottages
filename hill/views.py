@@ -1,10 +1,12 @@
 from django.shortcuts import render, redirect
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Cottage, CottageImages, Amenities, ThingsToKnow, ThingsToDo, Booking
-from .forms import BookingForm, ContactMessageForm
+from .forms import ContactMessageForm, BookingForm
 from django.contrib.auth.decorators import login_required
 from django.views.generic import FormView, TemplateView
 from django.urls import reverse_lazy
+from datetime import datetime, timedelta, date
+from django.contrib import messages
 import os
 
 #  Home Page
@@ -96,7 +98,46 @@ def marketview_cottage(request):
 
 # Booking Section
 
+@login_required
+def booking(request):
+    if request.method == 'POST':
+        form = BookingForm(request.POST)
+        if form.is_valid():
+            check_in_date = form.cleaned_data['check_in_date']
+            check_out_date = form.cleaned_data['check_out_date']
 
+            today = date.today()
+            max_booking_date = today + timedelta(days=21)
+
+            if today <= check_in_date <= max_booking_date and today <= check_out_date <= max_booking_date and check_in_date < check_out_date:
+                cottage_id = request.GET.get('cottage_id')
+
+
+                cottage = Cottage.objects.get(id=cottage_id)
+                if not Booking.objects.filter(cottage=cottage, check_in_date__lt=check_out_date, check_out_date__gt=check_in_date).exists():
+                    booking = form.save(commit=False)
+                    booking.user = request.user
+                    booking.cottage = cottage
+                    booking.save()
+                    messages.success(request, "Booking Saved!")
+                    return redirect('index')
+                else:
+                    messages.error(
+                        request, "The selected dates are not available for this cottage.")
+            else:
+                messages.error(request, "Invalid booking dates.")
+    else:
+        form = BookingForm()
+
+    return render(request, 'booking.html', {'form': form})
+
+
+# def index(request):
+#     # You can display the availability of the cottages and existing bookings on this page
+#     # Fetch existing bookings and render the availability calendar
+#     bookings = Booking.objects.all()
+#     cottages = Cottage.objects.all()
+#     return render(request, 'index.html', {'bookings': bookings, 'cottages': cottages})
 
 # ContactMessage
 class ContactMessage(FormView):

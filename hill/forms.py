@@ -1,18 +1,13 @@
 from django import forms
 from django.conf import settings
 from django.core.mail import send_mail
-from .models import Booking, ContactMessage
+from .models import Cottage, Booking, ContactMessage
 
-
-class BookingForm(forms.ModelForm):
-    class Meta:
-        model = Booking
-        fields = ['check_in_date', 'check_out_date',
-                  'number_of_guests', 'guest_name']
 
 
 
 class ContactMessageForm(forms.ModelForm):
+
     class Meta:
         model = ContactMessage
         fields = ['name', 'email', 'inquiry', 'message']
@@ -43,3 +38,23 @@ class ContactMessageForm(forms.ModelForm):
             from_email=settings.EMAIL_HOST_USER,
             recipient_list=[settings.RECIPIENT_ADDRESS]
         )
+
+
+class BookingForm(forms.ModelForm):
+    check_in_date = forms.DateField(
+        # Allow 'DD-MM-YYYY' or 'YYYY-MM-DD' formats
+        input_formats=['%d-%m-%Y', '%Y-%m-%d'],
+        widget=forms.DateInput(
+            attrs={'type': 'date', 'placeholder': 'DD-MM-YYYY'})
+    )
+    check_out_date = forms.DateField(
+        # Allow 'DD-MM-YYYY' or 'YYYY-MM-DD' formats
+        input_formats=['%d-%m-%Y', '%Y-%m-%d'],
+        widget=forms.DateInput(
+            attrs={'type': 'date', 'placeholder': 'DD-MM-YYYY'})
+    )
+
+    class Meta:
+        model = Booking
+        fields = ['check_in_date', 'check_out_date',
+                  'number_of_guests', 'guest_name']

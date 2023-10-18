@@ -256,7 +256,7 @@ footer {
     padding: 30px;
     background-color: #ddddda;
 }
-
+/* 
 .carousel-inner {
     margin: auto;
     max-height: 700px;
@@ -266,8 +266,12 @@ footer {
     width: fit-content;
     height: auto;
    
-}
+} */
 
+.carousel-item img {
+    width: 500px;
+    height: 400px;
+}
 
 .cottage-intro {
     padding: 100px;
