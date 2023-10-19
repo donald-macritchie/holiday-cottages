@@ -526,11 +526,34 @@ footer {
     height: 90vh;
 }
 
-.logout-content{
+.logout-content {
     margin-top: 150px;
     background-color: rgba(142, 157, 97, 0.8);
     padding: 50px;
     border: solid 1px black;
     border-radius: 5%;
+    color: #f5f4f4;
 
 }
+
+/* Sign Up.html */
+.signup-container{
+    background-image: url(../img/signup-img.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 90vh;
+}
+
+ .signup-content{
+    margin-top: 150px;
+    background-color: rgba(142, 157, 97, 0.8);
+    padding: 50px;
+    border: solid 1px black;
+    border-radius: 5%;
+    color: #f5f4f4;
+ }
+
+ .signup-link{
+    color: #1f0de3;
+ }
