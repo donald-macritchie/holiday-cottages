@@ -3,81 +3,50 @@
 {% load crispy_forms_tags %}
 {% block content %}
 
-<div class="conatiner-fluid">
+<div class="container-fluid">
     <div class="row">
         <div class="col-12 contact">
-            <div class="col-8 mx-auto text-center contact-head">
+            <div class="col-md-8 mx-auto text-center contact-head">
                 <h2>Contact Us</h2>
-                <p>If you have any questions or queries regaring anything about out cottages, please do get in touch and we would be
-                    more than happy to help.
-                <p>
+                <p>If you have any questions or queries regarding anything about our cottages, please do get in touch,
+                    and we would be more than happy to help.</p>
             </div>
         </div>
         <div class="col-12 contact-details-container">
             <div class="col-12 contact-section">
-                <div class="col-12">
-                    <div class="col-12 host-details">
+                <div class="col-12 col-md-6">
+                    <div class="host-details">
                         <h3>Contact Details</h3>
-                        <p>Host Name: </p>
-                        <p>Host Telephone Number: </p>
-                        <p>Host Email Address: </p>
+                        {% for host_detail in host_details %}
+                        <p>Host Name: {{ host_detail.name }}</p>
+                        <p>Host Telephone Number: {{ host_detail.telephone_number }}</p>
+                        <p>Host Email Address: {{ host_detail.email }}</p>
+                        {% endfor %}
                     </div>
                 </div>
-                <div class="col-12 contact-message-from">
-                    <h3>Send Us a Message</h3>
-                    <p>Alternatively, you can send us a message below</p>
-                </div>
-                    <div class="col-12">
-                        <form action="" method="POST">
-                            {% csrf_token %}
-                            <div class="form-field">
-                                <p>Name:</p>{{ form.name }}
-                            </div>
-                            <div class="form-field">
-                                <p>Email:</p>{{ form.email }}
-                            </div>
-                            <div class="form-field">
-                                <p>Your Message:</p>{{ form.message }}
-                            </div>
-                            <button type="submit">Send Message</button>
-                        </form>
-                    </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- <div class="container-fluid contact-container">
-    <div class="row">
-        <div class="col-10 contact-section">
-            <div class="col-12 text-center contact-head">
-
-            </div>
-            <div class="col-12 contact-details">
-                <div class="col-12">
-                    <h3>Contact Details</h3>
-                    <p>Host Name: </p>
-                    <p>Host Telephone Number: </p>
-                    <p>Host Email Address: </p>
-                </div>
-            </div>
-            <div class="col-12 contact-message-form">
-                <div class="col-12">
+                <div class="col-12 col-md-6 contact-message-from">
                     <h3>Send Us a Message</h3>
                     <p>Alternatively, you can send us a message below</p>
                 </div>
                 <div class="col-12">
                     <form action="" method="POST">
                         {% csrf_token %}
-                        {{ form }}
+                        <div class="form-field">
+                            <p>Name:</p>{{ form.name }}
+                        </div>
+                        <div class="form-field">
+                            <p>Email:</p>{{ form.email }}
+                        </div>
+                        <div class="form-field">
+                            <p>Your Message:</p>{{ form.message }}
+                        </div>
                         <button type="submit">Send Message</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-</div> -->
-
+</div>
 
 
 

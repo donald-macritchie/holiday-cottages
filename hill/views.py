@@ -1,6 +1,5 @@
-from django.shortcuts import render, redirect
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import Cottage, CottageImages, Amenities, ThingsToKnow, ThingsToDo, Booking
+from .models import Cottage, CottageImages, Amenities, ThingsToKnow, ThingsToDo, Booking, HostDetails
 from .forms import ContactMessageForm, BookingForm
 from django.contrib.auth.decorators import login_required
 from django.views.generic import FormView, TemplateView
@@ -134,6 +133,18 @@ def booking(request):
     return render(request, 'booking.html', {'form': form})
 
 
+
+
+# Host Details
+
+
+def host_details(request):
+    host_details = HostDetails.objects.all()
+
+    context = {
+        'host_details': host_details,
+    }
+    return render(request, 'contact.html', context)
 
 # ContactMessage
 class ContactMessage(FormView):

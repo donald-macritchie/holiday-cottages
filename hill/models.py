@@ -112,11 +112,16 @@ class Booking(models.Model):
 
 
 # Contact
+class HostDetailsManager(models.Manager):
+    pass
+
 
 class HostDetails(models.Model):
     name = models.CharField(max_length=100)
     email = models.EmailField(max_length=100)
     telephone_number = models.CharField(max_length=20)
+
+    objects = HostDetailsManager()
 
     def __str__(self):
         return self.name

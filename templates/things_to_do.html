@@ -2,76 +2,104 @@
 
 {% block content %}
 
-<div class="container">
+<div class="container-fluid things-head-container">
     <div class="row">
-        <div class="col-12 col-md-10 col-lg-10">
-            <h1>Things To Do</h1>
-            <p>The Peak District is packed full of different place to go and visit</p>
-            <p>Here is a few of our top picks...</p>
+        <div class="col-12 ">
+            <div class="col-4 text-center things-head">
+                <h1>Things To Do</h1>
+                <p>The Peak District is packed full of different place to go and visit</p>
+                <p>Here is a few of our top picks...</p>
+            </div>
         </div>
     </div>
 </div>
 
 <!-- Walks -->
-<div class="container">
+<div class="container-fluid walks-container">
     <div class="row">
-        <div class="col-12 col-md -10 col-lg-10">
-            <h3>Walks and Hikes</h3>
-            <p>If you are a keen hiker and looking for some local trails to blaze, here are a couple right on our doorstep.</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-12 col-md-10 col-lg-10">
-            <ul>
-                {% for activity in walks %}
-                <li>
-                    <h3>{{ activity.name }}</h3>
-                    <img src="{{ activity.image.url }}" alt="{{ activity.name }}">
-                    <p>{{ activity.description }}</p>
-                    <p>Location: {{ activity.location }}</p>
-                    {% if activity.site_link %}
-                    <a href="{{ activity.site_link }}" target="_blank">More Info</a>
-                    {% endif %}
-                </li>
-                {% endfor %}
-            </ul>
+        <div class="col-12 walks-section">
+            <div class="col-12 mx-auto walks-head">
+                <h2>Walks and Hikes</h2>
+                <p>If you are a keen hiker and looking for some local trails to blaze, here are a couple right on our doorstep.</p>
+                <div class="col-10 walks-content">
+                    <ul>
+                        {% for activity in walks %}
+                        <li>
+                            <h3>{{ activity.name }}</h3>
+                            <img src="{{ activity.image.url }}" alt="{{ activity.name }}">
+                            <p>{{ activity.description }}</p>
+                            <p>Location: {{ activity.location }}</p>
+                            {% if activity.site_link %}
+                            <a href="{{ activity.site_link }}" target="_blank">More Info</a>
+                            {% endif %}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
 <!-- Pubs/Resaurants -->
 
-<div class="container">
+<div class="container-fluid pubs-container">
     <div class="row">
-        <div class="col-12 col-md -10 col-lg-10">
-            <h3>Pubs and Restauraunts</h3>
+        <div class="col-12 pubs-section">
+            <div class="col-12 mx-auto pubs-head">
+            <h2>Pubs and Restauraunts</h2>
             <p>If eating and drinking are more your style, why not take a trip to some of the local pubs and restaurants.</p>
+                <div class="col-10 pubs-content">
+                    <ul>
+                        {% for activity in pubs %}
+                        <li>
+                            <h3>{{ activity.name }}</h3>
+                            <img src="{{ activity.image.url }}" alt="{{ activity.name }}">
+                            <p>{{ activity.description }}</p>
+                            <p>Location: {{ activity.location }}</p>
+                            {% if activity.site_link %}
+                            <a href="{{ activity.site_link }}" target="_blank">More Info</a>
+                            {% endif %}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
+</div>
+
+<div class="container-fluid attractions-container">
     <div class="row">
-        <div class="col-12 col-md-10 col-lg-10">
-            <ul>
-                {% for activity in pubs %}
-                <li>
-                    <h3>{{ activity.name }}</h3>
-                    <img src="{{ activity.image.url }}" alt="{{ activity.name }}">
-                    <p>{{ activity.description }}</p>
-                    <p>Location: {{ activity.location }}</p>
-                    {% if activity.site_link %}
-                    <a href="{{ activity.site_link }}" target="_blank">More Info</a>
-                    {% endif %}
-                </li>
-                {% endfor %}
-            </ul>
+        <div class="col-12 attractions-section">
+            <div class="col-12 mx-auto attractions-head">
+                <h2>Local Attractions</h2>
+                <p>The Peak Distric has numerous visitor attractions to take a day trip to.</p>
+                <p>Have a look at out top recommendations</p>
+                <div class="col-10 attractions-content">
+                    <ul>
+                        {% for activity in attractions %}
+                        <li>
+                            <h3>{{ activity.name }}</h3>
+                            <img src="{{ activity.image.url }}" alt="{{ activity.name }}">
+                            <p>{{ activity.description }}</p>
+                            <p>Location: {{ activity.location }}</p>
+                            {% if activity.site_link %}
+                            <a href="{{ activity.site_link }}" target="_blank">More Info</a>
+                            {% endif %}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
 
-
 <!-- Local Attractions -->
 
-<div class="container">
+<!-- <div class="container">
     <div class="row">
         <div class="col-12 col-md -10 col-lg-10">
             <h3>Local Attractions</h3>
@@ -96,6 +124,6 @@
             </ul>
         </div>
     </div>
-</div>
+</div> -->
 
 {% endblock %}
