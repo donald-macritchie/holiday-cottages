@@ -105,14 +105,14 @@ def booking(request):
         if form.is_valid():
             check_in_date = form.cleaned_data['check_in_date']
             check_out_date = form.cleaned_data['check_out_date']
+            number_of_guests = form.cleaned_data['number_of_guests']
+            guest_name = form.cleaned_data['guest_name']
 
             today = date.today()
             max_booking_date = today + timedelta(days=21)
 
             if today <= check_in_date <= max_booking_date and today <= check_out_date <= max_booking_date and check_in_date < check_out_date:
                 cottage_id = request.GET.get('cottage_id')
-
-
                 cottage = Cottage.objects.get(id=cottage_id)
                 if not Booking.objects.filter(cottage=cottage, check_in_date__lt=check_out_date, check_out_date__gt=check_in_date).exists():
                     booking = form.save(commit=False)

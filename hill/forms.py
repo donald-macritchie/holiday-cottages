@@ -1,7 +1,9 @@
+from .models import Booking
 from django import forms
 from django.conf import settings
 from django.core.mail import send_mail
 from .models import Cottage, Booking, ContactMessage
+# from bootstrap_datepicker_plus import DatePickerInput
 
 
 
@@ -42,19 +44,14 @@ class ContactMessageForm(forms.ModelForm):
 
 class BookingForm(forms.ModelForm):
     check_in_date = forms.DateField(
-        # Allow 'DD-MM-YYYY' or 'YYYY-MM-DD' formats
-        input_formats=['%d-%m-%Y', '%Y-%m-%d'],
-        widget=forms.DateInput(
-            attrs={'type': 'date', 'placeholder': 'DD-MM-YYYY'})
+        input_formats=['%d/%m/%Y'],
+        widget=forms.DateInput(attrs={'type': 'date'})
     )
     check_out_date = forms.DateField(
-        # Allow 'DD-MM-YYYY' or 'YYYY-MM-DD' formats
-        input_formats=['%d-%m-%Y', '%Y-%m-%d'],
-        widget=forms.DateInput(
-            attrs={'type': 'date', 'placeholder': 'DD-MM-YYYY'})
+        input_formats=['%d/%m/%Y'],
+        widget=forms.DateInput(attrs={'type': 'date'})
     )
 
     class Meta:
         model = Booking
-        fields = ['check_in_date', 'check_out_date',
-                  'number_of_guests', 'guest_name']
+        fields = ['check_in_date', 'check_out_date', 'number_of_guests', 'guest_name']

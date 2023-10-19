@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
+from datetime import datetime
 
 
 class Cottage(models.Model):
@@ -104,9 +105,10 @@ class Booking(models.Model):
     check_out_date = models.DateField()
     number_of_guests = models.IntegerField(default=0)
     guest_name = models.CharField(max_length=100)
+    created_at = models.DateTimeField(default=datetime.now)
 
     def __str__(self):
-        return f"{self.cottage.name} - {self.check_in_date} to {self.check_out_date}"
+        return f"Booking for {self.user.username} at {self.cottage} - Check-in: {self.check_in_date}, Check-out: {self.check_out_date}"
 
 
 class ContactMessage(models.Model):
