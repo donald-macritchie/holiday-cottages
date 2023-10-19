@@ -515,3 +515,22 @@ footer {
 .pubs-content ul {
     list-style-type: none;
 }
+
+/* Logout.html */
+
+.logout-container{
+    background-image: url(../img/logout_img.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 90vh;
+}
+
+.logout-content{
+    margin-top: 150px;
+    background-color: rgba(142, 157, 97, 0.8);
+    padding: 50px;
+    border: solid 1px black;
+    border-radius: 5%;
+
+}
