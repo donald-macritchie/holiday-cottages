@@ -128,16 +128,12 @@ def booking(request):
                 messages.error(request, "Invalid booking dates.")
     else:
         form = BookingForm()
+        cottage_id = request.GET.get('cottage_id')
+        cottage = Cottage.objects.get(id=cottage_id)
 
     return render(request, 'booking.html', {'form': form})
 
 
-# def index(request):
-#     # You can display the availability of the cottages and existing bookings on this page
-#     # Fetch existing bookings and render the availability calendar
-#     bookings = Booking.objects.all()
-#     cottages = Cottage.objects.all()
-#     return render(request, 'index.html', {'bookings': bookings, 'cottages': cottages})
 
 # ContactMessage
 class ContactMessage(FormView):

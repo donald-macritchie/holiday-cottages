@@ -358,3 +358,34 @@ footer {
 .sign-up-container {
     margin-top: 150px;
 }
+
+
+/* booking.html */
+
+.booking-form-container {
+    background-image: url(../img/peak-2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 90vh;
+
+}
+
+.booking-section{
+    margin: 150px auto;
+    padding: 50px;
+    background-color: rgba(142, 157, 97, 0.8);
+    border: solid 1px black;
+    border-radius: 5%;
+    color: #f5f4f4;
+}
+
+.booking-form-head{
+    margin-bottom: 50px;
+}
+
+.booking-form-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
