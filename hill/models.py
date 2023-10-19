@@ -111,6 +111,16 @@ class Booking(models.Model):
         return f"Booking for {self.user.username} at {self.cottage} - Check-in: {self.check_in_date}, Check-out: {self.check_out_date}"
 
 
+# Contact
+
+class HostDetails(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField(max_length=100)
+    telephone_number = models.CharField(max_length=20)
+
+    def __str__(self):
+        return self.name
+
 class ContactMessage(models.Model):
     name = models.CharField(max_length=100)
     email = models.EmailField()
@@ -141,3 +151,5 @@ class ThingsToDo(models.Model):
 
     def __str__(self):
         return self.name
+
+
