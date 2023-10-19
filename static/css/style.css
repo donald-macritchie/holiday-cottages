@@ -256,17 +256,6 @@ footer {
     padding: 30px;
     background-color: #ddddda;
 }
-/* 
-.carousel-inner {
-    margin: auto;
-    max-height: 700px;
-}
-
-.carousel-item {
-    width: fit-content;
-    height: auto;
-   
-} */
 
 .carousel-item img {
     width: 500px;
@@ -360,17 +349,48 @@ footer {
 }
 
 
-/* booking.html */
+/* Contact.html */
 
-.booking-form-container {
-    background-image: url(../img/peak-2.jpg);
+.contact{
+    background-image: url(../img/peak-3.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    height: 90vh;
-
+    height: 50vh;
 }
 
+.contact-head { 
+    margin: 150px auto;
+    padding: 50px;
+    background-color: rgba(142, 157, 97, 0.8);
+    border: solid 1px black;
+    border-radius: 5%;
+    color: #f5f4f4;
+}
+
+.contact-details-container {
+    background-color: #f5f4f4;
+    padding: 50px;
+}
+
+.contact-section{
+    background-color: #8e9d61;
+    padding: 30px;
+    color: #f5f4f4;
+}
+
+.contact-section h3 {
+    margin-bottom: 30px;
+}
+.host-details {
+    margin-bottom: 50px;
+}
+
+.form-field {
+    margin-bottom: 15px;
+}
+
+/* Booking.html */
 .booking-section{
     margin: 150px auto;
     padding: 50px;
