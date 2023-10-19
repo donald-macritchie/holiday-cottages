@@ -342,11 +342,7 @@ footer {
 }
 
 
-/* Sign Up Page */
 
-.sign-up-container {
-    margin-top: 150px;
-}
 
 
 /* Contact.html */
@@ -557,3 +553,22 @@ footer {
  .signup-link{
     color: #1f0de3;
  }
+
+ /* login.html */
+ .login-container{
+    background-image: url(../img/login-img.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 90vh;
+ }
+
+ .login-content{
+    margin-top: 150px;
+    background-color: rgba(142, 157, 97, 0.8);
+    padding: 50px;
+    border: solid 1px black;
+    border-radius: 5%;
+    color: #f5f4f4;
+ }
+
