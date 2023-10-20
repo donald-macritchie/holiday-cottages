@@ -360,13 +360,28 @@ footer {
 .cottage-booking-container {
     background-color: #8e9d61;
     color: #f5f4f4;
-    height: 80vh;
+    height: auto
 }
 
+.cottage-booking-head{
+    margin: 50px auto;
+}
+
+.cottage-booking-content{
+    padding: 50px;
+    background-color: #ddddda;
+    color: #242526;
+    border: solid 1px black;
+}
 
 
 /* Amenities section */
 .amenities-container {
+    padding: 50px;
+    background-color: #ddddda;
+}
+
+.amenities-content{
     padding: 50px;
     background-color: #8e9d61;
     color: #f5f4f4;

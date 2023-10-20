@@ -74,7 +74,7 @@
 <div class="container-fluid cottage-description-container">
     <div class="row">
         <div class="col-12 col-md-10 colo-lg-10 mx-auto cottage-description-text">
-            <p class="text-center">
+            <p class="text-left">
                 {{ description }}
             </p>
             <p>Number of Bedrooms: {{ no_of_bedrooms }}</p>
@@ -87,9 +87,14 @@
 
 <div class="container-fluid cottage-booking-container">
     <div class="row">
-        <div class="col-12">
+        <div class="col-12 col-md-10 col-lg-10 mx-auto text-center cottage-booking-head">
             <h1>Book a Stay In Homestead</h1>
-            <a href="{% url 'book_cottage' %}?cottage_id={{ cottage.id }}">Book This Cottage</a>
+        </div>
+        <div class="col-12 col-md-4 col-lg-4 mx-auto text-center cottage-booking-content">
+            <p>To book a stay in Homestead, please click the button below to select available dates</p>
+            <button>
+                <a href="{% url 'book_cottage' %}?cottage_id={{ cottage.id }}">Book This Cottage</a>
+            </button>
         </div>
     </div>
 </div>
@@ -100,33 +105,37 @@
 <!-- Amenitites -->
 
 <div class="container-fluid amenities-container">
-    <h2>Amenities</h2>
-    <div id="amenitiesAccordion">
-        {% for category, amenities in amenities_by_category.items %}
-        <div class="card">
-            <div class="card-header" id="{{ category|slugify }}">
-                <h2 class="mb-0">
-                    <button class="btn btn-link" type="button" data-toggle="collapse"
-                        data-target="#collapse{{ category|slugify }}">
-                        {{ category }}
-                    </button>
-                </h2>
-            </div>
-            <div id="collapse{{ category|slugify }}" class="collapse" aria-labelledby="{{ category|slugify }}"
-                data-parent="#amenitiesAccordion">
-                <div class="card-body">
-                    <ul>
-                        {% for amenity in amenities %}
-                        <li>
-                            <strong>{{ amenity.name }}</strong><br>
-                            {{ amenity.description }}
-                        </li>
-                        {% endfor %}
-                    </ul>
+    <div class="row">
+        <div class="col-12 amenities-content">
+            <h2>Amenities</h2>
+            <div id="amenitiesAccordion">
+                {% for category, amenities in amenities_by_category.items %}
+                <div class="card">
+                    <div class="card-header" id="{{ category|slugify }}">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse"
+                                data-target="#collapse{{ category|slugify }}">
+                                {{ category }}
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapse{{ category|slugify }}" class="collapse" aria-labelledby="{{ category|slugify }}"
+                        data-parent="#amenitiesAccordion">
+                        <div class="card-body">
+                            <ul>
+                                {% for amenity in amenities %}
+                                <li>
+                                    <strong>{{ amenity.name }}</strong><br>
+                                    {{ amenity.description }}
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
                 </div>
+                {% endfor %}
             </div>
         </div>
-        {% endfor %}
     </div>
 </div>
 
