@@ -299,7 +299,33 @@ footer {
     border-radius: 5%;
 }
 
-/* Cottage Image Carousel */
+
+/* Cottage Gallery */
+
+.cottage-gallery-container{
+    background-color: #ddddda;
+}
+
+.cottage-gallery{
+    margin: 50px auto;
+    padding: 50px;
+    background-color: #8e9d61;
+    border: solid 2px black;
+    color: #f5f4f4;
+
+}
+
+.cottage-gallery span{
+    font-family: Sail, sans-serif;
+}
+
+.cottage-gallery-image{
+    padding: 50px;
+    background-color: #8e9d61;
+    border: solid 2px black;
+}
+
+/* Cottage Image Carousel
 .image-gallery {
     padding: 30px;
     background-color: #ddddda;
@@ -312,7 +338,7 @@ footer {
 
 .cottage-intro {
     padding: 100px;
-}
+} */
 
 
 /* Description sections */

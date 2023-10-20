@@ -6,7 +6,7 @@
 
 <div class="container-fluid" id="homestead-title">
     <div class="row">
-        <div class="col-6 cottage-intro text-center mx-auto">
+        <div class="col-12 col-md-6 col-lg-6 cottage-intro text-center mx-auto">
             <div class="cottage-intro-container">
                 <h1>Homestead</h1>
                 <p>"Lovely cottage which has everything you need, in the most beautiful of surroundings."</p>
@@ -15,47 +15,60 @@
     </div>
 </div>
 
-<!-- Homestead Gallery -->
-<div class="container-fluid image-gallery">
+
+<!-- Image Gallery Button -->
+<div class="container-fluid cottage-gallery-container">
     <div class="row">
-        <div class="col-12">
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    {% for image in images %}
-                    <li data-target="#carouselExampleIndicators" data-slide-to="{{ forloop.counter0 }}"
-                        class="{% if forloop.first %}active{% endif %}"></li>
-                    {% endfor %}
-                </ol>
-                <div class="carousel-inner">
-                    {% for image in images %}
-                    <div class="carousel-item {% if forloop.first %}active{% endif %}">
-                        <img class="mx-auto d-block" src="{{ image.image.url }}" alt="{{ image.title }}">
-                    </div>
-                    {% endfor %}
-                </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
+        <div class="col-12 col-md-6 col-lg-6 text-center mx-auto cottage-gallery">
+            <h3>Images of <span>Homestead</span></h3>
+            <p>Take a look at where you are staying...</p>
+        </div>
+        <div class="col-12 col-md-8 col-lg-8 text-center mx-auto">
+            <div class="cottage-gallery-image">
+                <img class="img-fluid" src="../static/img/exterior_4_993x700.png" alt="Open Image Gallery" data-toggle="modal" data-target="#imageGallery"
+                    style="cursor: pointer;">
             </div>
         </div>
     </div>
 </div>
 
-<!-- Booking and Price -->
 
-<div class="container-fluid cottage-booking-container">
-    <div class="row">
-        <div class="col-12">
-            <h1>Booking</h1>
-            <a href="{% url 'book_cottage' %}?cottage_id={{ cottage.id }}">Book This Cottage</a>
+<!-- Image Gallery Modal -->
+<div class="modal fade" id="imageGallery" tabindex="-1" role="dialog" aria-labelledby="imageGalleryLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="imageGalleryLabel">Homestead Images</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="imageCarousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        {% for image in images %}
+                            <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                                <img src="{{ image.image.url }}" class="d-block w-100" alt="{{ image.title }}">
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <a class="carousel-control-prev" href="#imageCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#imageCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
         </div>
     </div>
 </div>
+
 
 <!-- Description -->
 <div class="container-fluid cottage-description-container">
@@ -70,10 +83,19 @@
     </div>
 </div>
 
+<!-- Booking and Price -->
+
+<div class="container-fluid cottage-booking-container">
+    <div class="row">
+        <div class="col-12">
+            <h1>Book a Stay In Homestead</h1>
+            <a href="{% url 'book_cottage' %}?cottage_id={{ cottage.id }}">Book This Cottage</a>
+        </div>
+    </div>
+</div>
 
 
 
-<hr>
 
 <!-- Amenitites -->
 
@@ -215,13 +237,6 @@
         &key={{GOOGLEMAPS_API_KEY}}&callback=initMap">
         </script>
 
-<script>
-    $('.datepicker').datepicker({
-            inline: true,
-            format: 'yyyy-mm-dd',
-            autoclose: true
-        });
-</script>
 
 
 {% endblock %}
