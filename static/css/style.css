@@ -76,31 +76,79 @@ footer {
     font-family: Sail, sans-serif
 }
 
+/* Home Page container */
+.home-page-container{
+}
+
 /* Welcome Message */
+.welcome-message{
+    margin-top: 50px;
+    background-color: rgba(142, 157, 97, 0.8);
+    padding: 50px;
+    border: solid 1px black;
+    border-radius: 5%;
+    color: #f5f4f4;
+}
 
-.welcome-message {
+/* Cottage Links  */
+.cottage-links-container{
     margin: 50px auto;
-    padding: 50px auto;
+    padding-bottom: 50px;
     background-color: #8e9d61;
+    border-color: #f5f4f4;
+    color: #f5f4f4;
+    height: auto;
 
 }
 
-.welcome-message-head {
-    margin: 50px auto;
-    padding: 30px;
-    background-color: #f5f4f4;
-    border-radius: 5%;
+.cottage-links-head{
+    margin: 50px 0;
 }
 
-.welcome-message-text {
-    margin-bottom: 30px;
-    padding: 30px;
+.cottage-link{
+    height: 200px;
+    padding: 50px auto;
+    background-color: #f0f0f0;
+    border: 3px solid black;
+}
+
+.cottage-link a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.cottage-link button{
+    padding: 10px 20px;
     background-color: #f5f4f4;
-    border-radius: 5%;
+    color: #242526;
+    border: solid 1px #242526;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
     font-size: 1.2em;
+    transition: background-color 0.3s;
 }
 
+.cottage-link button:hover{
+    background-color: #8e9d61;
+    color: #f5f4f4;
+}
 
+#homestead-cottages-link{
+    background-image: url('../img/house_sign_1_1029x700.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#marketview-cottages-link{
+    background-image: url('../img/house_sign_1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
 
 
 /* Site Links */

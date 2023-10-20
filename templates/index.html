@@ -15,47 +15,61 @@
         </div>
     </div>
 
+    <!-- Home page content -->
+
     <!-- Welcome Message -->
-
-    <div class="container-fluid welcome-message">
+    <div class="container-fluid home-page-container">
         <div class="row">
-            <div class="col-12 col-md-4 col-lg-4 text-center mx-auto welcome-message-head">
-                <h2>Welcome to Hill Cottages</h2>
-            </div>
-            <div class="col-12 col-md-10 col-lg-10 text-center mx-auto welcome-message-text">
-                <p>Whether you are looking to unwind and relax or take in all its natural beauty, there are countless
-                    reasons to visit the
-                    Peak District. And our Holidays Cottages are designed to help you maximise your visit to the
-                    countryside. From walks and
-                    hikes to pubs and local attractions, Hill Cottages is your gateway to see it all!</p>
-            </div>
-        </div>
-    </div>
 
+            <div class="col-11 col-md-6 col-lg-6 welcome-message mx-auto">
+                <div class="col-10 text-center mx-auto">
+                    <h2>Welcome to Hill Cottages</h2>
+                    <p>Whether you are looking to unwind and relax or take in all its natural beauty, there are countless
+                        reasons to visit the
+                        Peak District. And our Holidays Cottages are designed to help you maximise your visit to the
+                        countryside. From walks and
+                        hikes to pubs and local attractions, Hill Cottages is your gateway to see it all!</p>
+                </div>
+            </div>
 
-    <!-- Site Links -->
-    <div class="container-fluid site-links-container">
-        <div class="">
-            <section class="site-links">
-                <div class="row">
-                    <div class="col-12 col-md-4 col-lg-4">
-                        <div class="text-center site-link" id="site-contact-link">
-                            <a href="{% url 'contact' %}"><button>Contact</button></a>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4 col-lg-4">
-                        <div class="text-center site-link" id="site-cottages-link">
-                            <a href="{% url 'account_signup' %}"><button>Sign Up</button></a>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4 col-lg-4">
-                        <div class="text-center site-link" id="site-more-info-link">
-                            <a href="{% url 'things_to_do' %}"><button>Things To Do</button></a>
-                        </div>
+    <div class="container-fluid cottage-links-container">
+            <div class="row">
+                <div class="col-12 text-center mx-auto cottage-links-head">
+                    <h2>Our Cottages</h2>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                    <div class="text-center cottage-link" id="homestead-cottages-link">
+                        <a href="{% url 'homestead_cottage' %}"><button>Homestead</button></a>
                     </div>
                 </div>
-            </section>
-        </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                    <div class="text-center cottage-link" id="marketview-cottages-link">
+                        <a href="{% url 'marketview_cottage' %}"><button>Marketview</button></a>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <div class="container-fluid site-links-container">
+        <section class="site-links">
+            <div class="row">
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="text-center site-link" id="site-contact-link">
+                        <a href="{% url 'contact' %}"><button>Contact</button></a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="text-center site-link" id="site-cottages-link">
+                        <a href="{% url 'account_signup' %}"><button>Sign Up</button></a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="text-center site-link" id="site-more-info-link">
+                        <a href="{% url 'things_to_do' %}"><button>Things To Do</button></a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 
 
