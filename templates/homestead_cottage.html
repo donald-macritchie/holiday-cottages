@@ -142,18 +142,19 @@
 
 <!-- Location -->
 
-<section>
-    <div class="container-fluid">
+    <div class="container-fluid location-container">
         <div class="row">
-            <div class="col-12 col-md-4 col-lg-4">
+            <div class="col-12 col-md-4 col-lg-4 mx-auto text-center location-content">
                 <h2>Location</h2>
                 <p>{{ homestead_cottage.location }}</p>
             </div>
         </div>
     </div>
-    <div class="container-fluid">
+
+    <!-- Directions -->
+    <div class="container-fluid directions-container">
         <div class="row">
-            <div class="col-12 col-md-4 col-lg 4">
+            <div class="col-12 directions-content">
                 <h2>Directions</h2>
                 <div>
                     <h3>From Buxton: </h3>
@@ -178,21 +179,22 @@
             </div>
         </div>
     </div>
-    <div class="container map-container">
+
+    <!-- Map -->
+    <div class="container-fluid map-container">
         <div class="row">
-            <div class="col-12" id="map">
+            <div class="col-12 col-md-10 col-lg-10 map-content" id="map">
     
             </div>
         </div>
     </div>
-</section>
+
 
 <!-- General Details and Rules -->
 
-
-<div class="container">
+<div class="container-fluid things-to-know-container">
     <div class="row">
-        <div class="col-12">
+        <div class="col-12 things-to-know-content">
             <h2>Things to Know</h2>
             <div id="thingsToKnowAccordion">
                 {% for category, things in things_to_know_by_category.items %}
@@ -221,8 +223,6 @@
         </div>
     </div>
 </div>
-
-
 
 
 

@@ -376,51 +376,74 @@ footer {
 
 
 /* Amenities section */
-.amenities-container {
+.amenities-container,
+.things-to-know-container {
     padding: 50px;
     background-color: #ddddda;
 }
 
-.amenities-content{
+.amenities-content,
+.things-to-know-content{
     padding: 50px;
     background-color: #8e9d61;
     color: #f5f4f4;
     font-family: Sail, sans-serif;
+    border: solid 1px black;
 }
 
-.amenities-container h2 {
+.amenities-container h2,
+.things-to-know-container h2 {
     font-family: Sail, sans-serif;
     font-size: 2.2em;
     font-weight: 100;
 }
 
-.amenities-container .card-header {
+.amenities-container .card-header,
+.things-to-know-container .card-header {
     background-color: #ddddda;
 
 
 }
 
-.amenities-container button{
+.amenities-container button,
+.things-to-know-container button{
     font-size: 2rem;
     color: #242526;
 }
 
-.amenities-container .card-body {
+.amenities-container .card-body,
+.things-to-know-container .card-body {
     font-family: Roboto, sans-serif;
     font-weight: 100;
 }
 
 /* Location */
 
-.map-container {
-    padding-bottom: 100px;
+.location-container,
+.directions-container,
+.map-container{
+    padding: 50px;
+    background-color: #ddddda;
 }
+
+.location-content,
+.diretions-head,
+.directions-content,
+.map-content{
+    padding: 50px;
+    background-color: #8e9d61;
+    color: #f5f4f4;
+    font-family: Roboto, sans-serif;
+    border: solid 1px black;
+}
+
+
 
 #map {
     width: 90%;
     height: 700px;
     margin: 50px auto;
-}
+    }
 
 
 
