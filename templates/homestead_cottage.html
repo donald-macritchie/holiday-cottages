@@ -19,11 +19,9 @@
 <!-- Image Gallery Button -->
 <div class="container-fluid cottage-gallery-container">
     <div class="row">
-        <div class="col-12 col-md-6 col-lg-6 text-center mx-auto cottage-gallery">
+        <div class="col-10 col-md-8 col-lg-8 text-center mx-auto cottage-gallery">
             <h3>Images of <span>Homestead</span></h3>
             <p>Take a look at where you are staying...</p>
-        </div>
-        <div class="col-12 col-md-8 col-lg-8 text-center mx-auto">
             <div class="cottage-gallery-image">
                 <img class="img-fluid" src="../static/img/exterior_4_993x700.png" alt="Open Image Gallery" data-toggle="modal" data-target="#imageGallery"
                     style="cursor: pointer;">
@@ -87,15 +85,17 @@
 
 <div class="container-fluid cottage-booking-container">
     <div class="row">
-        <div class="col-12 col-md-10 col-lg-10 mx-auto text-center cottage-booking-head">
-            <h1>Book a Stay In Homestead</h1>
-        </div>
-        <div class="col-12 col-md-4 col-lg-4 mx-auto text-center cottage-booking-content">
-            <p>To book a stay in Homestead, please click the button below to select available dates</p>
-            <button>
-                <a href="{% url 'book_cottage' %}?cottage_id={{ cottage.id }}">Book This Cottage</a>
-            </button>
-        </div>
+       <div class="col-12">
+            <div class="col-12 col-md-10 col-lg-10 mx-auto text-center cottage-booking-head">
+                <h1>Book a Stay In Homestead</h1>
+            </div>
+            <div class="col-12 col-md-8 col-lg-8 mx-auto text-center cottage-booking-content">
+                <p>To book a stay in Homestead, please click the button below to select available dates</p>
+                <button>
+                    <a href="{% url 'book_cottage' %}?cottage_id={{ cottage.id }}">Book This Cottage</a>
+                </button>
+            </div>
+       </div>
     </div>
 </div>
 
@@ -144,7 +144,7 @@
 
     <div class="container-fluid location-container">
         <div class="row">
-            <div class="col-12 col-md-4 col-lg-4 mx-auto text-center location-content">
+            <div class="col-12 mx-auto text-center location-content">
                 <h2>Location</h2>
                 <p>{{ homestead_cottage.location }}</p>
             </div>

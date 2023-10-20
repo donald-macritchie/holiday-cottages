@@ -322,7 +322,6 @@ footer {
 .cottage-gallery-image{
     padding: 50px;
     background-color: #8e9d61;
-    border: solid 2px black;
 }
 
 /* Cottage Image Carousel
@@ -360,7 +359,8 @@ footer {
 .cottage-booking-container {
     background-color: #8e9d61;
     color: #f5f4f4;
-    height: auto
+    height: auto;
+    padding-bottom: 50px;
 }
 
 .cottage-booking-head{
