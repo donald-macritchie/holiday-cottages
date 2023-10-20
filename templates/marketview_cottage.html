@@ -1,11 +1,9 @@
 {% extends "base.html" %} {% block content %}
 
-<!-- Marketview Title -->
-
 <div class="container-fluid" id="marketview-title">
     <div class="row">
-        <div class="col-6 cottage-intro text-center mx-auto">
-            <div id="cottage-intro-container">
+        <div class="col-12 col-md-6 col-lg-6 cottage-intro text-center mx-auto">
+            <div class="cottage-intro-container">
                 <h1>Marketview</h1>
                 <p>"Beautiful and spotlessly clean cottage in a picturesque location."</p>
             </div>
@@ -13,173 +11,65 @@
     </div>
 </div>
 
-<!-- Marketview Gallery -->
-<!-- <div class="container-fluid image-gallery">
+
+<!-- Image Gallery Button -->
+<div class="container-fluid cottage-gallery-container">
     <div class="row">
-        <div class="col-12 col-md-10 col-lg-10">
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    {% for image in images %}
-                    <li data-target="#carouselExampleIndicators" data-slide-to="{{ forloop.counter0 }}"
-                        class="{% if forloop.first %}active{% endif %}"></li>
-                    {% endfor %}
-                </ol>
-                <div class="carousel-inner">
-                    {% for image in images %}
-                    <div class="carousel-item {% if forloop.first %}active{% endif %}">
-                        <img class="mx-auto d-block" src="{{ image.image.url }}" alt="{{ image.title }}">
-                    </div>
-                    {% endfor %}
-                </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-        </div>
-    </div>
-</div> -->
-
-<div class="container">
-    <div class="row">
-        <div class="row">
-            {% for image in marketview_images %}
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
-                    data-image="{{ image.image.url }}" data-target="#image-gallery">
-                    <img class="img-thumbnail" src="{{ image.image.url }}" alt="{{ image.title }}">
-                </a>
-            </div>
-            {% endfor %}
-        </div>
-
-
-        <div class="modal fade" id="image-gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title" id="image-gallery-title"></h4>
-                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
-                                class="sr-only">Close</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <img id="image-gallery-image" class="img-responsive col-md-12" src="">
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary float-left" id="show-previous-image"><i
-                                class="fa fa-arrow-left"></i>
-                        </button>
-
-                        <button type="button" id="show-next-image" class="btn btn-secondary float-right"><i
-                                class="fa fa-arrow-right"></i>
-                        </button>
-                    </div>
-                </div>
+        <div class="col-10 col-md-10 col-lg-10 text-center mx-auto cottage-gallery">
+            <h3>Images of <span>Marketview</span></h3>
+            <p>Take a look at where you are staying...</p>
+            <div class="cottage-gallery-image">
+                <img class="img-fluid" src="../static/img/exterior_4.png" alt="Open Image Gallery"
+                    data-toggle="modal" data-target="#imageGallery" style="cursor: pointer;">
             </div>
         </div>
     </div>
 </div>
 
 
-<!-- <section class="gallery-block cards-gallery">
-    <div class="container">
-        <div class="heading">
-            <h2>Card Gallery</h2>
-        </div>
-        <div class="row">
-            <div class="col-md-6 col-lg-4">
-                <div class="card border-0 transform-on-hover">
-                    <a class="lightbox" href="images/F1.jpg"><img src="images/F1.jpg" class="card-img-top"></a>
-                    <div class="card-body">
-                        <h6>Lorem Ipsum</h6>
-                        <p class="text-muted card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                            quam urna.</p>
+<!-- Image Gallery Modal -->
+<div class="modal fade" id="imageGallery" tabindex="-1" role="dialog" aria-labelledby="imageGalleryLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="imageGalleryLabel">Homestead Images</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="imageCarousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        {% for image in images %}
+                        <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                            <img src="{{ image.image.url }}" class="d-block w-100" alt="{{ image.title }}">
+                        </div>
+                        {% endfor %}
                     </div>
+                    <a class="carousel-control-prev" href="#imageCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#imageCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
                 </div>
             </div>
-
-            <div class="col-md-6 col-lg-4">
-                <div class="card border-0 transform-on-hover">
-                    <a class="lightbox" href="images/F2.jpg"><img src="images/F2.jpg" class="card-img-top"></a>
-                    <div class="card-body">
-                        <h6>Lorem Ipsum</h6>
-                        <p class="text-muted card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                            quam urna.</p>
-                    </div>
-                </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
-
-            <div class="col-md-6 col-lg-4">
-                <div class="card border-0 transform-on-hover">
-                    <a class="lightbox" href="images/F3.jpg"><img src="images/F3.jpg" class="card-img-top"></a>
-                    <div class="card-body">
-                        <h6>Lorem Ipsum</h6>
-                        <p class="text-muted card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                            quam urna.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="row">
-            <div class="col-md-6 col-lg-4">
-                <div class="card border-0 transform-on-hover">
-                    <a class="lightbox" href="images/F4.jpg"><img src="images/F4.jpg" class="card-img-top"></a>
-                    <div class="card-body">
-                        <h6>Lorem Ipsum</h6>
-                        <p class="text-muted card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                            quam urna.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-                <div class="card border-0 transform-on-hover">
-                    <a class="lightbox" href="images/F5.jpg"><img src="images/F5.jpg" class="card-img-top"></a>
-                    <div class="card-body">
-                        <h6>Lorem Ipsum</h6>
-                        <p class="text-muted card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                            quam urna.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-                <div class="card border-0 transform-on-hover">
-                    <a class="lightbox" href="images/F6.jpg"><img src="images/F6.jpg" class="card-img-top"></a>
-                    <div class="card-body">
-                        <h6>Lorem Ipsum</h6>
-                        <p class="text-muted card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                            quam urna.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->
-
-<!-- Booking and Price -->
-
-<div class="container">
-    <div class="row">
-        <div class="col-12">
-            <h2>Book a Stay in Marketview</h2>
         </div>
     </div>
 </div>
+
 
 <!-- Description -->
-<div class="container-fluid cottage-description">
+<div class="container-fluid cottage-description-container">
     <div class="row">
-        <div class="col-12 col-md-10 colo-lg-10 mx-auto">
-            <p class="text-center">
+        <div class="col-12 col-md-10 colo-lg-10 mx-auto cottage-description-text">
+            <p class="text-left">
                 {{ description }}
             </p>
             <p>Number of Bedrooms: {{ no_of_bedrooms }}</p>
@@ -188,92 +78,119 @@
     </div>
 </div>
 
+<!-- Booking and Price -->
+
+<div class="container-fluid cottage-booking-container">
+    <div class="row">
+        <div class="col-12">
+            <div class="col-12 col-md-10 col-lg-10 mx-auto text-center cottage-booking-head">
+                <h1>Book a Stay In Marketview</h1>
+            </div>
+            <div class="col-12 col-md-8 col-lg-8 mx-auto text-center cottage-booking-content">
+                <p>To book a stay in Marketview, please click the button below to select available dates</p>
+                <button>
+                    <a href="{% url 'book_cottage' %}?cottage_id={{ cottage.id }}">Book This Cottage</a>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 
 
 <!-- Amenitites -->
 
 <div class="container-fluid amenities-container">
-    <h2>Amenities</h2>
-    <div class="amenitiesAccordion">
-        {% for category, amenities in amenities_by_category.items %}
-        <div class="card">
-            <div class="card-header" id="{{ category|slugify }}">
-                <h2 class="mb-0">
-                    <button class="btn btn-link" type="button" data-toggle="collapse"
-                        data-target="#collapse{{ category|slugify }}">
-                        {{ category }}
-                    </button>
-                </h2>
-            </div>
-            <div id="collapse{{ category|slugify }}" class="collapse" aria-labelledby="{{ category|slugify }}"
-                data-parent="#amenitiesAccordion">
-                <div class="card-body">
-                    <ul>
-                        {% for amenity in amenities %}
-                        <li>
-                            <strong>{{ amenity.name }}</strong><br>
-                            {{ amenity.description }}
-                        </li>
-                        {% endfor %}
-                    </ul>
+    <div class="row">
+        <div class="col-12 amenities-content">
+            <h2>Amenities</h2>
+            <div id="amenitiesAccordion">
+                {% for category, amenities in amenities_by_category.items %}
+                <div class="card">
+                    <div class="card-header" id="{{ category|slugify }}">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse"
+                                data-target="#collapse{{ category|slugify }}">
+                                {{ category }}
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapse{{ category|slugify }}" class="collapse" aria-labelledby="{{ category|slugify }}"
+                        data-parent="#amenitiesAccordion">
+                        <div class="card-body">
+                            <ul>
+                                {% for amenity in amenities %}
+                                <li>
+                                    <strong>{{ amenity.name }}</strong><br>
+                                    {{ amenity.description }}
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
                 </div>
+                {% endfor %}
             </div>
         </div>
-        {% endfor %}
     </div>
 </div>
 
 
 <!-- Location -->
 
-<section>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12 col-md-4 col-lg-4">
-                <h2>Location</h2>
-                <p>{{ marketview_cottage.location }}</p>
+<div class="container-fluid location-container">
+    <div class="row">
+        <div class="col-12 mx-auto text-center location-content">
+            <h2>Location</h2>
+            <p>{{ marketview_cottage.location }}</p>
+        </div>
+    </div>
+</div>
+
+<!-- Directions -->
+<div class="container-fluid directions-container">
+    <div class="row">
+        <div class="col-12 directions-content">
+            <h2>Directions</h2>
+            <div>
+                <h3>From Buxton: </h3>
+                <p>
+                    From Ashbourne Road/A515, continue for 2.2 Miles. Turn right on to Buxton Road and Continue to follow
+                    B5053 for 3.3
+                    Miles. Upon arriving in Longnor, continue on to the village square and at the crossroads, turn right onto Leek
+                    Road.
+                    Marketview Cotttage is approximately 200ft on the right with the green door.
+                </p>
+            </div>
+            <div>
+                <h3>From Leek: </h3>
+                <p>
+                    From Buxton Road/A53, continue for 5.3 Miles. Take the first left just after the Winking Man Pub on
+                    you rleft hand
+                    side and continue on. After 4.4 Miles, you will arivve in Longnor and Marketview Cottage is situated on the left
+                    hand side with the green door just after the junction to Gauledge Lane.
+                </p>
             </div>
         </div>
     </div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12 col-md-4 col-lg 4">
-                <h2>Directions</h2>
-                <div>
-                    <h3>From Buxton: </h3>
-                    <p>
-                        From Ashbourne Road/A515, continue for 2.2 Miles. Turn right on to Buxton Road and Continue to follow
-                        B5053 for 3.3
-                        Miles. Upon arriving in Longnor, continue on to the village square and at the crossroads, turn right onto Leek Road.
-                        Marketview Cotttage is approximately 200ft on the right with the green door.
-                    </p>
-                    </div>
-                    <div>
-                        <h3>From Leek: </h3>
-                        <p>
-                            From Buxton Road/A53, continue for 5.3 Miles. Take the first left just after the Winking Man Pub on
-                            you rleft hand
-                            side and continue on. After 4.4 Miles, you will arivve in Longnor and Marketview Cottage is situated on the left
-                            hand side with the green door just after the junction to Gauledge Lane.
-                        </p>
-                </div>
-            </div>
+</div>
+
+<!-- Map -->
+<div class="container-fluid map-container">
+    <div class="row">
+        <div class="col-12 col-md-10 col-lg-10 map-content" id="map">
+
         </div>
     </div>
-    <div class="container map-container">
-        <div class="row">
-            <div class="col-12" id="map">
-    
-            </div>
-        </div>
-    </div>
-</section>
+</div>
+
 
 <!-- General Details and Rules -->
 
-<div class="container">
+<div class="container-fluid things-to-know-container">
     <div class="row">
-        <div class="col-12">
+        <div class="col-12 things-to-know-content">
             <h2>Things to Know</h2>
             <div id="thingsToKnowAccordion">
                 {% for category, things in things_to_know_by_category.items %}
@@ -304,46 +221,6 @@
 </div>
 
 
-<!-- <div class="container">
-    <div class="row">
-        <div class="col-12 things_to_know">
-            <h2>Things to Know</h2>
-            <p>General Rules:</p>
-            <ul>
-                <li>Check-in after 16:00</li>
-                <li>Checkout before 10:00</li>
-                <li>Self check-in with lockbox</li>
-                <li>During your stay 4 guests maximum</li>
-                <li>No pets</li>
-                <li>No parties or events</li>
-                <li>No smoking</li>
-            </ul>
-            <p>Additional Rules:</p>
-            <ul>
-                <li>Infants and Toddlers are welcome, however please check the amenities section for more information to see if Homestead is
-                suitable for you.</li>
-            </ul>
-            <p>During your stay at the cottage could you please:</p>
-            <ul>
-                <li>Handle the pull cord blinds with extra care.</li>
-                <li>Inform us of any damages and/or breakages in a reasonably timely manner.</li>
-                <li>Don't smoke or light candles in the property</li>
-                <li>Don’t wear shoes inside the cottage or dye hair.</li>
-                <li>Don’t hang clothes or cover the electric/storage heaters in the property.</li>
-            </ul>
-            <p>Before Your Leave:</p>
-            <ul>
-                <li>On departure please strip the bedding off the beds.</li>
-                <li>Empty fridge, freezer and all bins.</li>
-                <li>Clean the Wood Burning Stove out if used.</li>
-                <li>Switch off all lights, close all windows, lock the doors and leave the front door key in the outdoor key safe closed and
-                locked.</li>
-            </ul>
-        </div>
-    </div>
-</div> -->
-
-
 
 <!-- script -->
 
@@ -361,105 +238,10 @@
         let marker = new google.maps.Marker({position: marketview, map: map})
     }
 </script>
-<!-- <script async src="https://maps.googleapis.com/maps/api/js?v=weekly
+<script async src="https://maps.googleapis.com/maps/api/js?v=weekly
         &key={{GOOGLEMAPS_API_KEY}}&callback=initMap">
-        </script> -->
+        </script>
 
 
-<script>
-    let modalId = $('#image-gallery');
-
-        $(document)
-            .ready(function () {
-
-                loadGallery(true, 'a.thumbnail');
-
-                //This function disables buttons when needed
-                function disableButtons(counter_max, counter_current) {
-                    $('#show-previous-image, #show-next-image')
-                        .show();
-                    if (counter_max === counter_current) {
-                        $('#show-next-image')
-                            .hide();
-                    } else if (counter_current === 1) {
-                        $('#show-previous-image')
-                            .hide();
-                    }
-                }
-
-                /**
-                 *
-                 * @param setIDs        Sets IDs when DOM is loaded. If using a PHP counter, set to false.
-                 * @param setClickAttr  Sets the attribute for the click handler.
-                 */
-
-                function loadGallery(setIDs, setClickAttr) {
-                    let current_image,
-                        selector,
-                        counter = 0;
-
-                    $('#show-next-image, #show-previous-image')
-                        .click(function () {
-                            if ($(this)
-                                .attr('id') === 'show-previous-image') {
-                                current_image--;
-                            } else {
-                                current_image++;
-                            }
-
-                            selector = $('[data-image-id="' + current_image + '"]');
-                            updateGallery(selector);
-                        });
-
-                    function updateGallery(selector) {
-                        let $sel = selector;
-                        current_image = $sel.data('image-id');
-                        $('#image-gallery-title')
-                            .text($sel.data('title'));
-                        $('#image-gallery-image')
-                            .attr('src', $sel.data('image'));
-                        disableButtons(counter, $sel.data('image-id'));
-                    }
-
-                    if (setIDs == true) {
-                        $('[data-image-id]')
-                            .each(function () {
-                                counter++;
-                                $(this)
-                                    .attr('data-image-id', counter);
-                            });
-                    }
-                    $(setClickAttr)
-                        .on('click', function () {
-                            updateGallery($(this));
-                        });
-                }
-            });
-
-        // build key actions
-        $(document)
-            .keydown(function (e) {
-                switch (e.which) {
-                    case 37: // left
-                        if ((modalId.data('bs.modal') || {})._isShown && $('#show-previous-image').is(":visible")) {
-                            $('#show-previous-image')
-                                .click();
-                        }
-                        break;
-
-                    case 39: // right
-                        if ((modalId.data('bs.modal') || {})._isShown && $('#show-next-image').is(":visible")) {
-                            $('#show-next-image')
-                                .click();
-                        }
-                        break;
-
-                    default:
-                        return; // exit this handler for other keys
-                }
-                e.preventDefault(); // prevent the default action (scroll / move caret)
-            });
-
-</script>
         
 {% endblock %}

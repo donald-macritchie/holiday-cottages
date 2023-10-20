@@ -67,12 +67,20 @@ def marketview_cottage(request):
     marketview_cottage = get_object_or_404(Cottage, name='Marketview')
     description = marketview_cottage.description
 
+    # import photos of marketview
+
+    images = CottageImages.objects.filter(cottage=marketview_cottage)
+    marketview_image = CottageImages.objects.get(title='house_sign_1')
+
+
+    # Amenities
     amenities = marketview_cottage.amenities.all()
     amenities_by_category = {}
 
     for category, _ in Amenities.CATEGORY_CHOICES:
         amenities_by_category[category] = amenities.filter(category=category)
 
+    # Things to Know
     things_to_know_by_category = {}
     things_to_know = marketview_cottage.things_to_know.all()
 
@@ -83,17 +91,26 @@ def marketview_cottage(request):
     no_of_bedrooms = marketview_cottage.no_of_bedrooms
     no_of_bathrooms = marketview_cottage.no_of_bathrooms
 
+    # BookingForm
+    booking_form = BookingForm()
+
     content = {
         'marketview_cottage': marketview_cottage,
+        'images' : images,
         'amenities_by_category': amenities_by_category,
         'description': description,
         'GOOGLEMAPS_API_KEY': os.environ.get('GOOGLEMAPS_API_KEY', ''),
         'things_to_know_by_category': things_to_know_by_category,
         'no_of_bedrooms': no_of_bedrooms,
         'no_of_bathrooms': no_of_bathrooms,
+        'booking_form': booking_form,
+        'marketview_image_url': marketview_image.image.url,
+        'cottage': marketview_cottage,
     }
 
     return render(request, 'marketview_cottage.html', content)
+
+
 
 # Booking Section
 
