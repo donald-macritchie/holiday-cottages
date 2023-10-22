@@ -60,6 +60,8 @@ footer {
 
 /* Hero Image */
 .hero-image {
+    margin: 0;
+    padding: 0;
     width: 100%;
     height: 95vh;
 
@@ -263,6 +265,31 @@ footer {
     color: #242526;
     border: solid 1px #242526;
 }
+
+/* Home page media Queries **************/
+@media screen and (max-width: 768px) {
+
+    .welcome-message {
+        margin-top: 10px;
+    }
+
+    .cottage-links-container {
+        margin: 20px auto;
+    }
+
+    .cottage-links-head {
+        margin: 10px 0;
+    }
+
+
+    .site-links-container {
+        margin: 20px auto;
+        padding: 20px 15px;
+        background-color: #8e9d61;
+        color: #f0f0f0;
+    }
+}
+
 
 
 

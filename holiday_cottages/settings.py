@@ -32,9 +32,9 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 GOOGLEMAPS_API_KEY = os.environ.get('GOOGLEMAPS_API_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-X_FRAME_OPTIONS = 'SAMEORIGIN'
+# X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 ALLOWED_HOSTS = ['8000-donald-macritchie-holida-klnjz8fej0.us2.codeanyapp.com',
                  'holiday-cottages-d0c0525a5440.herokuapp.com']
