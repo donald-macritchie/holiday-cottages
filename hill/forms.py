@@ -15,10 +15,6 @@ class ContactMessageForm(forms.ModelForm):
         fields = ['name', 'email', 'inquiry', 'message']
 
     def get_info(self):
-        """
-        Method that returns formatted information
-        :return: subject, msg
-        """
         cleaned_data = self.cleaned_data
 
         name = cleaned_data.get('name').strip()
