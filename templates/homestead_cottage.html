@@ -90,6 +90,7 @@
                 <h1>Book a Stay In Homestead</h1>
             </div>
             <div class="col-12 col-md-8 col-lg-8 mx-auto text-center cottage-booking-content">
+                <p>Prices to stay in Homestead start at <strong>£{{ cottage.price_per_night }} per night.</strong></p>
                 <p>To book a stay in Homestead, please click the button below to select available dates</p>
                 <button>
                     <a href="{% url 'book_cottage' %}?cottage_id={{ cottage.id }}">Book This Cottage</a>
