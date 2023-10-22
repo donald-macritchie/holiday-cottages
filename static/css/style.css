@@ -735,7 +735,7 @@ footer {
 }
 
  .signup-content{
-    margin-top: 150px;
+    margin-top: 100px;
     background-color: rgba(142, 157, 97, 0.8);
     padding: 50px;
     border: solid 1px black;
@@ -746,6 +746,29 @@ footer {
  .signup-link{
     color: #1f0de3;
  }
+
+ /* Things to do .html media Queries */
+ @media screen and (max-width: 768px) {
+    .signup-content{
+        margin-top: 120px;
+        padding: 30px;
+        font-size: 0.9em;
+    }
+ }
+
+@media screen and (max-width: 425px) {
+    .signup-content{
+        margin-top: 100px;
+        font-size: 0.7em;
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .signup-content {
+        font-size: 0.65em;
+    }
+}
 
  /* login.html */
  .login-container{
