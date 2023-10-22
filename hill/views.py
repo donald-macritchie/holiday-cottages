@@ -116,38 +116,59 @@ def marketview_cottage(request):
 
 @login_required
 def booking(request):
+    existing_booking = Booking.objects.filter(user=request.user).first()
+
     if request.method == 'POST':
-        form = BookingForm(request.POST)
+        # make a copy of the request.POST, becuase the request.POST is immutable
+        request_POST = request.POST.copy()
+
+        # turn the date strings into datetime objects and reassing back to the copy of the request.POST
+        request_POST['check_in_date'] = datetime.strptime(
+            request.POST['check_in_date'], '%Y-%m-%d')
+        request_POST['check_out_date'] = datetime.strptime(
+            request.POST['check_out_date'], '%Y-%m-%d')
+        
+        # add the request_Post to the Booking Form
+        form = BookingForm(request_POST, instance=existing_booking)
+
+        # check if any errors exist in the form
+        print("ERRORS: ", form.errors)
+        
         if form.is_valid():
-            check_in_date = form.cleaned_data['check_in_date']
-            check_out_date = form.cleaned_data['check_out_date']
-            number_of_guests = form.cleaned_data['number_of_guests']
-            guest_name = form.cleaned_data['guest_name']
+            booking = form.save(commit=False)
+            booking.cottage = Cottage.objects.get(id=request.GET.get('cottage_id'))
+            booking.user = request.user
+            booking.save()
 
-            today = date.today()
-            max_booking_date = today + timedelta(days=21)
+            # check_out_date = form.cleaned_data['check_out_date']
+            # number_of_guests = form.cleaned_data['number_of_guests']
+            # guest_name = form.cleaned_data['guest_name']
 
-            if today <= check_in_date <= max_booking_date and today <= check_out_date <= max_booking_date and check_in_date < check_out_date:
-                cottage_id = request.GET.get('cottage_id')
-                cottage = Cottage.objects.get(id=cottage_id)
-                if not Booking.objects.filter(cottage=cottage, check_in_date__lt=check_out_date, check_out_date__gt=check_in_date).exists():
-                    booking = form.save(commit=False)
-                    booking.user = request.user
-                    booking.cottage = cottage
-                    booking.save()
-                    messages.success(request, "Booking Saved!")
-                    return redirect('index')
-                else:
-                    messages.error(
-                        request, "The selected dates are not available for this cottage.")
-            else:
-                messages.error(request, "Invalid booking dates.")
+            # today = date.today()
+            # max_booking_date = today + timedelta(days=180)
+
+            # if today <= check_in_date <= max_booking_date and today <= check_out_date <= max_booking_date and check_in_date < check_out_date:
+            #     cottage_id = request.GET.get('cottage_id')
+            #     cottage = Cottage.objects.get(id=cottage_id)
+            #     if not Booking.objects.filter(cottage=cottage, check_in_date__lt=check_out_date, check_out_date__gt=check_in_date).exists():
+            #         booking = form.save(commit=False)
+            #         booking.user = request.user
+            #         booking.cottage = cottage
+            #         booking.save()
+            #         messages.success(request, "Booking Saved!")
+            #         return redirect('index')
+            #     else:
+            #         messages.error(
+            #             request, "The selected dates are not available for this cottage.")
+            # else:
+            #     messages.error(request, "Invalid booking dates.")
+            return redirect('/')
     else:
-        form = BookingForm()
+        form = BookingForm(instance=existing_booking)
         cottage_id = request.GET.get('cottage_id')
         cottage = Cottage.objects.get(id=cottage_id)
 
-    return render(request, 'booking.html', {'form': form})
+    return render(request, 'booking.html', {'form': form, 'existing_booking': existing_booking, "cottage": cottage})
 
 
 

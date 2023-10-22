@@ -1,4 +1,3 @@
-from .models import Booking
 from django import forms
 from django.conf import settings
 from django.core.mail import send_mail
@@ -15,6 +14,7 @@ class ContactMessageForm(forms.ModelForm):
         fields = ['name', 'email', 'inquiry', 'message']
 
     def get_info(self):
+
         cleaned_data = self.cleaned_data
 
         name = cleaned_data.get('name').strip()
