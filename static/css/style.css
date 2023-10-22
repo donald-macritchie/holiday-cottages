@@ -40,6 +40,12 @@ body {
     font-weight: 100;
 }
 
+/* Messages */
+.messages-container{
+    position: absolute;
+    z-index: 2;
+}
+
 
 /* Footer */
 footer {
