@@ -169,7 +169,8 @@ def booking(request):
 def user_profile(request):
     user = get_object_or_404(User, id=request.user.id)
     user_bookings = Booking.objects.filter(user=user)
-    return render(request, 'user_profile.html', {'user': user, 'user_bookings': user_bookings})
+    return render(request, 'logout.html', {'user': user, 'user_bookings': user_bookings})
+
 
 
 # Host Details

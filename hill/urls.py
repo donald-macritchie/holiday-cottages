@@ -9,4 +9,5 @@ urlpatterns = [
     path('success/', views.ContactSuccessView.as_view(), name='success'),
     path('things_to_do/', views.things_to_do, name='things_to_do'),
     path('booking/', views.booking, name='book_cottage'),
+    
 ]
