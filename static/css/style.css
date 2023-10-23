@@ -855,3 +855,8 @@ footer {
     margin: 75px;
     font-size: 0.8em;
     }
+
+.modal_img{
+    height: auto;
+    object-fit: contain;
+}

@@ -28,27 +28,33 @@
                 <!-- User Bookings Section -->
                 <div class="profile-item">
                     <h2 class="accordion-header" id="userBookingsHeading">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#userBookingsCollapse" aria-expanded="false"
-                            aria-controls="userBookingsCollapse">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#userBookingsCollapse"
+                            aria-expanded="false" aria-controls="userBookingsCollapse">
                             User Bookings
                         </button>
                     </h2>
-                    <div id="userBookingsCollapse" class="accordion-collapse collapse"
-                        aria-labelledby="userBookingsHeading" data-bs-parent="#profileAccordion">
+                    <div id="userBookingsCollapse" class="accordion-collapse collapse" aria-labelledby="userBookingsHeading"
+                        data-bs-parent="#profileAccordion">
                         <div class="accordion-body">
                             <ul>
                                 {% for booking in user_bookings %}
                                 <li>
                                     <p>Cottage Name: {{ booking.cottage.name }}</p>
-                                    <p>Check-in: {{ booking.check_in_date }}</p>
-                                    <p>Check-out: {{ booking.check_out_date }}</p>
+                                    <p>Check-in Date: {{ booking.check_in_date }}</p>
+                                    <p>Check-out Date: {{ booking.check_out_date }}</p>
+
+                                    <a class="btn btn-primary" href="{% url 'edit_booking' booking.id %}">Edit Booking</a>
+                                    <a class="btn btn-primary" href="{% url 'delete_booking' booking.id %}">Delete Booking</a>
+
+
                                 </li>
+
                                 {% endfor %}
                             </ul>
                         </div>
                     </div>
                 </div>
+
                 <!-- Logout Section -->
                 <div class="profile-item">
                     <h2 class="accordion-header" id="logoutHeading">

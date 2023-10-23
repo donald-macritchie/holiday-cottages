@@ -176,6 +176,70 @@ def user_profile(request):
     return render(request, 'profile.html', context)
 
 
+# Edit booking
+
+@login_required
+def edit_booking(request, booking_id):
+    booking = get_object_or_404(Booking, id=booking_id, user=request.user)
+
+    if request.method == 'POST':
+        # Create a copy of the request.POST
+        request_POST = request.POST.copy()
+
+        # Parse the date strings into datetime objects
+        request_POST['check_in_date'] = datetime.strptime(
+            request.POST['check_in_date'], '%Y-%m-%d')
+        request_POST['check_out_date'] = datetime.strptime(
+            request.POST['check_out_date'], '%Y-%m-%d')
+
+        # Create a BookingForm instance without an existing instance
+        form = BookingForm(request_POST, instance=booking)
+
+        # Check if any errors exist in the form
+        if form.is_valid():
+            check_in_date = form.cleaned_data['check_in_date']
+            check_out_date = form.cleaned_data['check_out_date']
+
+            today = date.today()
+            max_booking_date = today + \
+                timedelta(days=180)  # 6 months in advance
+
+            if today <= check_in_date < check_out_date <= max_booking_date:
+                cottage_id = booking.cottage.id
+                cottage = Cottage.objects.get(id=cottage_id)
+
+                # Check if the selected dates are available for this cottage
+                if not Booking.objects.filter(cottage=cottage, check_in_date__lt=check_out_date, check_out_date__gt=check_in_date).exists():
+                    booking = form.save(commit=False)
+                    booking.user = request.user
+                    # booking.cottage = cottage
+                    booking.save()
+                    messages.success(request, "Booking Saved!")
+                    return redirect('user_profile')
+                else:
+                    messages.error(
+                        request, "The selected dates are not available for this cottage.")
+            else:
+                messages.error(request, "Invalid booking dates.")
+    else:
+        form = BookingForm(instance=booking)
+        cottage_id = booking.cottage.id
+        cottage = Cottage.objects.get(id=cottage_id)
+
+    return render(request, 'edit_booking.html', {'form': form, 'booking': booking})
+
+
+# Delete Booking
+@login_required
+def delete_booking(request, booking_id):
+    booking = get_object_or_404(Booking, id=booking_id, user=request.user)
+
+    if request.method == 'POST':
+        # Delete the booking
+        booking.delete()
+        return redirect('user_profile')
+
+    return render(request, 'delete_booking.html', {'booking': booking})
 
 
 # Host Details

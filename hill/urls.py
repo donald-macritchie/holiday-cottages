@@ -10,5 +10,10 @@ urlpatterns = [
     path('things_to_do/', views.things_to_do, name='things_to_do'),
     path('booking/', views.booking, name='book_cottage'),
     path('profile/', views.user_profile, name='user_profile'),
-    
+    path('edit_booking/<int:booking_id>', views.edit_booking, name='edit_booking'),
+    path('delete_booking/<int:booking_id>/',
+         views.delete_booking, name='delete_booking'),
+
+
+
 ]
