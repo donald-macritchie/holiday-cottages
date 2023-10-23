@@ -6,6 +6,33 @@
 
 {% block content %}
 
+<h1>Your Profile</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h2>User Profile</h2>
+            <h3>User Details</h3>
+            <p>Username: {{ user.username }}</p>
+            <p>Email: {{ user.email }}</p>
+
+
+            <h3>Your Bookings</h3>
+            <ul>
+                {% for booking in user_bookings %}
+                <li>
+                    <p>Cottage Name: {{ booking.cottage.name }}</p>
+                    <p>Check-in: {{ booking.check_in_date }}</p>
+                    <p>Check-out: {{ booking.check_out_date }}</p>
+
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+
+
 <div class="container-fluid logout-container">
     <div class="row">
         <div class="col-12 col-md-8 col-lg-6 mx-auto text-center d-flex justify-content-center align-items-center">
