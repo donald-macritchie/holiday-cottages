@@ -36,7 +36,7 @@ DEBUG = True
 
 # X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ['8000-donald-macritchie-holida-klnjz8fej0.us2.codeanyapp.com',
+ALLOWED_HOSTS = ['8003-donald-macritchie-holida-klnjz8fej0.us2.codeanyapp.com',
                  'holiday-cottages-d0c0525a5440.herokuapp.com']
 
 
