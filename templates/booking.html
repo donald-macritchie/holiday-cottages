@@ -7,12 +7,13 @@
         <div class="col-12 col-md-8 col-lg-6 mx-auto booking-section">
             <div class="col-12 mx-auto text-center booking-form-head">
                 <h1>Book a Cottage</h1>
-                <p>Please enter the following information to book a stay in {{ cottage.id }}</p>
-                <p>Prices to stay at {{ cottage.id }} start at <strong>£{{ cottage.price_per_night }}</strong></p>
+                <p>Please enter the following information to book a stay in <strong>{{ cottage.name }}</strong>.</p>
+                <p>Prices to stay at <strong>{{ cottage.name }}</strong> start at <strong>£{{ cottage.price_per_night }}</strong> per night.</p>
             </div>
             <div class="col-12 d-flex align-items-center booking-form-body">
                 <form method="post">
                     {% csrf_token %}
+                    {{ form.media }}
                     {{ form.as_p }}
                     <button type="submit">Book Now</button>
                 </form>
@@ -20,6 +21,7 @@
         </div>
     </div>
 </div>
+
 
 
 {% endblock %}

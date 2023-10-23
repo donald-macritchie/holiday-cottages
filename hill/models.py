@@ -100,7 +100,8 @@ class ThingsToKnow(models.Model):
 
 class Booking(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    cottage = models.ForeignKey(Cottage, on_delete=models.CASCADE)
+    cottage = models.ForeignKey(
+        Cottage, on_delete=models.CASCADE, related_name='bookings')
     check_in_date = models.DateField()
     check_out_date = models.DateField()
     number_of_guests = models.IntegerField(default=0)

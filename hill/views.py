@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from .models import Cottage, CottageImages, Amenities, ThingsToKnow, ThingsToDo, Booking, HostDetails
 from .forms import ContactMessageForm, BookingForm
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 from django.views.generic import FormView, TemplateView
 from django.urls import reverse_lazy
 from datetime import datetime, timedelta, date
@@ -163,30 +164,12 @@ def booking(request):
     return render(request, 'booking.html', {'form': form, 'cottage': cottage})
 
 
-    return render(request, 'booking.html', {'form': form, 'existing_booking': existing_booking, 'cottage': cottage})
-
-    # check_out_date = form.cleaned_data['check_out_date']
-    # number_of_guests = form.cleaned_data['number_of_guests']
-    # guest_name = form.cleaned_data['guest_name']
-
-    # today = date.today()
-    # max_booking_date = today + timedelta(days=180)
-
-    # if today <= check_in_date <= max_booking_date and today <= check_out_date <= max_booking_date and check_in_date < check_out_date:
-    #     cottage_id = request.GET.get('cottage_id')
-    #     cottage = Cottage.objects.get(id=cottage_id)
-    #     if not Booking.objects.filter(cottage=cottage, check_in_date__lt=check_out_date, check_out_date__gt=check_in_date).exists():
-    #         booking = form.save(commit=False)
-    #         booking.user = request.user
-    #         booking.cottage = cottage
-    #         booking.save()
-    #         messages.success(request, "Booking Saved!")
-    #         return redirect('index')
-    #     else:
-    #         messages.error(
-    #             request, "The selected dates are not available for this cottage.")
-    # else:
-    #     messages.error(request, "Invalid booking dates.")
+# User Profile
+@login_required
+def user_profile(request):
+    user = get_object_or_404(User, id=request.user.id)
+    user_bookings = Booking.objects.filter(user=user)
+    return render(request, 'user_profile.html', {'user': user, 'user_bookings': user_bookings})
 
 
 # Host Details
