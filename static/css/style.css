@@ -715,7 +715,7 @@ footer {
 
 /* Logout.html */
 
-.logout-container{
+.profile-container{
     background-image: url(../img/logout_img.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -723,13 +723,18 @@ footer {
     height: 90vh;
 }
 
-.logout-content {
+.profile-content {
     margin-top: 150px;
     background-color: rgba(142, 157, 97, 0.8);
     padding: 50px;
     border: solid 1px black;
     color: #f5f4f4;
 
+}
+
+.profile-item{
+    background-color: #ddddda;
+    color: #242526;
 }
 
 /* Sign Up.html */

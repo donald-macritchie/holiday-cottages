@@ -6,12 +6,12 @@
 
 {% block content %}
 
-<div class="container-fluid logout-container">
+<div class="container-fluid profile-container">
     <div class="row">
-        <div class="col-md-8 mx-auto logout-content">
+        <div class="col-md-8 mx-auto profile-content">
             <!-- User Details Section -->
             <div class="accordion" id="profileAccordion">
-                <div class="accordion-item">
+                <div class="profile-item">
                     <h2 class="accordion-header" id="userDetailsHeading">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse"
                             data-bs-target="#userDetailsCollapse" aria-expanded="true"
@@ -28,7 +28,7 @@
                     </div>
                 </div>
                 <!-- User Bookings Section -->
-                <div class="accordion-item">
+                <div class="profile-item">
                     <h2 class="accordion-header" id="userBookingsHeading">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse"
                             data-bs-target="#userBookingsCollapse" aria-expanded="false"
@@ -53,11 +53,11 @@
                     </div>
                 </div>
                 <!-- Logout Section -->
-                <div class="accordion-item">
+                <div class="profile-item">
                     <h2 class="accordion-header" id="logoutHeading">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse"
                             data-bs-target="#logoutCollapse" aria-expanded="false" aria-controls="logoutCollapse">
-                            Logout
+                            Sign out
                         </button>
                     </h2>
                     <div id="logoutCollapse" class="accordion-collapse collapse" aria-labelledby="logoutHeading"
