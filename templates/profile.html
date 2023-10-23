@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+
+<div class="container-fluid profile-container">
+    <div class="row">
+        <div class="col-md-8 mx-auto profile-content">
+            <!-- User Details Section -->
+            <div class="accordion" id="profileAccordion">
+                <div class="profile-item">
+                    <h2 class="accordion-header" id="userDetailsHeading">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#userDetailsCollapse" aria-expanded="true"
+                            aria-controls="userDetailsCollapse">
+                            User Details
+                        </button>
+                    </h2>
+                    <div id="userDetailsCollapse" class="accordion-collapse collapse show"
+                        aria-labelledby="userDetailsHeading" data-bs-parent="#profileAccordion">
+                        <div class="accordion-body">
+                            <p>Username: {{ user.username }}</p>
+                            <p>Email: {{ user.email }}</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- User Bookings Section -->
+                <div class="profile-item">
+                    <h2 class="accordion-header" id="userBookingsHeading">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#userBookingsCollapse" aria-expanded="false"
+                            aria-controls="userBookingsCollapse">
+                            User Bookings
+                        </button>
+                    </h2>
+                    <div id="userBookingsCollapse" class="accordion-collapse collapse"
+                        aria-labelledby="userBookingsHeading" data-bs-parent="#profileAccordion">
+                        <div class="accordion-body">
+                            <ul>
+                                {% for booking in user_bookings %}
+                                <li>
+                                    <p>Cottage Name: {{ booking.cottage.name }}</p>
+                                    <p>Check-in: {{ booking.check_in_date }}</p>
+                                    <p>Check-out: {{ booking.check_out_date }}</p>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Logout Section -->
+                <div class="profile-item">
+                    <h2 class="accordion-header" id="logoutHeading">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#logoutCollapse" aria-expanded="false" aria-controls="logoutCollapse">
+                            Logout
+                        </button>
+                    </h2>
+                    <div id="logoutCollapse" class="accordion-collapse collapse" aria-labelledby="logoutHeading"
+                        data-bs-parent="#profileAccordion">
+                        <div class="accordion-body">
+                            <div class="text-center">
+                                <h4>Logout of your account.</h4>
+                                <button type="button" class="btn btn-primary">
+                                    <a class="profile-logout" href="{% url 'account_logout' %}">Logout</a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

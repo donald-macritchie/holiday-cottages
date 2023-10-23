@@ -137,7 +137,7 @@ def booking(request):
 
             today = date.today()
             max_booking_date = today + \
-                timedelta(days=90)  # 3 months in advance
+                timedelta(days=180)  # 6 months in advance
 
             if today <= check_in_date < check_out_date <= max_booking_date:
                 cottage_id = request.GET.get('cottage_id')
@@ -167,9 +167,14 @@ def booking(request):
 # User Profile
 @login_required
 def user_profile(request):
-    user = get_object_or_404(User, id=request.user.id)
+    user = request.user
     user_bookings = Booking.objects.filter(user=user)
-    return render(request, 'logout.html', {'user': user, 'user_bookings': user_bookings})
+    context = {
+        'user': user,
+        'user_bookings': user_bookings,
+    }
+    return render(request, 'profile.html', context)
+
 
 
 
