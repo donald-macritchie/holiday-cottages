@@ -1,12 +1,28 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="container">
-    <h2>Delete Booking</h2>
-    <p>Are you sure you want to delete the booking for {{ booking.cottage.name }}?</p>
-    <form method="post">
-        {% csrf_token %}
-        <button type="submit" class="btn btn-danger">Delete</button>
-    </form>
+
+<div class="container-fluid delete-booking-container">
+    <div class="row">
+        <div class="col-12 col-md-10 col-lg-6 delete-booking-section">
+            <div class="col-12 col-md-10 col-lg-10 mx-auto text-center delete-booking-head">
+                <h2>Delete Booking</h2>
+                <p>Are you sure you want to delete the following booking?</p>
+                
+                <ul>
+                    <li><strong>Cottage Name:</strong> {{ booking.cottage.name }}</li>
+                    <li><strong>Check-in Date:</strong> {{ booking.check_in_date }}</li>
+                    <li><strong>Check-out Date:</strong> {{ booking.check_out_date }}</li>
+
+                </ul>
+                
+                <form method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
+
 {% endblock %}

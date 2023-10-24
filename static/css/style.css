@@ -862,7 +862,8 @@ footer {
     object-fit: contain;
 } */
 
-.edit-booking-container {
+.edit-booking-container,
+.delete-booking-container {
     background-image: url(../img/booking-img.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -870,7 +871,8 @@ footer {
     height: 90vh;
 }
 
-.edit-booking-section {
+.edit-booking-section,
+.delete-booking-section {
     margin: 100px auto;
     padding: 30px;
     background-color: rgba(142, 157, 97, 0.8);
@@ -879,6 +881,12 @@ footer {
     color: #f5f4f4;
 }
 
-.edit-booking-head {
+.edit-booking-head,
+.delete-booking-head {
+    margin-bottom: 30px;
+}
+
+.delete-booking-head li {
+    list-style-type: none;
     margin-bottom: 30px;
 }
