@@ -846,7 +846,7 @@ footer {
 
  }
 
-  @media screen and (max-width: 320px) {
+@media screen and (max-width: 320px) {
     .booking-form-head h1{
         font-size: 1.8em;
     }
@@ -855,8 +855,30 @@ footer {
     margin: 75px;
     font-size: 0.8em;
     }
+}
 
-.modal_img{
+/* .modal_img{
     height: auto;
     object-fit: contain;
+} */
+
+.edit-booking-container {
+    background-image: url(../img/booking-img.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 90vh;
+}
+
+.edit-booking-section {
+    margin: 100px auto;
+    padding: 30px;
+    background-color: rgba(142, 157, 97, 0.8);
+    border: solid 1px black;
+    border-radius: 5%;
+    color: #f5f4f4;
+}
+
+.edit-booking-head {
+    margin-bottom: 30px;
 }
