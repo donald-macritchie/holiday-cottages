@@ -809,8 +809,10 @@ footer {
 
 
 
-/* Booking.html */
-.booking-form-container {
+/* Booking.html/edit-booking/delete-booking */
+.booking-form-container,
+.edit-booking-container,
+.delete-booking-container {
     background-image: url(../img/booking-img.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -818,7 +820,9 @@ footer {
     height: 90vh;
 }
 
-.booking-section {
+.booking-section,
+.edit-booking-section,
+.delete-booking-section {
     margin: 100px auto;
     padding: 30px;
     background-color: rgba(142, 157, 97, 0.8);
@@ -836,6 +840,16 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.edit-booking-head,
+.delete-booking-head {
+    margin-bottom: 30px;
+}
+
+.delete-booking-head li {
+    list-style-type: none;
+    margin-bottom: 30px;
 }
 
 /* Booking.html media queries */
@@ -862,31 +876,5 @@ footer {
     object-fit: contain;
 } */
 
-.edit-booking-container,
-.delete-booking-container {
-    background-image: url(../img/booking-img.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    height: 90vh;
-}
 
-.edit-booking-section,
-.delete-booking-section {
-    margin: 100px auto;
-    padding: 30px;
-    background-color: rgba(142, 157, 97, 0.8);
-    border: solid 1px black;
-    border-radius: 5%;
-    color: #f5f4f4;
-}
 
-.edit-booking-head,
-.delete-booking-head {
-    margin-bottom: 30px;
-}
-
-.delete-booking-head li {
-    list-style-type: none;
-    margin-bottom: 30px;
-}

@@ -248,10 +248,8 @@ def delete_booking(request, booking_id):
 def host_details(request):
     host_details = HostDetails.objects.all()
 
-    context = {
-        'host_details': host_details,
-    }
-    return render(request, 'contact.html', context)
+    print(host_details) 
+    return render(request, 'contact.html', {'host_details': host_details})
 
 # ContactMessage
 class ContactMessage(FormView):
