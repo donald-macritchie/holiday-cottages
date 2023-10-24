@@ -207,6 +207,59 @@ When going on a vacation, many people want to plan their time away with includin
 - Much like the previous sections, The Local Attractions section gives users a view to what they can do in the area whilst on their vacation. Within the Peak District and surrounding counties, there are numerous stately homes and small towns with a great deal of heritage to vist. With this section, users can find a description of the attraction, its location relative to the village of Longnor and a link guiding the user away from the site to find out more information.
 
 
+### Sign Up
+
+Users can sign up to the  Hill Cottages site via the sign up page. Here user will enter a username, email address and password of their choosing and be prompted to retype the password. Once Signed up, users will be redirected back to the Home Page. If users have already created an account, there is a link to the sign in page they can follow.
+
+<!-- SIGN UP SCREENSHOT -->
+
+### Sign In
+Returning users to the site will also have the abiolity to sign in to their account via the Sign In page. Here they will enter their username and password to be authenticated. If users have not yet created an account, there is a link to the sign up page they can follow. 
+
+<!-- SIGN IN SCREENSHOT -->
+
+### Profile
+User who have signed in to their accounts will be able to access their own profile in which they can view their User Details, User Booking and have the ability to logout of the account. These sections have been implements into a dropdown menu for users to navigate between.
+
+<!-- PROFILE SCREENSHOT -->
+
+#### User Details
+
+- The User Details section includes the username and email they have signed up with
+  
+<!-- USER DETAILS SCREENSHOT -->
+
+#### User Bookings
+
+- The User Bookings section details what existing booking they have. It displays the name of the cottage along with the check in and check out dates. Below this information are two buttons; "Edit Booking" and "Delete Booking". These buttons will navigate the user to be able to change and delete their existing bookings.
+
+<!-- USER BOOKINGS SCREENSHOT -->
+
+##### Edit Booking
+
+- When the user click on the "edit booking" button, this will navigate the user to the Edit booking page. On the page is displayed the same form they used to make the original booking and the current booking details are autopopulated in the fields. From here users can edit the check in dates, check out dates, number of guests and the guest name. Once the user has clicked "confirm" they will be redirected back to their profile. 
+
+<!-- EDIT BOOKING SCREENSHOT -->
+
+##### Delete Booking
+
+- If a users decides to cancel their booking, they will click "delete booking". This will direct them to the delete booking page. The page will display a warning message sking them if they are sure, along with the current booking details and a "delete" button. Once click this will redirect them back to their profile. 
+
+<!-- DELETE BOOKING SCREENSHOT -->
+
+#### Logout
+
+- At the bottom of the Profile page dropdown, users can logout out of their account. When the Logout button is clicked, they will be redirected to the logout page where a warning message will ask if they are sure. Once confirmed, the user is redirected to the Home Page. and a message will be displayed stating "you have successfully signed out". 
+
+<!-- LOGOUT PAGE SCREENSHOT -->
+
+
+
+
+
+
+
+
 
 <!-- ** Homepage
 **COttage pages
