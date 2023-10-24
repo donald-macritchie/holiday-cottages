@@ -254,23 +254,6 @@ User who have signed in to their accounts will be able to access their own profi
 <!-- LOGOUT PAGE SCREENSHOT -->
 
 
-
-
-
-
-
-
-
-<!-- ** Homepage
-**COttage pages
-** Contact
-**Things to do
-**Signup
-**Login
-**Logout
-**Booking -->
-
-
 <!-- UI/UX -->
 <!-- *** Explanantion of design choices
 
