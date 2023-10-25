@@ -12,48 +12,65 @@ Hill Cottages provides a warm and welcoming starting point for those wishing to 
 ## Features
 
 ### Home Page
+
 The Hill Cottages home landing page provides an overview of what the site is about. Users can use various links to navigate to different pages on the site in order to get all the information they need.
 
 #### Navigation
+
 ![This is a screenshot of the sites navbar](./static/screenshots/navbar-scrshot.png)
 
 When users enter the site for the first time, it is essential that the top navigation is clear and intuitive. The Navbar sets out a number of different options for the user to visit.
 
 ##### Home
- - The "Home" link will direct users back to the home landing page. where they first started.
+
+- The "Home" link will direct users back to the home landing page. where they first started.
+  
 <!-- HOME NAV SCREENSHOT -->
 
 ##### Cottages
- - The "Cottages" link provides a dropdown menu in which links are displayed for the user to navigate to either cottage page.
+
+- The "Cottages" link provides a dropdown menu in which links are displayed for the user to navigate to either cottage page.
+  
 <!-- COTTAGE NAV SCREENSHOT -->
 
 ##### Homestead
- - The "Homestead" link within the "Cottages" dropdown menu will lead users to the Homestead Cottage page where they can gain view the cottageand its corrosponding information.
+
+- The "Homestead" link within the "Cottages" dropdown menu will lead users to the Homestead Cottage page where they can gain view the cottageand its corrosponding information.
+  
 <!-- HOMESTEAD NAV SCREENSHOT -->
 
 ##### Marketview
- - The "Marketview" link within the "Cottages" dropdown menu will lead users to the Marketview Cottage page where they can gain view the cottageand its corrosponding information.
+
+- The "Marketview" link within the "Cottages" dropdown menu will lead users to the Marketview Cottage page where they can gain view the cottageand its corrosponding information.
+
 <!-- MARKETVIEW NAV SCREENSHOT -->
 
 ##### Contact
- - The "Contact" link will bring users to the contact page.
+
+- The "Contact" link will bring users to the contact page.
+
 <!-- CONTACT NAV SCREENSHOT -->
 
 ##### Things to do
- - The "Things To Do" link will bring users to the Things To Do page where users can find out more information on what activites and attractions they may want to explore during their stay.
+
+- The "Things To Do" link will bring users to the Things To Do page where users can find out more information on what activites and attractions they may want to explore during their stay.
+  
 <!-- THINGS TO DO NAV SCREENSHOT -->
 
 ##### Sign Up
- - The "Sign up" link directs users to the sign up page where they can create a personal account for Hill Cottages.
+
+- The "Sign up" link directs users to the sign up page where they can create a personal account for Hill Cottages.
 
 <!-- SIGN UP NAV SCREENSHOT -->
 
 
 ##### Sign In
- - The "Sign In" link will be used by users who ave already signed up to Hill Cottages.
+
+- The "Sign In" link will be used by users who ave already signed up to Hill Cottages.
 <!-- SIGN IN NAV SCREENSHOT -->
 
 ##### Profile
+
 - The "Profile" link will be available to users who have signed up to Hill Cottages and are signed in to their accounts.
 <!-- PROFILE NAV SCREENSHOT -->
 
@@ -65,7 +82,7 @@ When users enter the site for the first time, it is essential that the top navig
 <!-- HERO IMAGE SCREENSHOT -->
 
 
- - The Text within the Hero Image "Your PerfectStay in the Peak District", immediately informs the user of roughly where the cottages are located. 
+- The Text within the Hero Image "Your PerfectStay in the Peak District", immediately informs the user of roughly where the cottages are located. 
  
  
 <!-- LOGO SCREENSHOT -->
@@ -79,13 +96,13 @@ When users enter the site for the first time, it is essential that the top navig
 
 #### Our Cottages
 
- - This section will showcase which cottages are available to book and links have been provided for the user to navigate to either cottage. Within both links, the background image has been set to the respective cottages house signs. This gives a sense of authenticity to the user.
+- This section will showcase which cottages are available to book and links have been provided for the user to navigate to either cottage. Within both links, the background image has been set to the respective cottages house signs. This gives a sense of authenticity to the user.
 
 <!-- OUR COTTAGES HOME SCREEN SHOT -->
 
 #### Site Links
 
- - Additional site links for "Contact", "Sign Up" and "Things To Do", have been provided for users to further explore the site and maximise productivity on there site visit.
+- Additional site links for "Contact", "Sign Up" and "Things To Do", have been provided for users to further explore the site and maximise productivity on there site visit.
 
 <!-- SITE LINKS SCREENSHOT -->
 
@@ -101,6 +118,7 @@ When users enter the site for the first time, it is essential that the top navig
 <!-- FOOTER SCREENSHOT -->
 
 ### Homestead Cottage and Marketview Cottage
+
 The respective cottage pages have been designed to showcase the cottage in its entirety.When users visit either cottage page, they will be able to access information about the specific cottage and what it has to offer. The cottage pages have been split up into section for the user to navigate. Homestead and Marketview pages have been created in an identical layout. 
 
 #### Hero Image and Text
@@ -118,7 +136,7 @@ The respective cottage pages have been designed to showcase the cottage in its e
 
 #### Cottage Description
 
- - Below the image gallery is a breif description of the cottage along with a few of the cottage amenities on offer. It also states The number of bedrooms and bathrooms so the user can determine whether this cottage is right for them.
+- Below the image gallery is a breif description of the cottage along with a few of the cottage amenities on offer. It also states The number of bedrooms and bathrooms so the user can determine whether this cottage is right for them.
 
 <!-- COTTAGE DESCRIPTION SCREENSHOT -->
 
@@ -214,11 +232,13 @@ Users can sign up to the  Hill Cottages site via the sign up page. Here user wil
 <!-- SIGN UP SCREENSHOT -->
 
 ### Sign In
+
 Returning users to the site will also have the abiolity to sign in to their account via the Sign In page. Here they will enter their username and password to be authenticated. If users have not yet created an account, there is a link to the sign up page they can follow. 
 
 <!-- SIGN IN SCREENSHOT -->
 
 ### Profile
+
 User who have signed in to their accounts will be able to access their own profile in which they can view their User Details, User Booking and have the ability to logout of the account. These sections have been implements into a dropdown menu for users to navigate between.
 
 <!-- PROFILE SCREENSHOT -->
@@ -266,6 +286,54 @@ User who have signed in to their accounts will be able to access their own profi
 
 
 <!-- Testing -->
+
+## Testing
+
+### Manual Testing
+
+#### Home Page
+
+- The following table documents the manual testing carried out on the home page.
+  
+#### NavBar
+
+| Feature | Expect | Action | Result |
+| ---| ---| ---| ---|
+| Hill Cottages NavBar Logo. | When clicked, the home page will open. | Clicked on Hill Cottages Logo. | Home Page opened. |
+| Home NavBar Button. | When clicked the Home page will open. | Clicked on Home Button. | Home Page opened when clicked. |
+| Cottages NavBar Button. | When clicked, a dropdown menu will appear showing links to the respective cottage pages. | Clicked on the Cottages Button. | Dropdown menu appeared showing both Homestead and Marketview cottage links. |
+| Cottages Dropdown Homestead Button. | When clicked, the user will be directed to the Homestead Cottage page. | Clicked on the Homestead Button. | Homestead page opened. |
+| Cottage Dropdown Marketview Button. | When clicked, the user will be dircted to the Marketview cottage page. | Clicked on the Marketview button. | Marketview page Opened. |
+| Contact NavBar Button | When clicked the user will be directed to the Contact page. | Clicked on the Contact Button. | Contact Page opened. |
+| Things To Do NavBar Button. | When clicked, the user will be directed to the Things To Do Page. | Clicked in the Things To Do button. | Things To Do page opens. |
+
+- If user is unauthenticated;
+  
+| Feature | Expect | Action | Result |
+| ---| ---| ---| ---|
+| Sign Up NavBar Button. | When clicked, the user will be directed to the Sign Up page. | Clicked on the Sign Up button. | Sign Up page opened. |
+| Sign In NavBar Button. | When clicked, the user will be directed to the Sign In page. | Clicked on the Sign In button. | Sign In page opened. |
+
+- If user is authenticated;
+
+| Feature | Expect | Action | Result |
+| ---| ---| ---| ---|
+| Profile NavBar Button. | When clicked, the user will be directed to the Profile page. | Clicked on the Profile button. | Profile page opened. |
+
+#### Our Cottages
+
+| Feature | Expect | Action | Result |
+| ---| ---| ---| ---|
+| Homestead Button. | When clicked, the user will be directed to the Homestead page. | Clicked on the Homestead button. | Homestead page opened. |
+| Marketview Button. | When clicked, the user will be directed to the Marketview page. | Clicked on the Marketview button. | Marketview page opened. |
+
+#### Site Links
+
+| Feature | Expect | Action | Result |
+| ---| ---| ---| ---|
+| Contact Button. | 
+
+
 
 <!-- Manual Testing
 /**

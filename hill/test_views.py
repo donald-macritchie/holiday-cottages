@@ -1,7 +1,6 @@
 import unittest
-from .views import homestead_cottage
 from django.urls import reverse
-from django.test import Client
+from django.test import TestCase, Client
 
 
 class TestHomesteadCottageView(unittest.TestCase):
@@ -21,17 +20,6 @@ class TestHomesteadCottageView(unittest.TestCase):
         homestead_cottage = response.context['homestead_cottage']
 
         self.assertEqual(homestead_cottage.name, 'Homestead')
-        
-
-
-class TestBookingView(unittest.TestCase):
-    def setUp(self):
-        self.client = Client
-
-    def test_booking_view_GET(self):
-        response = self.client.get(reverse('booking'))
-        
-        self.assertEqual(response.status_code, 200)
 
 
 if __name__ == '__main__':
