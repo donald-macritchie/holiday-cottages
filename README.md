@@ -289,9 +289,9 @@ User who have signed in to their accounts will be able to access their own profi
 
 ## Testing
 
-### Manual Testing
+## Manual Testing
 
-#### Home Page
+### Home Page
 
 - The following table documents the manual testing carried out on the home page.
   
@@ -331,7 +331,152 @@ User who have signed in to their accounts will be able to access their own profi
 
 | Feature | Expect | Action | Result |
 | ---| ---| ---| ---|
-| Contact Button. | 
+| Contact Button. | When clicked, the user will be directed to the Contact page. | Clicked on the Contact button. | Contact page opened. |
+| Sign Up Button. | When clicked, the user will be directed to the Sign Up page. | Clicked on the Sign Up button. | Sign Up page opened. |
+| Things To Do Button. | When clicked, the user will be directed to the Things To Do page. | Clicked on the Things To Do button. |Things To Do page opened. |
+
+#### Footer 
+
+| Feature | Expect | Action | Result |
+| ---| ---| ---| ---|
+| Contact Link | When clicked, the Contact page will open. | Clicked on contact link. | Contact page opened. |
+| Facebook Social Link | When clicked, The user will be directed to Facebook's Login Page | Clicked on Facebook link. | Facebook Home page opened. |
+| Instagram Social Link | When clicked, The user will be directed to Instagram's Login Page | Clicked on Instagram link. | Instagram Home page opened. |
+| Twitter Social Link | When clicked, The user will be directed to Twitter's Login Page | Clicked on Twitter link. | Twitter Home page opened. |
+| Sign Up link. | When clicked the user will be directed to the Sign Up page. | Clicked on the Sign Up link. | Sign UP page opened. |
+
+### Homestead
+
+- The following table documents the manual testing carried out on the Homestead Cottage page.
+
+#### Image Gallery
+
+| Feature | Expect | Action | Result |
+| --| --| --| --|
+| Image Gallery. | When Hovered over with the cursor, the cursor pointer will change. | Hovered over main image. | Cursor pointer changed. |
+| Image Gallery. | When clicked the image gallery modal will appear. | Clicked main image. | Image gallery modal appeared. |
+| Image Gallery carousel. | When clicking on the carousel indicators, images should loop from one image to the next. | Clicked on carousel indicator and loop through entire image gallery. | Image gallery can be looped though using the carousel. |
+| Image Gallery Modal Close Button. | When clicked, the image gallery button should close the modal. | Clicked the Close button. | Image gallery modal closed. |
+
+#### Booking Link
+
+- If the user is unauthenticated;
+
+| Feature | Expect | Action | Result |
+| --| --| --| --|
+| Book This Cottage Button. | When clicked, the user will be redireted to the Sign Up page. | Clicked the Book This Cottage Button. | Sign Up Page opened. |
+
+- If the user is authenticated;
+
+| Feature | Expect | Action | Result |
+| --| --| --| --|
+| Book This Cottage Button. | When clicked, the user will be directed to the Booking page. | Clicked the Book This Cottage Button. | Booking Page opened. |
+
+#### Amenities Section
+
+| Feature | Expect | Action | Result |
+| --| --| --| --|
+| Bathroom Dropdown. | When clicked, the Bathroom amenities list will collapse showing the details. | Clicked the Bathroom dropdown button. | Bathroom Amenities list collapsed and display details. |
+
+- The Amenities section uses the same functinality throughout and the remaining dropdowns were tested in the same fashion and all results were as expected. 
+
+#### Google Map
+
+| Feature | Expect | Action | Result |
+| --| --| --| --|
+| Google Map Cottage Location. | Google map to show cottage location with use of a location marker. | Checked cottage location vs marker location. | Marker Location in the correct position on the map. |
+| Google map zoom in function. | When clicked, the map zooms in towards the cottage location. | Clicked zoom in button. | Map zooms in to cottage location. |
+| Google map zoom out function. | When clicked, the map zooms out away from the cottage location. | Clicked zoom out button. | Map zooms out away from cottage location. |
+| Google Maps streetview function. | When the "orange man" is positioned next to the cottage location, it will display the google street view of the cottage. | Place "Orange man" next to cottage location. | Cottage is visible on google maps streetview. |
+
+#### Things To Know
+
+| Feature | Expect | Action | Result |
+| --| --| --| --|
+| Checking in and out Dropdown. | When clicked, the Checking in and out list will collapse showing the details. | Clicked the Checking in and out dropdown button. | checking in and out list collapsed and display details. |
+
+- The Things to Know section uses the same functinality throughout and the remaining dropdowns were tested in the same fashion and all results were as expected.
+
+
+### Marketview
+
+- The following table documents the manual testing carried out on the Marketview Cottage page.
+
+#### Image Gallery
+
+| Feature | Expect | Action | Result |
+| --| --| --| --|
+| Image Gallery. | When Hovered over with the cursor, the cursor pointer will change. | Hovered over main image. | Cursor pointer changed. |
+| Image Gallery. | When clicked the image gallery modal will appear. | Clicked main image. | Image gallery modal appeared. |
+| Image Gallery carousel. | When clicking on the carousel indicators, images should loop from one image to the next. | Clicked on carousel indicator and loop through entire image gallery. | Image gallery can be looped though using the carousel. |
+| Image Gallery Modal Close Button. | When clicked, the image gallery button should close the modal. | Clicked the Close button. | Image gallery modal closed. |
+
+#### Booking Link
+
+- If the user is unauthenticated;
+
+| Feature | Expect | Action | Result |
+| --| --| --| --|
+| Book This Cottage Button. | When clicked, the user will be redireted to the Sign Up page. | Clicked the Book This Cottage Button. | Sign Up Page opened. |
+
+- If the user is authenticated;
+
+| Feature | Expect | Action | Result |
+| --| --| --| --|
+| Book This Cottage Button. | When clicked, the user will be directed to the Booking page. | Clicked the Book This Cottage Button. | Booking Page opened. |
+
+#### Amenities Section
+
+| Feature | Expect | Action | Result |
+| --| --| --| --|
+| Bathroom Dropdown. | When clicked, the Bathroom amenities list will collapse showing the details. | Clicked the Bathroom dropdown button. | Bathroom Amenities list collapsed and display details. |
+
+- The Amenities section uses the same functinality throughout and the remaining dropdowns were tested in the same fashion and all results were as expected.
+
+#### Google Map
+
+| Feature | Expect | Action | Result |
+| --| --| --| --|
+| Google Map Cottage Location. | Google map to show cottage location with use of a location marker. | Checked cottage location vs marker location. | Marker Location in the correct position on the map. |
+| Google map zoom in function. | When clicked, the map zooms in towards the cottage location. | Clicked zoom in button. | Map zooms in to cottage location. |
+| Google map zoom out function. | When clicked, the map zooms out away from the cottage location. | Clicked zoom out button. | Map zooms out away from cottage location. |
+| Google Maps streetview function. | When the "orange man" is positioned next to the cottage location, it will display the google street view of the cottage. | Place "Orange man" next to cottage location. | Cottage is visible on google maps streetview. |
+
+#### Things To Know
+
+| Feature | Expect | Action | Result |
+| --| --| --| --|
+| Checking in and out Dropdown. | When clicked, the Checking in and out list will collapse showing the details. | Clicked the Checking in and out dropdown button. | checking in and out list collapsed and display details. |
+
+- The Things to Know section uses the same functinality throughout and the remaining dropdowns were tested in the same fashion and all results were as expected.
+
+### Things To Do
+
+- The following table documents the manual testing carried out on the Thinsg To Do page.
+
+#### Walks and Hikes
+
+| Feature | Expect | Action | Result |
+| --| --| --| --|
+| Dragons Back More Info Link | When clicked, the user will be directed to letsgotpeakdistrict.co.uk's Dragon's Back Walk Details Page. | Clicked the More Info link. | letsgotpeakdistrict.co.uk's Dragon's Back Walk Details Page opened. |
+| Hartington Dales More Info link. | When clicked, the user will be redirected to letsgotpeakdistrict.co.uk's Hartington Dales Walk Details page. | Clicked More Info link. | letsgotpeakdistrict.co.uk's Hartington Dales Walk Details page opened. |
+
+#### Pubs And Restaurants
+
+| Feature | Expect | Action | Result |
+| --| --| --| --|
+| Ye Old Cheshire Cheese Inn More Info link. | When clicked, the user will be directed to Ye Old Cheshire Cheese Inn's Trip Advisor Page. | Clicked More Info link | Ye Old Cheshire Cheese Inn's Trip Advisor Page opened. |
+| Pack Horse Inn More Info link. | When clicked, the user will be directed to The Pack Horse Inn website. | Clicked More Info link | The Pack Horse Inn's website opened. |
+| Royal Oak More Info link. | When clicked, the user will be directed to the Royal Oak's website. | Clicked More Info link. | Teh Royal Oak's website opened. |
+
+#### Local Attractions
+| Feature | Expect | Action | Result |
+| --| --| --| --|
+| Chatworth House More Info link. | When clicked, the Chatsworth House website will open. | Clicked More Info link. | The Chatsworth House website opened. |
+ Bakewell More Info link. | When clicked Visit Peak District website will open. | Clicked More Info link. | Visit Peak District opened. |
+ Buxton More Info link. | When clicked Visit buxton website will open. | Clicked More Info link. | The Visit Buxton wevsite opened. |
+ 
+ 
 
 
 
