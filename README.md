@@ -425,6 +425,7 @@ User who have signed in to their accounts will be able to access their own profi
 | --| --| --| --|
 | Book This Cottage Button. | When clicked, the user will be directed to the Booking page. | Clicked the Book This Cottage Button. | Booking Page opened. |
 
+
 #### Amenities Section
 
 | Feature | Expect | Action | Result |
@@ -452,7 +453,7 @@ User who have signed in to their accounts will be able to access their own profi
 
 ### Things To Do
 
-- The following table documents the manual testing carried out on the Thinsg To Do page.
+- The following table documents the manual testing carried out on the Things To Do page.
 
 #### Walks and Hikes
 
@@ -470,6 +471,7 @@ User who have signed in to their accounts will be able to access their own profi
 | Royal Oak More Info link. | When clicked, the user will be directed to the Royal Oak's website. | Clicked More Info link. | Teh Royal Oak's website opened. |
 
 #### Local Attractions
+
 | Feature | Expect | Action | Result |
 | --| --| --| --|
 | Chatworth House More Info link. | When clicked, the Chatsworth House website will open. | Clicked More Info link. | The Chatsworth House website opened. |
@@ -477,18 +479,173 @@ User who have signed in to their accounts will be able to access their own profi
  Buxton More Info link. | When clicked Visit buxton website will open. | Clicked More Info link. | The Visit Buxton wevsite opened. |
  
  
+### Sign Up 
+
+- The following table documents the manual testing carried out on the Sign Up page.
+
+| Feature | Expect | Action | Result |
+| --| --| --| --|
+| Sign In link | When clicked the user will be redirected to the Sign In page. | Clicked the Sign In link. | Sign In page opens. |
+| Sign Up Button. | Once the user has entered all information into the username, email, password and confirm password fields, the user will be redirected back to the Home Page. | Entered all information into the provifed fields and clicked Sign Up button. | User account is created and Home page opened. |
+
+### Sign In
+
+- The following table documents the manual testing carried out on the Sign In page.
+
+| Feature | Expect | Action | Result |
+| --| --| --| --|
+| Sign Up link | When clicked the user will be redirected to the Sign Up page. | Clicked the Sign Up link. | Sign up page opened. | 
+| Sign In Button. | Once the user has entered their username and password, when the sign in button is clicked, the user is redirected to the Home Page. | Entered all the information into the required fields and clcied Sign In Button. | Home page opens. |
+
+### Profile 
+
+- The following table documents the manual testing carried out on the Profile page.
+  
+| Feature | Expect | Action | Result |
+| --| --| --| --|
+| User Details Dropdown | When clicked the User Details dropdown will collapse and show the users details. | Clicked the User Details Dropdown. | User details are made visible.| 
+| User Bookings Dropdown | When clicked the User Bookings dropdown will collapse and show the users bookings. | Clicked the User Bookings Dropdown. | User bookings are made visible.| 
+| Logout Dropdown | When clicked the Logout dropdown will collapse and show the Logout button. | Clicked the Logout Dropdown. | Logout Button is made visible.| 
+
+#### User Bookings
+
+| Feature | Expect | Action | Result |
+| --| --| --| --|
+| Edit Booking Button. | When clicked the user is redirected to the edit booking page. | Clicked the edit booking button. | Edit booking page opens. | 
+| Delete Booking Button | When clicked the user will be redirected to the delete booking page. | Clicked the delete booking button. | Delete booking page opened. | 
+
+#### Logout 
+| Feature | Expect | Action | Result |
+| --| --| --| --|
+| Logout Button | When clicked the user will be logged out of their account and redirected to the Home page. | Clicked the Logout button. | Logged out of account and home page opened. | 
+
+### Booking
+
+- The following table documents the manual testing carried out on the Booking Page.
+
+| Feature | Expect | Action | Result |
+| --| --| --| --|
+| Check in date widget | When clicked, a pop up calendar will appear for the user to interact with. | Clicked the Check in date widget. | Calendar popped up. | 
+| Check in date calendar. | When dates are clicked on from the calendar, the date will populate the Check in date field. | Clicked any date from todays date in the Calendar. | Check in date field populated the selected date. |  
+|Check out date widget. | When clicked a pop up calendar will appear for the user to interact with. | Clicked the check out date widget. | Calendar popped up. | 
+| Check out date calendar. | When dates are clicked on from the calendar, the date will populate the check out date field. | Clicked a date after the check in date selection. | Check out date field is populated with the selected date | 
+| Number of guests - Typed input | A number can be entered into the field by typing a number | Enter a number via the keyboard | Only numbers appear in teh field. |
+| Number of guests - rocker switch | The number of guests can be input via th rocker switch at the end of the number of guests field | Use rocker switch to input number into number of guests field. | Number has been input into number of guests fields. |
+
+- If dates are available;
+  
+| Feature | Expect | Action | Result |
+| --| --| --| --|
+| Book Now Button | Once all information has been input into the fields, the book now button will store the booking in the database and redirect the user to home page. | Input all relevant information and click Book Now. | Booking is stored in database and Home page opened. | 
+
+- If dates are unavailable;
+- 
+| Feature | Expect | Action | Result |
+| --| --| --| --|
+| Book Now Button | If the dates selected are not available, an error message will apear stating "The selected dates are not available for this cottage". | Input invalid dates | Error message appears at the top of the page stating "The selected date are not available for this cottage". |  
+
+### Edit Booking
+
+- The following table documents the manual testing carried out on the Edit Booking Page.
+
+| Feature | Expect | Action | Result |
+| --| --| --| --|
+| Check in date widget | When clicked, a pop up calendar will appear for the user to interact with. | Clicked the Check in date widget. | Calendar popped up. |
+| Check in date calendar. | When dates are clicked on from the calendar, the date will populate the Check in date field. | Clicked any date from todays date in the Calendar. | Check in date field populated the selected date. |  
+|Check out date widget. | When clicked a pop up calendar will appear for the user to interact with. | Clicked the check out date widget. | Calendar popped up. |
+| Check out date calendar. | When dates are clicked on from the calendar, the date will populate the check out date field. | Clicked a date after the check in date selection. | Check out date field is populated with the selected date |
+| Number of guests - Typed input | A number can be entered into the field by typing a number | Enter a number via the keyboard | Only numbers appear in teh field. |
+| Number of guests - rocker switch | The number of guests can be input via th rocker switch at the end of the number of guests field | Use rocker switch to input number into number of guests field. | Number has been input into number of guests fields. |
+
+- If date are available;
+
+| Feature | Expect | Action | Result |
+| --| --| --| --|
+| Confirm Button | Once all information has been changed bu the user and click the Confirm, the user is redirected back to their Profile page. | Change booking information and click confirm. | New booking is saved successfully and Profile page opened. |
+
+- If Dates are not available;
+
+| Feature | Expect | Action | Result |
+| --| --| --| --|
+|Confirm Button | Once all fields have been entered and the confirm button is clicked, if the dates aree unavailable, an error message will apear at the top of the edit booking page. | Enter invalid dates and click confirm. | Error message appear stating " Selected dates are unavailable". | 
+ 
+
+ ### Delete Booking
+
+ - The following table documents the manual testing carried out on the Delete Booking Page.
+
+| Feature | Expect | Action | Result |
+| --| --| --| --|
+| Delete Button | When clicked the booking will be delete from the database and will be removed from the users User Booking in their profile. | Clicked Delete Button | Booking is deleted from the datebase and no longer appears in the Users Profile. | 
+
+## Automated Testing
+
+Automated testing has been carried out using Django's inbuilt TestCase and Unittest. 
+
+### Models Tests
+
+- TestCottage has been implemented to test the Cottage Model.
+
+```
+
+class TestCottage(unittest.TestCase):
+
+    def test_create_cottage(self):
+        cottage = Cottage(
+            name='Test Cottage',
+            slug='test-cottage',
+            description='A test cottage for unittests',
+            location='Test Location',
+            price_per_night=100,
+            no_of_bedrooms=2,
+            no_of_bathrooms=1,
+        )
+        
+        self.assertEqual(cottage.name, 'Test Cottage')
+        self.assertEqual(cottage.slug, 'test-cottage')
+        self.assertEqual(cottage.description, 'A test cottage for unittests')
+        self.assertIsInstance(cottage, Cottage)
+        self.assertTrue(cottage.name.startswith('Test'))
+        self.assertIn('unittests', cottage.description)
+
+
+    def test_cottage_string_representation(self):
+
+        cottage = Cottage(name='Test Cottage')
+        
+        self.assertEqual(str(cottage), 'Test Cottage')
+
+    if __name__ == '__main__':
+        unittest.main()
+
+```
+
+#### test_create_cottage
+
+- In test_create_cottage, it is testing if the cottage model is creating the correct objects in the model. 
+-  It is also testing if the objects have been provides with correct values.
+  
+#### test_cottage_string_representation
+
+- Here the Test is checking if the string in the cottage object is correct.
+
+```
+
+System check identified no issues (0 silenced).
+..
+----------------------------------------------------------------------
+Ran 2 tests in 0.000s
+
+OK
+
+```
+
+### Views Tests
 
 
 
-<!-- Manual Testing
-/**
-Feature
-Expect
-Action
-Result
-  */
 
-Automated Testing
+ 
 
 Validatiors
 
