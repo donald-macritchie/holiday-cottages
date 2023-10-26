@@ -149,7 +149,7 @@ def booking(request):
                     booking.cottage = cottage
                     booking.save()
                     messages.success(request, "Booking Saved!")
-                    return redirect('index')
+                    return redirect('booking_confirmation', booking_id=booking.id)
                 else:
                     messages.error(
                         request, "The selected dates are not available for this cottage.")
@@ -161,6 +161,21 @@ def booking(request):
         cottage = Cottage.objects.get(id=cottage_id)
 
     return render(request, 'booking.html', {'form': form, 'cottage': cottage})
+
+
+# Booking confirmation
+
+
+@login_required
+def booking_confirmation(request, booking_id):
+    try:
+        booking = Booking.objects.get(id=booking_id)
+    except Booking.DoesNotExist:
+        messages.error(request, "Booking not found.")
+        return redirect('index')
+
+
+    return render(request, 'booking_confirmation.html', {'booking': booking})
 
 
 # User Profile
@@ -242,7 +257,7 @@ def delete_booking(request, booking_id):
 
 
 
-# ContactMessage
+# Contact
 
 
 class ContactMessage(FormView): 

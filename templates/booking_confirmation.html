@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-10 col-lg-10">
+            <h1>Booking Confirmation</h1>
+            <p>Your booking has been successfully confirmed!</p>
+            
+            <h2>Booking Details</h2>
+            <p>Check-in Date: {{ booking.check_in_date }}</p>
+            <p>Check-out Date: {{ booking.check_out_date }}</p>
+            
+            
+            <a href="{% url 'index' %}">Go back to the homepage</a>
+    </div>
+</div>
+
+{% endblock %}
