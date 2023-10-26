@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Cottage, CottageImages, Amenities, ThingsToKnow, Booking, ContactMessage, ThingsToDo, HostDetails
+from .models import Cottage, CottageImages, Amenities, ThingsToKnow, Booking, ThingsToDo, HostDetails
 from django_summernote.admin import SummernoteModelAdmin
 
 
@@ -14,6 +14,5 @@ admin.site.register(CottageImages)
 admin.site.register(Amenities)
 admin.site.register(ThingsToKnow)
 admin.site.register(Booking)
-admin.site.register(ContactMessage)
 admin.site.register(ThingsToDo)
 admin.site.register(HostDetails)

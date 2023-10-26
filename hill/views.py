@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Cottage, CottageImages, Amenities, ThingsToKnow, ThingsToDo, Booking, HostDetails
-from .forms import ContactMessageForm, BookingForm
+from .forms import BookingForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.views.generic import FormView, TemplateView
@@ -260,27 +260,11 @@ def delete_booking(request, booking_id):
 # Contact
 
 
-class ContactMessage(FormView): 
-    template_name = 'contact.html'
-    form_class = ContactMessageForm
-    success_url = reverse_lazy('contact:success')
+def host_details(request):
+    host_details = HostDetails.objects.first()
 
-    def form_valid(self, form):
-        form.send()
-        return super().form_valid(form)
-        
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        host_details = HostDetails.objects.all()
-        context['host_details'] = host_details
-        return context
+    return render(request, 'contact.html', {'host_details': host_details})
 
-class ContactSuccessView(TemplateView):
-    template_name = 'success.html'
-
-
-
-# Things to do
 
 def things_to_do(request):
     walks = ThingsToDo.objects.filter(category='walks')
