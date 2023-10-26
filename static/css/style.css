@@ -809,10 +809,11 @@ footer {
 
 
 
-/* Booking.html/edit-booking/delete-booking */
+/* Booking.html/booking_confirmation/edit-booking/delete-booking */
 .booking-form-container,
 .edit-booking-container,
-.delete-booking-container {
+.delete-booking-container,
+.booking-confirmation-container {
     background-image: url(../img/booking-img.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -822,7 +823,8 @@ footer {
 
 .booking-section,
 .edit-booking-section,
-.delete-booking-section {
+.delete-booking-section,
+.booking-confirmation-section {
     margin: 100px auto;
     padding: 30px;
     background-color: rgba(142, 157, 97, 0.8);
@@ -830,6 +832,10 @@ footer {
     border-radius: 5%;
     color: #f5f4f4;
 
+}
+
+.booking-confirmation-section a{
+    color: #f5f4f4;
 }
 
 .booking-form-head {
