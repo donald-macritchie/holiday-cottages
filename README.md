@@ -63,7 +63,6 @@ When users enter the site for the first time, it is essential that the top navig
 
 <!-- SIGN UP NAV SCREENSHOT -->
 
-
 ##### Sign In
 
 - The "Sign In" link will be used by users who ave already signed up to Hill Cottages.
@@ -74,17 +73,14 @@ When users enter the site for the first time, it is essential that the top navig
 - The "Profile" link will be available to users who have signed up to Hill Cottages and are signed in to their accounts.
 <!-- PROFILE NAV SCREENSHOT -->
 
-
 #### Hero Image and Logo
 
-- The hero image used for the home page is of a valley within the peak district. This has been used to showcase the likeness of of the surrounding area the users will be staying in when visiting one of the cottages. It also demonstrates the potential of what activities are in the area, specifically walking and hiking. 
+- The hero image used for the home page is of a valley within the peak district. This has been used to showcase the likeness of of the surrounding area the users will be staying in when visiting one of the cottages. It also demonstrates the potential of what activities are in the area, specifically walking and hiking.
 
 <!-- HERO IMAGE SCREENSHOT -->
 
+- The Text within the Hero Image "Your PerfectStay in the Peak District", immediately informs the user of roughly where the cottages are located.
 
-- The Text within the Hero Image "Your PerfectStay in the Peak District", immediately informs the user of roughly where the cottages are located. 
- 
- 
 <!-- LOGO SCREENSHOT -->
 
 #### Welcome Message
@@ -92,7 +88,6 @@ When users enter the site for the first time, it is essential that the top navig
 - The Welcome Message beneath the hero image, gives a breif introduction to the site and why you would want to use Hill Cottages whilst visiting the Peak District.
 
 <!-- WLECOME MESSAGE SCREENSHOT -->
-
 
 #### Our Cottages
 
@@ -106,10 +101,9 @@ When users enter the site for the first time, it is essential that the top navig
 
 <!-- SITE LINKS SCREENSHOT -->
 
-
 #### Reviews
 
-- Towards the end of the home page, A reviews section has been included for users to find out about the previous experiences of other Hill Cottages users. These reviews come from real people who have stayed in these cottages before. For privacy reasons, their names have been changed to generic names. 
+- Towards the end of the home page, A reviews section has been included for users to find out about the previous experiences of other Hill Cottages users. These reviews come from real people who have stayed in these cottages before. For privacy reasons, their names have been changed to generic names.
 
 #### Footer
 
@@ -119,14 +113,13 @@ When users enter the site for the first time, it is essential that the top navig
 
 ### Homestead Cottage and Marketview Cottage
 
-The respective cottage pages have been designed to showcase the cottage in its entirety.When users visit either cottage page, they will be able to access information about the specific cottage and what it has to offer. The cottage pages have been split up into section for the user to navigate. Homestead and Marketview pages have been created in an identical layout. 
+The respective cottage pages have been designed to showcase the cottage in its entirety.When users visit either cottage page, they will be able to access information about the specific cottage and what it has to offer. The cottage pages have been split up into section for the user to navigate. Homestead and Marketview pages have been created in an identical layout.
 
 #### Hero Image and Text
 
-- Each Cottage has their own hero image of the respective house sign. Within the Hero image, is the Cottage title along with another quote a previous user has said. 
+- Each Cottage has their own hero image of the respective house sign. Within the Hero image, is the Cottage title along with another quote a previous user has said.
   
 <!-- HERO IMAGE SCREENSHOT -->
-
 
 #### Image Gallery
 
@@ -158,7 +151,6 @@ The respective cottage pages have been designed to showcase the cottage in its e
 
 <!-- AMENITIES SCREENSHOT -->
 
-
 #### Location
 
 The location section has been divided up into three different parts;
@@ -166,7 +158,6 @@ The location section has been divided up into three different parts;
 - Location Descrition
 - Directions
 - Map
-
 
 ##### Location Description
 
@@ -184,7 +175,6 @@ The location section has been divided up into three different parts;
 
 - Similar to the amenities section, The Things to Know section gives the user the ability to view different categories by way of a dropdown so they can find out general information like check in and check out times, House Rules and what to do before you leave.
 
-
 ### Contact
 
 A contact page has been created for users of the site. This can be used by any user, whether they hvae signed up or not. This page has two sections, Host Contact Details and a Message service.
@@ -199,18 +189,16 @@ Similar to the other site pages, the Contact page has a hero Image and a messgae
 
 #### Send a message
 
-- Beneath the host details is a form for users to input their Name, Email Address and a text box for them to write and submit their message. 
-
+- Beneath the host details is a form for users to input their Name, Email Address and a text box for them to write and submit their message.
 <!-- SEND A MESSAGE SCREENSHOT -->
-
 
 ### Things To Do
 
-When going on a vacation, many people want to plan their time away with including a number of activities. A Thigs To Do page has been create to help and inform users of what they can do in the local area. The Things To Do page has three sections for users to view: Walks and Hikes, Pubs and Restaurants, and Local Attractions. Each item within their respective section has a description of the activity and a link out of the site to get further information. 
+When going on a vacation, many people want to plan their time away with including a number of activities. A Thigs To Do page has been create to help and inform users of what they can do in the local area. The Things To Do page has three sections for users to view: Walks and Hikes, Pubs and Restaurants, and Local Attractions. Each item within their respective section has a description of the activity and a link out of the site to get further information.
 
 #### Walks and Hikes
 
-- As the Peak District attracts many hikers to the area, it seemed fitting to include a couple of local trails for them to explore. Within the Walks and Hikes section, users can find the image from the trail, the description and location relative to the village of Longnor and a link guiding the user away from the site to find out more information. 
+- As the Peak District attracts many hikers to the area, it seemed fitting to include a couple of local trails for them to explore. Within the Walks and Hikes section, users can find the image from the trail, the description and location relative to the village of Longnor and a link guiding the user away from the site to find out more information.
 
 <!-- WALKS AND HIKES SCREENSHOT -->
 
@@ -224,7 +212,6 @@ When going on a vacation, many people want to plan their time away with includin
 
 - Much like the previous sections, The Local Attractions section gives users a view to what they can do in the area whilst on their vacation. Within the Peak District and surrounding counties, there are numerous stately homes and small towns with a great deal of heritage to vist. With this section, users can find a description of the attraction, its location relative to the village of Longnor and a link guiding the user away from the site to find out more information.
 
-
 ### Sign Up
 
 Users can sign up to the  Hill Cottages site via the sign up page. Here user will enter a username, email address and password of their choosing and be prompted to retype the password. Once Signed up, users will be redirected back to the Home Page. If users have already created an account, there is a link to the sign in page they can follow.
@@ -233,7 +220,7 @@ Users can sign up to the  Hill Cottages site via the sign up page. Here user wil
 
 ### Sign In
 
-Returning users to the site will also have the abiolity to sign in to their account via the Sign In page. Here they will enter their username and password to be authenticated. If users have not yet created an account, there is a link to the sign up page they can follow. 
+Returning users to the site will also have the abiolity to sign in to their account via the Sign In page. Here they will enter their username and password to be authenticated. If users have not yet created an account, there is a link to the sign up page they can follow.
 
 <!-- SIGN IN SCREENSHOT -->
 
@@ -257,22 +244,21 @@ User who have signed in to their accounts will be able to access their own profi
 
 ##### Edit Booking
 
-- When the user click on the "edit booking" button, this will navigate the user to the Edit booking page. On the page is displayed the same form they used to make the original booking and the current booking details are autopopulated in the fields. From here users can edit the check in dates, check out dates, number of guests and the guest name. Once the user has clicked "confirm" they will be redirected back to their profile. 
+- When the user click on the "edit booking" button, this will navigate the user to the Edit booking page. On the page is displayed the same form they used to make the original booking and the current booking details are autopopulated in the fields. From here users can edit the check in dates, check out dates, number of guests and the guest name. Once the user has clicked "confirm" they will be redirected back to their profile.
 
 <!-- EDIT BOOKING SCREENSHOT -->
 
 ##### Delete Booking
 
-- If a users decides to cancel their booking, they will click "delete booking". This will direct them to the delete booking page. The page will display a warning message sking them if they are sure, along with the current booking details and a "delete" button. Once click this will redirect them back to their profile. 
+- If a users decides to cancel their booking, they will click "delete booking". This will direct them to the delete booking page. The page will display a warning message sking them if they are sure, along with the current booking details and a "delete" button. Once click this will redirect them back to their profile.
 
 <!-- DELETE BOOKING SCREENSHOT -->
 
 #### Logout
 
-- At the bottom of the Profile page dropdown, users can logout out of their account. When the Logout button is clicked, they will be redirected to the logout page where a warning message will ask if they are sure. Once confirmed, the user is redirected to the Home Page. and a message will be displayed stating "you have successfully signed out". 
+- At the bottom of the Profile page dropdown, users can logout out of their account. When the Logout button is clicked, they will be redirected to the logout page where a warning message will ask if they are sure. Once confirmed, the user is redirected to the Home Page. and a message will be displayed stating "you have successfully signed out".
 
 <!-- LOGOUT PAGE SCREENSHOT -->
-
 
 <!-- UI/UX -->
 <!-- *** Explanantion of design choices
@@ -282,8 +268,6 @@ User who have signed in to their accounts will be able to access their own profi
 **Wireframes - Figma diagrams
 
 ** Database Structure -->
-
-
 
 <!-- Testing -->
 
@@ -335,7 +319,7 @@ User who have signed in to their accounts will be able to access their own profi
 | Sign Up Button. | When clicked, the user will be directed to the Sign Up page. | Clicked on the Sign Up button. | Sign Up page opened. |
 | Things To Do Button. | When clicked, the user will be directed to the Things To Do page. | Clicked on the Things To Do button. |Things To Do page opened. |
 
-#### Footer 
+#### Footer
 
 | Feature | Expect | Action | Result |
 | ---| ---| ---| ---|
@@ -378,7 +362,7 @@ User who have signed in to their accounts will be able to access their own profi
 | --| --| --| --|
 | Bathroom Dropdown. | When clicked, the Bathroom amenities list will collapse showing the details. | Clicked the Bathroom dropdown button. | Bathroom Amenities list collapsed and display details. |
 
-- The Amenities section uses the same functinality throughout and the remaining dropdowns were tested in the same fashion and all results were as expected. 
+- The Amenities section uses the same functinality throughout and the remaining dropdowns were tested in the same fashion and all results were as expected.
 
 #### Google Map
 
@@ -396,7 +380,6 @@ User who have signed in to their accounts will be able to access their own profi
 | Checking in and out Dropdown. | When clicked, the Checking in and out list will collapse showing the details. | Clicked the Checking in and out dropdown button. | checking in and out list collapsed and display details. |
 
 - The Things to Know section uses the same functinality throughout and the remaining dropdowns were tested in the same fashion and all results were as expected.
-
 
 ### Marketview
 
@@ -424,7 +407,6 @@ User who have signed in to their accounts will be able to access their own profi
 | Feature | Expect | Action | Result |
 | --| --| --| --|
 | Book This Cottage Button. | When clicked, the user will be directed to the Booking page. | Clicked the Book This Cottage Button. | Booking Page opened. |
-
 
 #### Amenities Section
 
@@ -477,9 +459,8 @@ User who have signed in to their accounts will be able to access their own profi
 | Chatworth House More Info link. | When clicked, the Chatsworth House website will open. | Clicked More Info link. | The Chatsworth House website opened. |
  Bakewell More Info link. | When clicked Visit Peak District website will open. | Clicked More Info link. | Visit Peak District opened. |
  Buxton More Info link. | When clicked Visit buxton website will open. | Clicked More Info link. | The Visit Buxton wevsite opened. |
- 
- 
-### Sign Up 
+
+### Sign Up
 
 - The following table documents the manual testing carried out on the Sign Up page.
 
@@ -494,30 +475,31 @@ User who have signed in to their accounts will be able to access their own profi
 
 | Feature | Expect | Action | Result |
 | --| --| --| --|
-| Sign Up link | When clicked the user will be redirected to the Sign Up page. | Clicked the Sign Up link. | Sign up page opened. | 
+| Sign Up link | When clicked the user will be redirected to the Sign Up page. | Clicked the Sign Up link. | Sign up page opened. |
 | Sign In Button. | Once the user has entered their username and password, when the sign in button is clicked, the user is redirected to the Home Page. | Entered all the information into the required fields and clcied Sign In Button. | Home page opens. |
 
-### Profile 
+### Profile
 
 - The following table documents the manual testing carried out on the Profile page.
   
 | Feature | Expect | Action | Result |
 | --| --| --| --|
-| User Details Dropdown | When clicked the User Details dropdown will collapse and show the users details. | Clicked the User Details Dropdown. | User details are made visible.| 
-| User Bookings Dropdown | When clicked the User Bookings dropdown will collapse and show the users bookings. | Clicked the User Bookings Dropdown. | User bookings are made visible.| 
-| Logout Dropdown | When clicked the Logout dropdown will collapse and show the Logout button. | Clicked the Logout Dropdown. | Logout Button is made visible.| 
+| User Details Dropdown | When clicked the User Details dropdown will collapse and show the users details. | Clicked the User Details Dropdown. | User details are made visible.|
+| User Bookings Dropdown | When clicked the User Bookings dropdown will collapse and show the users bookings. | Clicked the User Bookings Dropdown. | User bookings are made visible.|
+| Logout Dropdown | When clicked the Logout dropdown will collapse and show the Logout button. | Clicked the Logout Dropdown. | Logout Button is made visible.|
 
 #### User Bookings
 
 | Feature | Expect | Action | Result |
 | --| --| --| --|
-| Edit Booking Button. | When clicked the user is redirected to the edit booking page. | Clicked the edit booking button. | Edit booking page opens. | 
-| Delete Booking Button | When clicked the user will be redirected to the delete booking page. | Clicked the delete booking button. | Delete booking page opened. | 
+| Edit Booking Button. | When clicked the user is redirected to the edit booking page. | Clicked the edit booking button. | Edit booking page opens. |
+| Delete Booking Button | When clicked the user will be redirected to the delete booking page. | Clicked the delete booking button. | Delete booking page opened. |
 
-#### Logout 
+#### Logout
+
 | Feature | Expect | Action | Result |
 | --| --| --| --|
-| Logout Button | When clicked the user will be logged out of their account and redirected to the Home page. | Clicked the Logout button. | Logged out of account and home page opened. | 
+| Logout Button | When clicked the user will be logged out of their account and redirected to the Home page. | Clicked the Logout button. | Logged out of account and home page opened. |
 
 ### Booking
 
@@ -525,10 +507,10 @@ User who have signed in to their accounts will be able to access their own profi
 
 | Feature | Expect | Action | Result |
 | --| --| --| --|
-| Check in date widget | When clicked, a pop up calendar will appear for the user to interact with. | Clicked the Check in date widget. | Calendar popped up. | 
+| Check in date widget | When clicked, a pop up calendar will appear for the user to interact with. | Clicked the Check in date widget. | Calendar popped up. |
 | Check in date calendar. | When dates are clicked on from the calendar, the date will populate the Check in date field. | Clicked any date from todays date in the Calendar. | Check in date field populated the selected date. |  
-|Check out date widget. | When clicked a pop up calendar will appear for the user to interact with. | Clicked the check out date widget. | Calendar popped up. | 
-| Check out date calendar. | When dates are clicked on from the calendar, the date will populate the check out date field. | Clicked a date after the check in date selection. | Check out date field is populated with the selected date | 
+|Check out date widget. | When clicked a pop up calendar will appear for the user to interact with. | Clicked the check out date widget. | Calendar popped up. |
+| Check out date calendar. | When dates are clicked on from the calendar, the date will populate the check out date field. | Clicked a date after the check in date selection. | Check out date field is populated with the selected date |
 | Number of guests - Typed input | A number can be entered into the field by typing a number | Enter a number via the keyboard | Only numbers appear in teh field. |
 | Number of guests - rocker switch | The number of guests can be input via th rocker switch at the end of the number of guests field | Use rocker switch to input number into number of guests field. | Number has been input into number of guests fields. |
 
@@ -536,10 +518,10 @@ User who have signed in to their accounts will be able to access their own profi
   
 | Feature | Expect | Action | Result |
 | --| --| --| --|
-| Book Now Button | Once all information has been input into the fields, the book now button will store the booking in the database and redirect the user to home page. | Input all relevant information and click Book Now. | Booking is stored in database and Home page opened. | 
+| Book Now Button | Once all information has been input into the fields, the book now button will store the booking in the database and redirect the user to home page. | Input all relevant information and click Book Now. | Booking is stored in database and Home page opened. |
 
 - If dates are unavailable;
-- 
+
 | Feature | Expect | Action | Result |
 | --| --| --| --|
 | Book Now Button | If the dates selected are not available, an error message will apear stating "The selected dates are not available for this cottage". | Input invalid dates | Error message appears at the top of the page stating "The selected date are not available for this cottage". |  
@@ -567,26 +549,25 @@ User who have signed in to their accounts will be able to access their own profi
 
 | Feature | Expect | Action | Result |
 | --| --| --| --|
-|Confirm Button | Once all fields have been entered and the confirm button is clicked, if the dates aree unavailable, an error message will apear at the top of the edit booking page. | Enter invalid dates and click confirm. | Error message appear stating " Selected dates are unavailable". | 
- 
+|Confirm Button | Once all fields have been entered and the confirm button is clicked, if the dates aree unavailable, an error message will apear at the top of the edit booking page. | Enter invalid dates and click confirm. | Error message appear stating " Selected dates are unavailable". |
 
- ### Delete Booking
+### Delete Booking
 
- - The following table documents the manual testing carried out on the Delete Booking Page.
+- The following table documents the manual testing carried out on the Delete Booking Page.
 
 | Feature | Expect | Action | Result |
 | --| --| --| --|
-| Delete Button | When clicked the booking will be delete from the database and will be removed from the users User Booking in their profile. | Clicked Delete Button | Booking is deleted from the datebase and no longer appears in the Users Profile. | 
+| Delete Button | When clicked the booking will be delete from the database and will be removed from the users User Booking in their profile. | Clicked Delete Button | Booking is deleted from the datebase and no longer appears in the Users Profile. |
 
 ## Automated Testing
 
-Automated testing has been carried out using Django's inbuilt TestCase and Unittest. 
+Automated testing has been carried out using Django's inbuilt TestCase and Unittest.
 
 ### Models Tests
 
 - TestCottage has been implemented to test the Cottage Model.
 
-```
+```python
 
 class TestCottage(unittest.TestCase):
 
@@ -622,14 +603,14 @@ class TestCottage(unittest.TestCase):
 
 #### test_create_cottage
 
-- In test_create_cottage, it is testing if the cottage model is creating the correct objects in the model. 
--  It is also testing if the objects have been provides with correct values.
+- In test_create_cottage, it is testing if the cottage model is creating the correct objects in the model.
+- It is also testing if the objects have been provides with correct values.
   
 #### test_cottage_string_representation
 
 - Here the Test is checking if the string in the cottage object is correct.
 
-```
+```text
 
 System check identified no issues (0 silenced).
 ..

@@ -112,7 +112,6 @@ def marketview_cottage(request):
     return render(request, 'marketview_cottage.html', content)
 
 
-
 # Booking Section
 
 @login_required
@@ -242,17 +241,11 @@ def delete_booking(request, booking_id):
     return render(request, 'delete_booking.html', {'booking': booking})
 
 
-# Host Details
-
-
-def host_details(request):
-    host_details = HostDetails.objects.all()
-
-    print(host_details) 
-    return render(request, 'contact.html', {'host_details': host_details})
 
 # ContactMessage
-class ContactMessage(FormView):
+
+
+class ContactMessage(FormView): 
     template_name = 'contact.html'
     form_class = ContactMessageForm
     success_url = reverse_lazy('contact:success')
@@ -260,7 +253,12 @@ class ContactMessage(FormView):
     def form_valid(self, form):
         form.send()
         return super().form_valid(form)
-
+        
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        host_details = HostDetails.objects.all()
+        context['host_details'] = host_details
+        return context
 
 class ContactSuccessView(TemplateView):
     template_name = 'success.html'
