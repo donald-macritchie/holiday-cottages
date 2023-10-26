@@ -54,8 +54,6 @@ class CottageImages(models.Model):
         return self.title
 
 
-
-
 class Amenities(models.Model):
     CATEGORY_CHOICES = (
         ('Bathroom', 'Bathroom'),
@@ -91,8 +89,8 @@ class ThingsToKnow(models.Model):
 
     name = models.CharField(max_length=100)
     description = models.TextField(blank=True, null=True)
-    category = models.CharField(max_length=50, choices=CATEGORY_CHOICES, default='')
-
+    category = models.CharField(
+        max_length=50, choices=CATEGORY_CHOICES, default='')
 
     def __str__(self):
         return self.name
@@ -127,6 +125,7 @@ class HostDetails(models.Model):
     def __str__(self):
         return self.name
 
+
 class ContactMessage(models.Model):
     name = models.CharField(max_length=100)
     email = models.EmailField()
@@ -136,9 +135,6 @@ class ContactMessage(models.Model):
     def __str__(self):
         return f"Message from {self.name}"
 
-
-
-# Things to do
 
 class ThingsToDo(models.Model):
     THINGS_TO_DO_CATEGORY = (
@@ -157,5 +153,3 @@ class ThingsToDo(models.Model):
 
     def __str__(self):
         return self.name
-
-

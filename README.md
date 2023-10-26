@@ -141,9 +141,13 @@ The respective cottage pages have been designed to showcase the cottage in its e
 
 #### Booking Form
 
-- Once the user has decided they want to book a stay, they can proceed to the booking link button. Once clicked on, if they have not signed up to the site, they will be redirected to the sign in page where they can sign into their Hill Cottages account. Once signed in, they will be redirected to teh booking form. In the booking form, Users Will be shown the name of the cottage they are booking along with the price per night. Users will enter check in and check out dates via a pop up calendar, number of guests and their Name. If the dates slected are available, a pop up message will appear stating that the booking was successful and are then redirectwd to the home page. If selected dates are not available, a pop up message will appear stating "selected dates not available"
+- Once the user has decided they want to book a stay, they can proceed to the booking link button. Once clicked on, if they have not signed up to the site, they will be redirected to the sign in page where they can sign into their Hill Cottages account. Once signed in, they will be redirected to the booking form. In the booking form, Users will be shown the name of the cottage they are booking along with the price per night. Users will enter check in and check out dates via a pop up calendar, number of guests and their Name. If the dates selected are available, a pop up message will appear stating that the booking was successful and are then redirected to the booking confirmation page. If selected dates are not available, a pop up message will appear stating "selected dates not available".
 
 <!-- BOOKING FORM SCREENSHOT -->
+
+#### Booking Confirmation
+
+- Provided that the date selected are available, the dates will be stored in the database and the user will be redirected to the booking confirmation page. Here the user will be able to view their booking details. The Home Button will redirect the user to the Home page.
 
 #### Amenities section
 
@@ -526,6 +530,14 @@ User who have signed in to their accounts will be able to access their own profi
 | --| --| --| --|
 | Book Now Button | If the dates selected are not available, an error message will apear stating "The selected dates are not available for this cottage". | Input invalid dates | Error message appears at the top of the page stating "The selected date are not available for this cottage". |  
 
+### Booking Confirmation
+
+- The following table documents the manual testing carried out on the booking confirmation page.
+
+| Feature | Expect | Action | Result |
+| --| --| --| --|
+| Home Button | When clicked the user will be redirected to the Home page. | Clicked the Home button. | Home page opened. |
+
 ### Edit Booking
 
 - The following table documents the manual testing carried out on the Edit Booking Page.
@@ -603,12 +615,17 @@ class TestCottage(unittest.TestCase):
 
 #### test_create_cottage
 
-- In test_create_cottage, it is testing if the cottage model is creating the correct objects in the model.
-- It is also testing if the objects have been provides with correct values.
+- In test_create_cottage, it is testing the creation of the cottage object.
+- The assertions are checking if the test data provided are equal to the name, slug and description attributes
+- assertIsInstance is checking if the "cottage" object is an instance of the "Cottage" class.
+- self.assertTrue(cottage.name.startswith('Test')): This assertion checks if the name attribute of the cottage object starts with the string 'Test'.
+- self.assertIn('unittests', cottage.description): This assertion checks if the string 'unittests' is found within the description attribute of the cottage object.
   
 #### test_cottage_string_representation
 
 - Here the Test is checking if the string in the cottage object is correct.
+
+These tests produced the following result;
 
 ```text
 
@@ -623,12 +640,141 @@ OK
 
 ### Views Tests
 
+- TestHomesteadCottageView has been implemented to homestead_cottage view.
+
+``` python
+class TestHomesteadCottageView(unittest.TestCase):
+    def setUp(self):
+        self.client = Client()
+
+    # Tests if the view returns a 200 status
+
+    def test_homestead_cottage_view(self):
+        response = self.client.get(reverse('homestead_cottage'))
+
+        self.assertEqual(response.status_code, 200)
+
+    # Test if the context data is passed to the template
+    def test_homestead_cottage_context(self):
+        response = self.client.get(reverse('homestead_cottage'))
+        homestead_cottage = response.context['homestead_cottage']
+
+        self.assertEqual(homestead_cottage.name, 'Homestead')
 
 
+if __name__ == '__main__':
+    unittest.main()
+```
 
- 
+#### test_homestead_cottage_view
 
-Validatiors
+- This test method checks if the view associated with the URL pattern named 'homestead_cottage' returns a 200 status code.
+
+#### test_homestead_cottage_context
+
+- This test method checks if the view passes context data to the template.
+
+These tests produced the following result;
+
+```text
+..
+----------------------------------------------------------------------
+Ran 2 tests in 5.434s
+
+OK
+```
+
+### Forms Test
+
+- TestBookingForm has been implemented to test the Booking form.
+
+```python
+class TestBookingForm(unittest.TestCase):
+
+
+    # Test if the form is valid when all fields have correct data
+    def test_valid_form(self):
+        data = {
+            'check_in_date': '31/12/2023',
+            'check_out_date': '02/01/2024',
+            'number_of_guests': 2,
+            'guest_name': 'John Doe',
+        }
+        form = BookingForm(data=data)
+        self.assertTrue(form.is_valid())
+
+
+    # Test if the form is invalid when fields have missing or incorrect data 
+    def test_invalid_form(self):
+        data = {
+            'check_in_date': '31/12/2023',
+            'check_out_date': '02/01/2022',
+            'number_of_guests': '',
+            'guest_name': 'John Doe',
+        }
+        form = BookingForm(data=data)
+        self.assertFalse(form.is_valid())
+
+    # Test if the date widgets render as expected
+    def test_widgets(self):
+        form = BookingForm()
+        self.assertIn('type="date"', str(form['check_in_date']))
+        self.assertIn('type="date"', str(form['check_out_date']))
+
+
+    # Test if the form is correctly saving to the data to the model
+    def test_save_to_model(self):
+        data = {
+            'check_in_date': '31/12/2023',
+            'check_out_date': '02/01/2024',
+            'number_of_guests': 2,
+            'guest_name': 'John Doe',
+        }
+
+        form = BookingForm(data=data)
+        self.assertTrue(form.is_valid())
+        booking = form.save(commit=False)
+        self.assertEqual(booking.check_in_date, date(2023, 12, 31))
+        self.assertEqual(booking.check_out_date, date(2024, 1, 2))
+        self.assertEqual(booking.number_of_guests, 2)
+        self.assertEqual(booking.guest_name, 'John Doe')
+
+
+    if __name__ == '__main__':
+        unittest.main()
+```
+
+#### test_valid_form
+
+- Test that the form is valid when all fields are filled with correct data.
+
+#### test_invalid_form
+
+- Test that the form is invalid when required fields are missing or contain incorrect data.
+  
+#### test_widgets
+
+- Test if the date widgets render as expected
+
+#### test_save_to_model
+
+- Test if the form is correctly saving to the data to the model
+
+These tests produced the following results;
+
+```text
+....
+----------------------------------------------------------------------
+Ran 4 tests in 0.019s
+
+OK
+```
+
+### Validators
+
+#### CI Python Linter
+- All clear, no errors found. 
+
 
 Different browsers
 

@@ -24,25 +24,6 @@
                         {% endfor %}
                     </div>
                 </div>
-                <div class="col-12 col-md-6 contact-message-from">
-                    <h3>Send Us a Message</h3>
-                    <p>Alternatively, you can send us a message below</p>
-                </div>
-                <div class="col-12">
-                    <form action="" method="POST">
-                        {% csrf_token %}
-                        <div class="form-field">
-                            <p>Name:</p>{{ form.name }}
-                        </div>
-                        <div class="form-field">
-                            <p>Email:</p>{{ form.email }}
-                        </div>
-                        <div class="form-field">
-                            <p>Your Message:</p>{{ form.message }}
-                        </div>
-                        <button type="submit">Send Message</button>
-                    </form>
-                </div>
             </div>
         </div>
     </div>

@@ -182,7 +182,7 @@ def booking_confirmation(request, booking_id):
 @login_required
 def user_profile(request):
     user = request.user
-    user_bookings = Booking.objects.filter(user=user)
+    user_bookings = Booking.objects.filter(user=user).order_by('check_in_date')
     context = {
         'user': user,
         'user_bookings': user_bookings,

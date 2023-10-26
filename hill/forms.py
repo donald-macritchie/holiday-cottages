@@ -4,9 +4,6 @@ from django.core.mail import send_mail
 from .models import Cottage, Booking, ContactMessage
 
 
-
-
-
 class ContactMessageForm(forms.ModelForm):
 
     class Meta:
@@ -50,4 +47,5 @@ class BookingForm(forms.ModelForm):
 
     class Meta:
         model = Booking
-        fields = ['check_in_date', 'check_out_date', 'number_of_guests', 'guest_name']
+        fields = ['check_in_date', 'check_out_date',
+                  'number_of_guests', 'guest_name']
