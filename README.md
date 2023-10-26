@@ -264,20 +264,92 @@ User who have signed in to their accounts will be able to access their own profi
 
 <!-- LOGOUT PAGE SCREENSHOT -->
 
-<!-- UI/UX -->
-<!-- *** Explanantion of design choices
+## UX
 
-** Include User stories/agile methodology
+### Site Goals
 
-**Wireframes - Figma diagrams
+The goal of Hill Cottages is to offer a quick and easy way to plan a short stay vacation in the Peak District, England. The site ensures that not only can users view and book from a selection of cottages, but also give them all the information they need, from cottage location to what amenities are included. Users can view their existing booking via their profile page where they can view, edit or delete their bookings. It also gives users a chance to plan their stay with information about local attractions in the area.
 
-** Database Structure -->
+### User Stories
 
+#### As a site user
+
+- As a SITE USER I can VIEW THE PROPERTIES AVAILABLE so that I CAN DECIDE IF I WANT TO STAY
+- As a SITE USER I can VIEW THE AMENITIES OF THE PROPERTY so that I CAN DECIDE WHICH ONE I WANT TO STAY IN
+- As a SITE USER I can FIND OUT HOW MUCH IT IS TO STAY PER NIGHT so that I CAN PLAN AND BUDGET ACCORDINGLY
+- As a SITE USER I can HAVE FULL VISIBILITY OF A CALENDAR MONTH so that I CAN SEE CLEARLY WHAT DATES I WOULD LIKE TO BOOK MY STAY
+- As a SITE USER I can READ A SET OF DIRECTIONS TO THE PROPERTY so that I CAN PLAN MY TRAVEL ACCORDINGLY
+- As a SITE USER I can CONTACT THE HOST so that I CAN ASK QUESTION DIRECTLY BEFORE/DURING/AFTER MY STAY
+- As a SITE USER I can SIGN UP THE SITE so that MY DETAILS ARE STORED FOR LATER USE
+- As a SITE USER I can LOGIN TO MY ACCOUNT so that I CAN ACCESS MY USER PROFILE TO CHECK MY PERSONAL INFORMATION AND EXISTING BOOKINGS
+- 
+
+#### As a site admin
+
+- As a SITE ADMIN I can RETRIEVE CUSTOMER DETAILS so that I CAN CONTACT THEM WHEN REQUIRED
+- As a SITE ADMIN I can VIEW BOOKINGS THAT HAVE BEEN MADE so that I CAN ORGANISE COTTAGE TURNAROUND ACTIVITIES (Cleaning, etc.).
+- As a SITE ADMIN I can ADD TO MY DATABASE so that I can ADD NEW LISTINGS TO THE SITE AS REQUIRED
+  
+### Wireframes
+
+- Wireframes were created tt the beginning of the project to guide design chioces and layout.
+- Wireframes were created using [Figma](www.figma.com)
+
+Home Page
+  
+![This is a screenshot of the home page wireframe](./static/screenshots/wireframe-homepage.png)
+
+Cottage Page
+
+![This is a screenshot of the cottage page wireframe](./static/screenshots/wireframe-cottagepage.png)
+
+More Info Page
+
+![This is a screenshot of the More Info page wireframe](./static/screenshots/wireframe-moreinfopage.png)
+
+### Database Models
+
+- Models
+    - Cottage
+        - Admin can enter specific details about each property.
+    - Cottage Images
+        - Allows specific images to be set to a specific category.
+    - Amenities
+        - Categorize specfic amenities into seperate lists
+    - Things To Know
+        - Categorize key peices of information for the user to be aware of.
+    - Booking
+        - Assigns the user to the cottage id.
+        - Assigns the selected dates to be assigned to the selected cottage id. 
+    - Host Details
+        - Allow host to enter contact detaisl to be displayed. 
+    - Things to do
+        - Stores a collection of local visitor attraction formthe local area to be displayed.
+
+### Design
+
+- Colour Scheme
+    - The main colour scheme is a mixture of moss green and off-white
+    - Different opacities have been used throughout the site to give, typically when used on top of background images to still allow the image to be seen.
+
+- Images
+    - Images are a vital part of the site.
+    - Property images play a huge part for the user to be able to view the cottage and get a sense not only where they will be staying but also get a general feel of the area they are in.
+    - A variety of landscape images of the surrounding area have been used with in the property images galleries but mainly used in backfround images. This helps the user understand the local environment and gives a sense of how rural the location is.
+
+- Fonts
+    - The majority of the fonts throughout the site are Roboto which provides clean reading and conveys the most important information very clearly. The "Sail" font has been used throughout logos and hero images to give a feeling of rusticness.
+
+- Icons
+    - Icons have been used sparingly throughout, only being used in the social media icons within the footer.
+    - Icons have been accquired via FontAwesome.
+  
+  
 <!-- Testing -->
 
 ## Testing
 
-## Manual Testing
+### Manual Testing
 
 ### Home Page
 
@@ -787,9 +859,9 @@ OK
 - All CSS code was passed through the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/0)
 - No errors were found
   
-Different browsers
+<!-- Different browsers -->
 
-Unfixed Bugs -->
+
 
 <!-- Deployment -->
 

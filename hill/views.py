@@ -3,11 +3,10 @@ from .models import Cottage, CottageImages, Amenities, ThingsToKnow, ThingsToDo,
 from .forms import BookingForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
-from django.views.generic import FormView, TemplateView
-from django.urls import reverse_lazy
 from datetime import datetime, timedelta, date
 from django.contrib import messages
 import os
+
 
 #  Home Page
 def index(request):
@@ -23,7 +22,6 @@ def homestead_cottage(request):
 
     images = CottageImages.objects.filter(cottage=homestead_cottage)
     homestead_image = CottageImages.objects.get(title='house_sign_1')
-
 
     # Amenities
     amenities = homestead_cottage.amenities.all()
@@ -48,7 +46,7 @@ def homestead_cottage(request):
 
     content = {
         'homestead_cottage': homestead_cottage,
-        'images' : images,
+        'images': images,
         'amenities_by_category': amenities_by_category,
         'description': description,
         'GOOGLEMAPS_API_KEY': os.environ.get('GOOGLEMAPS_API_KEY', ''),
@@ -73,7 +71,6 @@ def marketview_cottage(request):
     images = CottageImages.objects.filter(cottage=marketview_cottage)
     marketview_image = CottageImages.objects.get(title='house_sign_1')
 
-
     # Amenities
     amenities = marketview_cottage.amenities.all()
     amenities_by_category = {}
@@ -97,7 +94,7 @@ def marketview_cottage(request):
 
     content = {
         'marketview_cottage': marketview_cottage,
-        'images' : images,
+        'images': images,
         'amenities_by_category': amenities_by_category,
         'description': description,
         'GOOGLEMAPS_API_KEY': os.environ.get('GOOGLEMAPS_API_KEY', ''),
@@ -173,7 +170,6 @@ def booking_confirmation(request, booking_id):
     except Booking.DoesNotExist:
         messages.error(request, "Booking not found.")
         return redirect('index')
-
 
     return render(request, 'booking_confirmation.html', {'booking': booking})
 
@@ -256,7 +252,6 @@ def delete_booking(request, booking_id):
     return render(request, 'delete_booking.html', {'booking': booking})
 
 
-
 # Contact
 
 
@@ -275,6 +270,3 @@ def things_to_do(request):
         'things_to_do.html',
         {'walks': walks, 'pubs': pubs, 'attractions': attractions}
     )
-
-
-

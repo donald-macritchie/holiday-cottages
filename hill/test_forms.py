@@ -2,8 +2,8 @@ import unittest
 from .forms import BookingForm
 from datetime import date
 
-class TestBookingForm(unittest.TestCase):
 
+class TestBookingForm(unittest.TestCase):
 
     # Test if the form is valid when all fields have correct data
     def test_valid_form(self):
@@ -16,8 +16,7 @@ class TestBookingForm(unittest.TestCase):
         form = BookingForm(data=data)
         self.assertTrue(form.is_valid())
 
-
-    # Test if the form is invalid when fields have missing or incorrect data 
+    # Test if the form is invalid when fields have missing or incorrect data
     def test_invalid_form(self):
         data = {
             'check_in_date': '31/12/2023',
@@ -33,7 +32,6 @@ class TestBookingForm(unittest.TestCase):
         form = BookingForm()
         self.assertIn('type="date"', str(form['check_in_date']))
         self.assertIn('type="date"', str(form['check_out_date']))
-
 
     # Test if the form is correctly saving to the data to the model
     def test_save_to_model(self):
@@ -51,7 +49,6 @@ class TestBookingForm(unittest.TestCase):
         self.assertEqual(booking.check_out_date, date(2024, 1, 2))
         self.assertEqual(booking.number_of_guests, 2)
         self.assertEqual(booking.guest_name, 'John Doe')
-
 
     if __name__ == '__main__':
         unittest.main()

@@ -16,7 +16,7 @@ class TestCottage(unittest.TestCase):
             no_of_bedrooms=2,
             no_of_bathrooms=1,
         )
-        
+
         self.assertEqual(cottage.name, 'Test Cottage')
         self.assertEqual(cottage.slug, 'test-cottage')
         self.assertEqual(cottage.description, 'A test cottage for unittests')
@@ -24,15 +24,11 @@ class TestCottage(unittest.TestCase):
         self.assertTrue(cottage.name.startswith('Test'))
         self.assertIn('unittests', cottage.description)
 
-
     def test_cottage_string_representation(self):
 
         cottage = Cottage(name='Test Cottage')
-        
+
         self.assertEqual(str(cottage), 'Test Cottage')
 
     if __name__ == '__main__':
         unittest.main()
-
-
-

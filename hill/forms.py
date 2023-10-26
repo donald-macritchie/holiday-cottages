@@ -4,7 +4,6 @@ from django.core.mail import send_mail
 from .models import Cottage, Booking
 
 
-
 class BookingForm(forms.ModelForm):
     check_in_date = forms.DateField(
         input_formats=['%d/%m/%Y'],

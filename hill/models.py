@@ -123,7 +123,6 @@ class HostDetails(models.Model):
         return self.name
 
 
-
 class ThingsToDo(models.Model):
     THINGS_TO_DO_CATEGORY = (
         ('walks', 'walks'),

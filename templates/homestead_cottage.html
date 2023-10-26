@@ -112,7 +112,7 @@
             <div id="amenitiesAccordion">
                 {% for category, amenities in amenities_by_category.items %}
                 <div class="card">
-                    <div class="card-header" id="{{ category|slugify }}">
+                    <div class="card-header {{ category|slugify }}">
                         <h2 class="mb-0">
                             <button class="btn btn-link" type="button" data-toggle="collapse"
                                 data-target="#collapse{{ category|slugify }}">
@@ -200,7 +200,7 @@
             <div id="thingsToKnowAccordion">
                 {% for category, things in things_to_know_by_category.items %}
                 <div class="card">
-                    <div class="card-header" id="{{ category|slugify }}">
+                    <div class="card-header {{ category|slugify }}">
                         <h3 class="mb-0">
                             <button class="btn btn-link" type="button" data-toggle="collapse"
                                 data-target="#collapse{{ category|slugify }}">
