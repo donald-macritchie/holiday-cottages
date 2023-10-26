@@ -515,8 +515,8 @@ User who have signed in to their accounts will be able to access their own profi
 | Check in date calendar. | When dates are clicked on from the calendar, the date will populate the Check in date field. | Clicked any date from todays date in the Calendar. | Check in date field populated the selected date. |  
 |Check out date widget. | When clicked a pop up calendar will appear for the user to interact with. | Clicked the check out date widget. | Calendar popped up. |
 | Check out date calendar. | When dates are clicked on from the calendar, the date will populate the check out date field. | Clicked a date after the check in date selection. | Check out date field is populated with the selected date |
-| Number of guests - Typed input | A number can be entered into the field by typing a number | Enter a number via the keyboard | Only numbers appear in teh field. |
-| Number of guests - rocker switch | The number of guests can be input via th rocker switch at the end of the number of guests field | Use rocker switch to input number into number of guests field. | Number has been input into number of guests fields. |
+| Number of guests | A number can be entered into the field by typing a number | Enter a number via the keyboard | Only numbers appear in the field. |
+
 
 - If dates are available;
   
@@ -773,9 +773,20 @@ OK
 ### Validators
 
 #### CI Python Linter
+
+- All python code was passed throuh the [CI Python Linter](https://pep8ci.herokuapp.com/#)
 - All clear, no errors found. 
 
+#### HTML W3C
 
+- All html code was cassed through the [W3C HTML Validator](https://validator.w3.org/)
+- The only warning found were for django template tags {% %}
+
+#### CSS
+
+- All CSS code was passed through the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/0)
+- No errors were found
+  
 Different browsers
 
 Unfixed Bugs -->
