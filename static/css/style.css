@@ -161,7 +161,7 @@ footer {
 }
 
 #marketview-cottages-link{
-    background-image: url('../img/house_sign_1.png');
+    background-image: url('https://res-console.cloudinary.com/dguikroes/thumbnails/v1/image/upload/v1698424353/bXYtaG91c2Vfc2lnbl8xX2Fud2FpdA==/drilldown');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -212,21 +212,21 @@ footer {
 }
 
 #site-contact-link {
-    background-image: url('../img/peak-2.jpg');
+    background-image: url('https://res-console.cloudinary.com/dguikroes/thumbnails/v1/image/upload/v1698424699/cGVhay0yX3RrcDI1Zw==/drilldown');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
 }
 
 #site-cottages-link {
-    background-image: url('../img/generic-cottage-1.jpeg');
+    background-image: url('https://res-console.cloudinary.com/dguikroes/thumbnails/v1/image/upload/v1698424928/Z2VuZXJpYy1jb3R0YWdlLTFfYnNvNm0z/drilldown');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
 }
 
 #site-more-info-link {
-    background-image: url('../img/peak-3.jpg');
+    background-image: url('https://res-console.cloudinary.com/dguikroes/thumbnails/v1/image/upload/v1698425017/cGVhay0zX2l5dHZydw==/drilldown');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -318,7 +318,7 @@ footer {
 
 #homestead-title {
     height: 50vh;
-    background-image: url(../img/house_sign_1_1029x700.png);
+    background-image: url('https://res-console.cloudinary.com/dguikroes/thumbnails/v1/image/upload/v1698424007/aG91c2Vfc2lnbl8xXzEwMjl4NzAwX3VhN3hqNg==/drilldown');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -326,7 +326,7 @@ footer {
 
 #marketview-title {
     height: 50vh;
-    background-image: url(../img/house_sign_1.png);
+    background-image: url('https://res-console.cloudinary.com/dguikroes/thumbnails/v1/image/upload/v1698424353/bXYtaG91c2Vfc2lnbl8xX2Fud2FpdA==/drilldown');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -497,14 +497,10 @@ footer {
     padding-top: 150px;
 }
 
-
-
-
-
 /* Contact.html */
 
 .contact{
-    background-image: url(../img/peak-3.jpg);
+    background-image: url('https://res-console.cloudinary.com/dguikroes/thumbnails/v1/image/upload/v1698424699/cGVhay0yX3RrcDI1Zw==/drilldown');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -549,7 +545,7 @@ footer {
 /* Things to do.html */
 
 .things-head-container{
-    background-image: url(../img/peak-3.jpg);
+    background-image: url('https://res-console.cloudinary.com/dguikroes/thumbnails/v1/image/upload/v1698425017/cGVhay0zX2l5dHZydw==/drilldown');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -717,14 +713,14 @@ footer {
 /* Logout/profile.html */
 .profile-container{
     min-height: 90vh;
-    background-image: url(../img/logout_img.jpeg);
+    background-image: url('https://res-console.cloudinary.com/dguikroes/thumbnails/v1/image/upload/v1698426030/bG9naW4taW1nX3h2eWg5OQ==/drilldown');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
 }
 
 .logout-container{
-    background-image: url(../img/logout_img.jpeg);
+    background-image: url('https://res-console.cloudinary.com/dguikroes/thumbnails/v1/image/upload/v1698426082/bG9nb3V0X2ltZ19panhudmE=/drilldown');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -754,7 +750,7 @@ footer {
 
 /* Sign Up.html */
 .signup-container{
-    background-image: url(../img/signup-img.jpeg);
+    background-image: url('https://res-console.cloudinary.com/dguikroes/thumbnails/v1/image/upload/v1698426239/c2lnbnVwLWltZ19jb3B5X3AwdmVteg==/drilldown');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -799,7 +795,7 @@ footer {
 
  /* login.html */
  .login-container{
-    background-image: url(../img/login-img.jpeg);
+    background-image: url('https://res-console.cloudinary.com/dguikroes/thumbnails/v1/image/upload/v1698426030/bG9naW4taW1nX3h2eWg5OQ==/drilldown');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -822,7 +818,7 @@ footer {
 .edit-booking-container,
 .delete-booking-container,
 .booking-confirmation-container {
-    background-image: url(../img/booking-img.jpeg);
+    background-image: url('https://res-console.cloudinary.com/dguikroes/thumbnails/v1/image/upload/v1698426385/Ym9va2luZy1pbWdfdWtxbGx3/drilldown');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
