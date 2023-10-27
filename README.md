@@ -921,7 +921,6 @@ Install Django and Supporting Libraries
     ```text
     python3 manage.py migrate
     ```
-    
     - Run server to test
 
     ```text
@@ -1053,8 +1052,7 @@ Prepare environment and settings.py file
 
         ]
         ```
-    
-    (note: order is important)
+        (note: order is important)
 
   - Tell Django to use Cloudinary to store media and static files
 
@@ -1111,8 +1109,7 @@ Prepare environment and settings.py file
 
     ```text
     web: gunicorn PROJ_NAME.wsgi
-    ```
-    
+    ``` 
 - In the terminal:
 
     - add, commit an push.
@@ -1120,14 +1117,146 @@ Prepare environment and settings.py file
 - In Heroku:
 
   - Deploy Content manually through heroku
-  - Github as deployment method, on main branch. 
+  - Github as deployment method, on main branch.
 
+## Credits/References
 
+### Hill Cottages
 
-    
+  - Hill Cottages is based on the real life holiday cottages owned by Mr Joseph Hill. Mr Hill currently hosts his holiday cottages through AirBnb and has given me permission to use the information and images from the AirBnB webpages where his cottages are hosted.
+    - [Homestead](https://www.airbnb.co.uk/rooms/41428855?source_impression_id=p3_1696932897_Savr%2F0B2L3k%2Bvjye&guests=1&adults=1)
+    - [Marketview](https://www.airbnb.co.uk/rooms/45085629?check_in=2023-11-24&check_out=2023-11-30&source_impression_id=p3_1696600579_QicgwlweEDQqI3qg&previous_page_section_name=1000&federated_search_id=3723ae97-44aa-47da-969c-c120d0abac0b)
 
-<!-- *** Description of deployment method -->
+### Code
 
-<!-- Citation/Referneces -->
+- Booking system
 
-<!-- Future features -->
+    - Inspiration for creating the booking view was taken from Johnkh2002's [Clinic-Booking-Project repo](https://github.com/Johnkh2002/Clinic-Booking-Project/tree/main) on github.
+    - For the booking models, insiration was taken from Ayush Dixit's on [medium.com](https://medium.com/towards-data-engineering/data-modelling-design-a-data-model-for-a-hotel-booking-system-like-airbnb-2110a6d079c6)
+  - Site Layout
+
+    - The sites layout was primarily produced through the use of [Bootstrap 4.6](https://getbootstrap.com/docs/4.6/getting-started/introduction/).
+    - I have taken various elements such as 'accordian' to prodice collapsable lists and 'Modals' to produce the pop up image gallery.
+
+- [Django's Documentation](https://docs.djangoproject.com/en/4.2/)
+- Various support from Code Institutes Tutoring team
+- Code Institute Mentor, Antonio Rodriguez
+- Automated testing inspiration was taken from Amy Oshea's [MS4-ARTstop
+](https://github.com/AmyOShea/MS4-ARTstop/tree/main/contact) Repo.
+
+### Images
+
+Various images have been used throughout taken from different sources.
+
+#### Home Page
+
+- [Home page hero image](https://unsplash.com/photos/S3bJyQwaB8Q)
+- [Homestead House sign Image](https://www.airbnb.co.uk/rooms/41428855?source_impression_id=p3_1696932897_Savr%2F0B2L3k%2Bvjye&guests=1&adults=1&modal=PHOTO_TOUR_SCROLLABLE&modalItem=946220348)
+- [Marketview House sign Image](https://www.airbnb.co.uk/rooms/45085629?check_in=2023-11-24&check_out=2023-11-30&source_impression_id=p3_1696600579_QicgwlweEDQqI3qg&previous_page_section_name=1000&federated_search_id=3723ae97-44aa-47da-969c-c120d0abac0b&modal=PHOTO_TOUR_SCROLLABLE&modalItem=1090930697)
+- Contact Background image - Taken by myself on site
+- [Sign Up Background image](https://pixabay.com/photos/trees-house-barn-country-4428896/)
+- Things To Do Background image - Taken by myself on site
+- [Reviews section background image](https://unsplash.com/photos/S3bJyQwaB8Q)
+
+#### Homestead Cottage Page
+
+- [Hero Image](https://www.airbnb.co.uk/rooms/41428855?source_impression_id=p3_1696932897_Savr%2F0B2L3k%2Bvjye&guests=1&adults=1&modal=PHOTO_TOUR_SCROLLABLE&modalItem=946220348)
+- [Image Gallery](https://www.airbnb.co.uk/rooms/41428855?source_impression_id=p3_1696932897_Savr%2F0B2L3k%2Bvjye&guests=1&adults=1&modal=PHOTO_TOUR_SCROLLABLE) - Taken from Airbnb Homestead site
+
+#### Marketview Cottage Page
+
+- [Hero Image](https://www.airbnb.co.uk/rooms/45085629?check_in=2023-11-24&check_out=2023-11-30&source_impression_id=p3_1696600579_QicgwlweEDQqI3qg&previous_page_section_name=1000&federated_search_id=3723ae97-44aa-47da-969c-c120d0abac0b&modal=PHOTO_TOUR_SCROLLABLE&modalItem=1090930697)
+- [Image Gallery](https://www.airbnb.co.uk/rooms/45085629?check_in=2023-11-24&check_out=2023-11-30&source_impression_id=p3_1696600579_QicgwlweEDQqI3qg&previous_page_section_name=1000&federated_search_id=3723ae97-44aa-47da-969c-c120d0abac0b&modal=PHOTO_TOUR_SCROLLABLE)
+  
+#### Contact Page
+
+- Hero Image - Taken by myself on site.
+
+#### Things to do Page
+
+- Hero Image - Taken by myself on site.
+- [Dragons Back Image](https://letsgopeakdistrict.co.uk/dragons-back-walk-3-9-miles/)
+- [Hartington Dales Image](https://letsgopeakdistrict.co.uk/dragons-back-walk-3-9-miles/)
+- [Ye Olde Cheshire Cheese Inn Image](https://www.tripadvisor.co.uk/Hotel_Review-g1885473-d1464948-Reviews-Ye_Olde_Cheshire_Cheese_Inn-Longnor_Peak_District_National_Park_England.html)
+- [Pack Horse Inn](https://organixx.co.uk/the-packhorse-crowdicote/)
+- [The Royal Oak](https://whatpub.com/pubs/CHE/2099/royal-oak-hurdlow)
+- [Chatsworth House](https://pixabay.com/photos/chatsworth-house-derbyshire-4476934/)
+- [Bakewell](https://www.istockphoto.com/photo/cottages-alongside-the-river-wye-bakewell-gm528888555-53730578?phrase=bakewell+derbyshire&searchscope=image%2Cfilm)
+- [Buxton](https://www.istockphoto.com/photo/pavilion-gardens-buxton-gm489937336-74948427?phrase=buxton+england&searchscope=image%2Cfilm)
+
+#### Booking Page
+
+- [Booking background Image](https://pixabay.com/photos/mam-tor-high-peak-castleton-3600896/)
+
+#### Booking Confirmation Page
+
+- [Booking Confirmation background Image](https://pixabay.com/photos/mam-tor-high-peak-castleton-3600896/)
+
+#### Edit Booking Page
+
+- [Edit Booking background Image](https://pixabay.com/photos/mam-tor-high-peak-castleton-3600896/)
+
+#### Delete Booking Page
+
+- [Delete Booking background Image](https://pixabay.com/photos/mam-tor-high-peak-castleton-3600896/)
+
+#### Profile Page
+
+- [Profile page background image](https://pixabay.com/photos/mam-tor-gate-peak-district-5393682/)
+
+#### Sign Up Page
+
+- [Sign Up Background Image](https://pixabay.com/photos/bridge-peak-district-england-hiking-4720246/)
+
+#### Sign In Page
+
+- [Sign In background Image](https://pixabay.com/photos/sky-landscape-hills-hiking-calm-4428894/)
+
+#### Sign out Page
+
+- [Signout page background image](https://pixabay.com/photos/mam-tor-gate-peak-district-5393682/)
+
+### General Information
+
+#### Reviews
+
+- All quotes and reviews were taken from genuine customer reviews from The Homestead and Marketview Airbnb pages. Any name attached to the reviews have been changed to generic name to protect individuals privacy. 
+- [Homestead Airbnb Reviews](https://www.airbnb.co.uk/rooms/41428855/reviews?source_impression_id=p3_1696932897_Savr%2F0B2L3k%2Bvjye&guests=1&adults=1)
+- [Marketview Airbnb Reviews](https://www.airbnb.co.uk/rooms/45085629/reviews?check_in=2023-11-24&check_out=2023-11-30&source_impression_id=p3_1696600579_QicgwlweEDQqI3qg&previous_page_section_name=1000&federated_search_id=3723ae97-44aa-47da-969c-c120d0abac0b)
+
+#### Walks
+
+- [Dragons Back Hike Information](https://letsgopeakdistrict.co.uk/dragons-back-walk-3-9-miles/)
+- [Hartington Dales Hike Information](https://letsgopeakdistrict.co.uk/hartington-dales-walk-5-miles/)
+
+#### Pubs and Restaurants
+
+- [Ye Olde Cheshire Cheese Inn's Host Details on Google](https://www.google.com/search?q=ye+olde+cheshire+cheese+inn+longnor&sca_esv=577157151&sxsrf=AM9HkKljNmRV8Fni_yNNZG_-2YYtPK6yiA%3A1698410365841&ei=fa87ZaD8MoG-hbIPxa-bgA0&hotel_occupancy=2&ved=0ahUKEwjgrqfUn5aCAxUBX0EAHcXXBtAQ4dUDCBA&uact=5&oq=ye+olde+cheshire+cheese+inn+longnor&gs_lp=Egxnd3Mtd2l6LXNlcnAiI3llIG9sZGUgY2hlc2hpcmUgY2hlZXNlIGlubiBsb25nbm9yMg4QLhiABBjHARivARiYBTIFEAAYgAQyBRAAGIAEMgUQABiABDIIEAAYigUYhgMyHRAuGIAEGMcBGK8BGJgFGJcFGNwEGN4EGOAE2AECSLEWUIcHWMAScAF4AZABAJgBeaABzAaqAQMyLja4AQPIAQD4AQHCAgoQABhHGNYEGLADwgIKEAAYigUYsAMYQ8ICGRAuGIoFGMcBGK8BGJgFGMgDGLADGEPYAQHCAhAQLhiKBRjIAxiwAxhD2AEBwgIWEC4YigUYxwEY0QMYyAMYsAMYQ9gBAcICFhAuGIoFGMcBGK8BGMgDGLADGEPYAQHCAg4QLhivARjHARiABBiYBcICCxAuGIAEGMcBGK8BwgIGEAAYFhgewgIIEAAYFhgeGAriAwYY8gQgok7iAwQYACBBiAYBkAYSugYGCAEQARgIugYGCAIQARgU&sclient=gws-wiz-serp)
+- [Pack Horse Inn's Host Details on Google](https://www.google.com/search?q=packhorse+inn+longnor&sca_esv=577157151&hotel_occupancy=2&sxsrf=AM9HkKmTj9ih7zg560SMnaNy39lnkiN3qg%3A1698410375294&ei=h687ZbzPEb2xhbIP4Ou2-Ak&gs_ssp=eJzj4tZP1zcsMzerMk0zNGC0UjWoMLEwTzROTEpLNjIwNzQwSrMyqDA3MU8xNUwzTkozszRPSjP0Ei1ITM7OyC8qTlXIzMtTyMnPS8_LLwIAFu4Wsw&oq=packhorse+inn+longnor&gs_lp=Egxnd3Mtd2l6LXNlcnAiFXBhY2tob3JzZSBpbm4gbG9uZ25vcioCCAAyCxAuGIAEGMcBGK8BMgYQABgHGB4yGhAuGIAEGMcBGK8BGJcFGNwEGN4EGOAE2AEBSOUfUABYoRFwAHgBkAEAmAFxoAHMCKoBBDEyLjG4AQHIAQD4AQHCAggQABgIGAcYHuIDBBgAIEGIBgG6BgYIARABGBQ&sclient=gws-wiz-serp)
+- [The Royal Oak's Host Details on Google](https://www.google.com/search?q=royal+oak+hurdlow&sca_esv=577157151&hotel_occupancy=2&sxsrf=AM9HkKkx7mM2F_6YstJIaquoH4oVk3YcFQ%3A1698410471067&ei=5687ZebXA4GshbIPlo-oiAo&gs_ssp=eJzj4tZP1zcsiy_OLTbPMWC0UjGoMLEwTzQyNTFNNE0zNUhKMrcyqDBNNrBMNjK3sEizTE1LSfESLMqvTMxRyE_MVsgoLUrJyS8HAM8fFZE&oq=Royal+&gs_lp=Egxnd3Mtd2l6LXNlcnAiBlJveWFsICoCCAEyBxAjGIoFGCcyDhAuGIoFGMcBGK8BGJECMg0QLhiKBRjHARivARhDMhEQLhiKBRjHARivARiYBRiRAjIREC4YgAQYsQMYgwEYxwEY0QMyCxAuGIAEGMcBGNEDMhMQLhiKBRjHARivARiYBRiZBRhDMggQABiABBixAzILEAAYigUYsQMYgwEyBxAAGIoFGENInzFQAFjYFHABeAGQAQCYAcgBoAH-B6oBBTEuNS4xuAEDyAEA-AEBwgIUEC4YigUYsQMYgwEYxwEY0QMYkQLCAgsQLhiDARixAxiABMICCxAAGIAEGLEDGIMBwgIKEAAYigUYsQMYQ8ICDhAuGIAEGLEDGMcBGNEDwgIIEC4YgAQYsQPCAgsQLhiABBixAxiDAcICHRAuGIoFGMcBGK8BGJECGJcFGNwEGN4EGOAE2AEBwgINEC4YigUYxwEY0QMYQ8ICCBAAGIoFGJECwgINEC4YgAQYxwEY0QMYCsICBxAAGIAEGArCAhMQLhiABBixAxiDARjHARjRAxgKwgIFEAAYgATCAhwQLhiABBjHARjRAxgKGJcFGNwEGN4EGOAE2AEB4gMEGAAgQYgGAboGBggBEAEYFA&sclient=gws-wiz-serp)
+
+#### Local Attractions
+
+- [Chatsworth House's Description from Chatsworth.org](https://www.chatsworth.org/)
+- [Bakewell's description from visitpeakdistrict.com](https://www.visitpeakdistrict.com/locations/bakewell)
+- [Buxtons description from https://www.visitbuxton.co.uk/](https://www.visitbuxton.co.uk/)
+
+### Readme Document
+
+Writing this readme document has been guide through these sources;
+
+- "Creating a Readme" - from Code Institute Diploma in Full Stack Software Development Course.
+- Code Institute's [readme template](https://github.com/Code-Institute-Solutions/readme-template)
+- Kera Cudmore's [readme examples](https://github.com/kera-cudmore/readme-examples)
+- [Basic writing and formatting syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#styling-text)
+
+## Future Features to Implement
+
+### Unavailable dates in the Booking Calendar
+
+- A feature to implement in future versions of the site will be forusers to have the ability to view unavailable booking dates in the calendar. Currently, the booking system gives feedback via pop up messages stating that dates are not available. To better the User Experience, I would like to implement the use os "greying out" unavailable dates so the user has full visiibilty of what date are and are not available to book.
+
+### Automatic Emails
+
+- To ensure that the Host is aware of new bookings as they happen, I would like to implement the use of automatic email sent to the Host once a booking is made. I would also like to be able to end a "booking confirmation" to the user so they can be confident their booking has been produced and further bettering the UX of the site.
+- I would like to implement automatic email when new users sign up to the site. Again, to make Hosts aware of new users, will be a very useful tool so they can plan various buisness activites such as marketing and budgeting. In the same way, the user would receive a "booking confirmation email", a "Signed up successfully email" would also benefit the UX.
