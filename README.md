@@ -1,7 +1,7 @@
 # Hill Cottages
 
 <!-- Introduction -->
-Hill Cottages is a holiday cottage website aimed at those who are looking for short stay vacations. Hill Cottages consists of two holiday cottages based in the village of Longnor, England. These Cottages are going to be used by both tourists and domestic citizens to the UK, who are looking to experience the Peak District and all it has to offer. 
+Hill Cottages is a holiday cottage website aimed at those who are looking for short stay vacations. Hill Cottages consists of two holiday cottages based in the village of Longnor, England. These Cottages are going to be used by both tourists and domestic citizens to the UK, who are looking to experience the Peak District and all it has to offer.
 
 Hill Cottages provides a warm and welcoming starting point for those wishing to visit, with various features throughout the site to help user plan their vacation.  
 
@@ -282,7 +282,6 @@ The goal of Hill Cottages is to offer a quick and easy way to plan a short stay 
 - As a SITE USER I can CONTACT THE HOST so that I CAN ASK QUESTION DIRECTLY BEFORE/DURING/AFTER MY STAY
 - As a SITE USER I can SIGN UP THE SITE so that MY DETAILS ARE STORED FOR LATER USE
 - As a SITE USER I can LOGIN TO MY ACCOUNT so that I CAN ACCESS MY USER PROFILE TO CHECK MY PERSONAL INFORMATION AND EXISTING BOOKINGS
-- 
 
 #### As a site admin
 
@@ -343,7 +342,6 @@ More Info Page
 - Icons
     - Icons have been used sparingly throughout, only being used in the social media icons within the footer.
     - Icons have been accquired via FontAwesome.
-  
   
 <!-- Testing -->
 
@@ -588,7 +586,6 @@ More Info Page
 |Check out date widget. | When clicked a pop up calendar will appear for the user to interact with. | Clicked the check out date widget. | Calendar popped up. |
 | Check out date calendar. | When dates are clicked on from the calendar, the date will populate the check out date field. | Clicked a date after the check in date selection. | Check out date field is populated with the selected date |
 | Number of guests | A number can be entered into the field by typing a number | Enter a number via the keyboard | Only numbers appear in the field. |
-
 
 - If dates are available;
   
@@ -847,7 +844,7 @@ OK
 #### CI Python Linter
 
 - All python code was passed throuh the [CI Python Linter](https://pep8ci.herokuapp.com/#)
-- All clear, no errors found. 
+- All clear, no errors found.
 
 #### HTML W3C
 
@@ -861,20 +858,10 @@ OK
   
 <!-- Different browsers -->
 
-
-
 <!-- Deployment -->
 
 <!-- *** Description of deployment method -->
 
-
 <!-- Citation/Referneces -->
 
-
-
-
 <!-- Future features -->
-
-
-
-
