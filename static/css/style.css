@@ -240,7 +240,7 @@ footer {
     padding-top: 100px;
     padding-bottom: 100px;
 
-    background: url("../img/peak-district.jpeg") no-repeat center center fixed;
+    background: url("https://res-console.cloudinary.com/dguikroes/thumbnails/v1/image/upload/v1698423884/cGVhay1kaXN0cmljdF94OHBxbng=/drilldown") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -488,13 +488,6 @@ footer {
         padding: 30px;
         font-size: 0.7em;
     }
-}
-
-
-/* Message Success */
-
-#message-success-container {
-    padding-top: 150px;
 }
 
 /* Contact.html */
