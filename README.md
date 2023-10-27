@@ -278,13 +278,15 @@ User who have signed in to their accounts will be able to access their own profi
 
 - If a users decides to cancel their booking, they will click "delete booking". This will direct them to the delete booking page. The page will display a warning message sking them if they are sure, along with the current booking details and a "delete" button. Once click this will redirect them back to their profile.
 
-<!-- DELETE BOOKING SCREENSHOT -->
+![This is an image of the delete bookiong page](./static/screenshots/delete-booking.png)
 
 #### Logout
 
 - At the bottom of the Profile page dropdown, users can logout out of their account. When the Logout button is clicked, they will be redirected to the logout page where a warning message will ask if they are sure. Once confirmed, the user is redirected to the Home Page. and a message will be displayed stating "you have successfully signed out".
 
-<!-- LOGOUT PAGE SCREENSHOT -->
+![This is an image of the logout section on the profile page](./static/screenshots/profile-logout.png)
+
+![This is an image of the logout page](./static/screenshots/logout-page.png)
 
 ## UX
 
