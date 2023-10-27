@@ -860,6 +860,272 @@ OK
 
 <!-- Deployment -->
 
+## Project Set Up and Deployment
+
+Install Django and Supporting Libraries
+
+- In the terminal:
+
+   - Install Django and gunicorn
+
+    ```text
+    pip3 install 'django<4' gunicorn
+    ```
+
+    - Install Supporting libraries
+
+    ```text
+    pip3 install dj_database_url==0.5.0 psycopg2
+    ```
+
+    - Install Cloudinary Libraries
+
+    ```text
+    pip3 install dj3-cloudinary-storage
+    pip3 install urllib3==1.26.15
+    ```
+
+    - Create requirements file
+
+    ```text
+    pip3 freeze --local > requirements.txt
+    ```
+
+    - Create Project
+
+    ```text
+    django-admin startproject hill_cottages .
+    ```
+
+    - Create App 
+
+    ```text
+    python3 manage.py startapp hill
+    ```
+
+- In settings.py:
+
+    - Add to installed apps
+
+    ```text
+    INSTALLED_APPS = [
+    …
+    'hill',
+    ]
+    ```
+
+- In the terminal:
+
+    - Migrate changes:
+
+    ```text
+    python3 manage.py migrate
+    ```
+    
+    - Run server to test
+
+    ```text
+    python3 manage.py runserver
+    ```
+
+- In settings.py:
+
+    - Add local server to "ALLOWED HOSTS"
+
+    ```text
+    ALLOWED_HOSTS = ['localhost']
+    ```
+
+Create new external database
+
+ - On elephantsql.com:
+
+    - Log in to your ElephantSQL account
+    - Create New Instance
+    - Set up plan
+    - Select Region
+    - Click “Review”
+    - Click “Create instance”
+    - From the elephant sql dashboard, copy the ElephantSQL database URL
+
+Create Heroku app
+
+- In heroku.com:
+
+    - Create new Heroku App
+    - Open the settings tab
+    - Click Reveal Config Vars
+    - Add a Config Var called DATABASE_URL
+    - The value should be the ElephantSQL database url
+
+Attach the Database:
+
+- In the IDE file explorer or terminal:
+
+    - Create new env.py file on top level directory
+  
+- In env.py:
+
+    - Import os library
+    - Set environment variables. os.environ["DATABASE_URL"] = "Paste in ElephantSQL database URL"
+    - Add in secret key. os.environ["SECRET_KEY"] = "Make up your own randomSecretKey"
+
+- In heroku.com:
+
+    - Add Secret Key to Config Vars. SECRET_KEY, “randomSecretKey”
+
+Prepare environment and settings.py file
+
+- In settings.py:
+
+    - Reference env.py
+
+      ```text
+        from pathlib import Path
+        import os
+        import dj_database_url
+
+        if os.path.isfile("env.py"):
+        import env
+        ```
+
+    - Remove the insecure secret key and replace - links to the SECRET_KEY variable on Heroku.
+  
+        ```text
+            SECRET_KEY = os.environ.get('SECRET_KEY')
+        ```
+
+    - Comment out the old DataBases Section
+
+      ```text
+        DATABASES = {
+            'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+            }
+        }
+        ```
+
+    - Add new DATABASES Section
+
+        ```text
+        DATABASES = {
+        'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+        }
+        ```
+    
+- In the Terminal:
+
+    - Save all files and Make Migrations
+
+        ```text
+        python3 manage.py migrate
+        ```
+
+- In Cloudinary.com:
+
+  - Copy your CLOUDINARY_URL e.g. API Environment Variable.
+  - Add Cloudinary URL to env.py - be sure to paste in the correct section of the link
+
+    ```text
+    os.environ["CLOUDINARY_URL"] = "cloudinary://************************"
+    ```
+
+- In Heroku:
+
+  - Add Cloudinary URL to Heroku Config Vars - be sure to paste in the correct section of the link
+
+    ```text
+    CLOUDINARY_URL, cloudinary://************************
+    ```
+
+- In settings.py
+
+    - Add Cloudinary Libraries to installed apps
+
+        ```text
+        INSTALLED_APPS = [
+        …,
+        'cloudinary_storage',
+        'django.contrib.staticfiles',
+        'cloudinary',
+        …,
+
+        ]
+        ```
+    
+    (note: order is important)
+
+  - Tell Django to use Cloudinary to store media and static files
+
+    ```text
+    STATIC_URL = '/static/'
+
+    STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+    STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+    MEDIA_URL = '/media/'
+    DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+    ```
+
+  - Link file to the templates directory in Heroku
+  
+    ```text
+        TEMPLATES = [
+            {
+                …,
+                'DIRS': [TEMPLATES_DIR],
+            …,
+                    ],
+                },
+            },
+        ]
+
+    ```
+
+    - Add Heroku Hostname to ALLOWED_HOSTS
+
+    ```text
+    ALLOWED_HOSTS = ["PROJ_NAME.herokuapp.com", "YOUR_HOSTNAME"]
+    ```
+
+- In the IDE file explorer or terminal:
+
+  - Create 3 new folders on top level directory
+
+    ```text
+    media, static, templates
+    ```
+
+  - Create a Procfile on the top level directory
+
+    ```text
+    Procfile
+    ```
+
+- In Procfile:
+
+  - Add code
+
+    ```text
+    web: gunicorn PROJ_NAME.wsgi
+    ```
+    
+- In the terminal:
+
+    - add, commit an push.
+
+- In Heroku:
+
+  - Deploy Content manually through heroku
+  - Github as deployment method, on main branch. 
+
+
+
+    
+
 <!-- *** Description of deployment method -->
 
 <!-- Citation/Referneces -->
