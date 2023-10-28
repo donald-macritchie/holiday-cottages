@@ -2,108 +2,108 @@
 {% block content %}
 
 
-    <!-- Hero Image -->
-    <div class="container-fluid hero-image">
+<!-- Hero Image -->
+<div class="container-fluid hero-image">
+    <div class="row">
+        <div class="col-12 hero-image-text">
+            <section class="jumbotron text-center">
+                <h1 class="">Hill Cottages</h1>
+                <strong>Your Perfect Stay in the Peak District</strong>
+            </section>
+        </div>
+    </div>
+</div>
+
+<!-- Home page content -->
+
+<!-- Welcome Message -->
+<div class="container-fluid home-page-container">
+    <div class="row">
+        <div class="col-11 col-md-8 col-lg-6 welcome-message mx-auto">
+            <div class="col-12 text-center mx-auto">
+                <h2>Welcome to Hill Cottages</h2>
+                <p>Whether you are looking to unwind and relax or take in all its natural beauty, there are countless
+                    reasons to visit the
+                    Peak District. And our Holidays Cottages are designed to help you maximise your visit to the
+                    countryside. From walks and
+                    hikes to pubs and local attractions, Hill Cottages is your gateway to see it all!</p>
+            </div>
+        </div>
+    </div>
+</div>    
+
+<div class="container-fluid cottage-links-container">
+    <div class="row">
+        <div class="col-12 text-center mx-auto cottage-links-head">
+            <h2>Our Cottages</h2>
+        </div>
+        <div class="col-12 col-md-6 col-lg-6">
+            <div class="text-center cottage-link" id="homestead-cottages-link">
+                <a href="{% url 'homestead_cottage' %}"><button>Homestead</button></a>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-6">
+            <div class="text-center cottage-link" id="marketview-cottages-link">
+                <a href="{% url 'marketview_cottage' %}"><button>Marketview</button></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid site-links-container">
+    <div class="site-links">
         <div class="row">
-            <div class="col-12 hero-image-text">
-                <section class="jumbotron text-center">
-                    <h1 class="">Hill Cottages</h1>
-                    <strong>Your Perfect Stay in the Peak District</strong>
-                </section>
-            </div>
-        </div>
-    </div>
-
-    <!-- Home page content -->
-
-    <!-- Welcome Message -->
-    <div class="container-fluid home-page-container">
-        <div class="row">
-            <div class="col-11 col-md-8 col-lg-6 welcome-message mx-auto">
-                <div class="col-12 text-center mx-auto">
-                    <h2>Welcome to Hill Cottages</h2>
-                    <p>Whether you are looking to unwind and relax or take in all its natural beauty, there are countless
-                        reasons to visit the
-                        Peak District. And our Holidays Cottages are designed to help you maximise your visit to the
-                        countryside. From walks and
-                        hikes to pubs and local attractions, Hill Cottages is your gateway to see it all!</p>
+            <div class="col-12 col-md-4 col-lg-4">
+                <div class="text-center site-link" id="site-contact-link">
+                    <a href="{% url 'contact' %}"><button>Contact</button></a>
                 </div>
             </div>
-        </div>
-    </div>    
-
-    <div class="container-fluid cottage-links-container">
-            <div class="row">
-                <div class="col-12 text-center mx-auto cottage-links-head">
-                    <h2>Our Cottages</h2>
-                </div>
-                <div class="col-12 col-md-6 col-lg-6">
-                    <div class="text-center cottage-link" id="homestead-cottages-link">
-                        <a href="{% url 'homestead_cottage' %}"><button>Homestead</button></a>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-6">
-                    <div class="text-center cottage-link" id="marketview-cottages-link">
-                        <a href="{% url 'marketview_cottage' %}"><button>Marketview</button></a>
-                    </div>
+            <div class="col-12 col-md-4 col-lg-4">
+                <div class="text-center site-link" id="site-cottages-link">
+                    <a href="{% url 'account_signup' %}"><button>Sign Up</button></a>
                 </div>
             </div>
-    </div>
-
-    <div class="container-fluid site-links-container">
-        <div class="site-links">
-            <div class="row">
-                <div class="col-12 col-md-4 col-lg-4">
-                    <div class="text-center site-link" id="site-contact-link">
-                        <a href="{% url 'contact' %}"><button>Contact</button></a>
-                    </div>
-                </div>
-                <div class="col-12 col-md-4 col-lg-4">
-                    <div class="text-center site-link" id="site-cottages-link">
-                        <a href="{% url 'account_signup' %}"><button>Sign Up</button></a>
-                    </div>
-                </div>
-                <div class="col-12 col-md-4 col-lg-4">
-                    <div class="text-center site-link" id="site-more-info-link">
-                        <a href="{% url 'things_to_do' %}"><button>Things To Do</button></a>
-                    </div>
+            <div class="col-12 col-md-4 col-lg-4">
+                <div class="text-center site-link" id="site-more-info-link">
+                    <a href="{% url 'things_to_do' %}"><button>Things To Do</button></a>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
 
-    <!-- Reviews section -->
-    <div class="container-fluid reviews-container">
-        <div class="row">
-            <div class="col-md-5 review-title">
-                <h3>What Does Everyone Else Think?</h3>
+<!-- Reviews section -->
+<div class="container-fluid reviews-container">
+    <div class="row">
+        <div class="col-md-5 review-title">
+            <h3>What Does Everyone Else Think?</h3>
+        </div>
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <p class="card-text">Lovely cottage which has everything you need, in the most beautiful of surroundings. We loved seeing the neighbouring
+                    cows every day. Longnor is a beautiful peaceful village, and just a short car ride away from lots of other nice places
+                    like Buxton. Joe was so friendly and responsive to any messages. We had a wonderful time!</p>
+                    <p>- John Smith</p>
+                </div>
             </div>
-            <div class="col-md-6">
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <p class="card-text">Lovely cottage which has everything you need, in the most beautiful of surroundings. We loved seeing the neighbouring
-                        cows every day. Longnor is a beautiful peaceful village, and just a short car ride away from lots of other nice places
-                        like Buxton. Joe was so friendly and responsive to any messages. We had a wonderful time!</p>
-                        <p>- John Smith</p>
-                    </div>
+            <div class="card mb-4">
+                <div class="card-body">
+                    <p class="card-text">This was exactly what we hoped for. A lovely, quiet cottage in the middle of a beautiful area. Wouldn't hesitate to
+                    recommend this place to others or to come back ourselves one day. Thanks very much!</p>
+                    <p>- Joe Bloggs</p>
                 </div>
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <p class="card-text">This was exactly what we hoped for. A lovely, quiet cottage in the middle of a beautiful area. Wouldn't hesitate to
-                        recommend this place to others or to come back ourselves one day. Thanks very much!</p>
-                        <p>- Joe Bloggs</p>
-                    </div>
-                </div>
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <p class="card-text">We absolutely loved our stay and would highly recommend the accommodation it well and truly exceeded our expectations.</p>
-                        <p>- Jane Doe</p>
-                    </div>
+            </div>
+            <div class="card mb-4">
+                <div class="card-body">
+                    <p class="card-text">We absolutely loved our stay and would highly recommend the accommodation it well and truly exceeded our expectations.</p>
+                    <p>- Jane Doe</p>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
 
 {% endblock %}

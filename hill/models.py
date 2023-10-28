@@ -110,10 +110,6 @@ class Booking(models.Model):
         return f"Booking for {self.user.username} at {self.cottage} - Check-in: {self.check_in_date}, Check-out: {self.check_out_date}"
 
 
-# Contact
-    pass
-
-
 class HostDetails(models.Model):
     name = models.CharField(max_length=100)
     email = models.EmailField(max_length=100)
