@@ -1,13 +1,11 @@
 # Hill Cottages
 
 <!-- Introduction -->
-Hill Cottages is a holiday cottage website aimed at those who are looking for short stay vacations. Hill Cottages consists of two holiday cottages based in the village of Longnor, England. These Cottages are going to be used by both tourists and domestic citizens to the UK, who are looking to experience the Peak District and all it has to offer.
+Hill Cottages is a holiday cottage website aimed at those who are looking for short stay vacations in the Peak District. Hill Cottages consists of two holiday cottages based in the village of Longnor, England. These Cottages are going to be used by both tourists and domestic citizens to the UK, who are looking to experience the Peak District and all it has to offer.
 
-Hill Cottages provides a warm and welcoming starting point for those wishing to visit, with various features throughout the site to help user plan their vacation.  
+Hill Cottages provides a warm and welcoming starting point for those wishing to visit, with various features throughout the site to help users plan their vacation.  
 
-[View the live project here]()
-
-<!-- RESPONSIVE IMAGE GOES HERE -->
+[View the live project here](https://holiday-cottages-d0c0525a5440.herokuapp.com/)
 
 
 ## Features
@@ -24,7 +22,7 @@ When users enter the site for the first time, it is essential that the top navig
 
 ##### Home
 
-- The "Home" link will direct users back to the home landing page. where they first started.
+- The "Home" link will direct users back to the home landing page, where they first started.
   
 ![This is an image of the Home Button in the Navbar](./static/screenshots/navbar-home-button.png)
 
@@ -36,13 +34,13 @@ When users enter the site for the first time, it is essential that the top navig
 
 ##### Homestead
 
-- The "Homestead" link within the "Cottages" dropdown menu will lead users to the Homestead Cottage page where they can gain view the cottageand its corrosponding information.
+- The "Homestead" link within the "Cottages" dropdown menu will lead users to the Homestead Cottage page where they can gain a view of the cottage and its corrosponding information.
   
 ![This is an image of the Homestead button in the navbar](./static/screenshots/navbar-homestead-button.png)
 
 ##### Marketview
 
-- The "Marketview" link within the "Cottages" dropdown menu will lead users to the Marketview Cottage page where they can gain view the cottageand its corrosponding information.
+- The "Marketview" link within the "Cottages" dropdown menu will lead users to the Marketview Cottage page where they can gain a view of the cottage and its corrosponding information.
 
 ![This is an image of the marketview button in the navbar](./static/screenshots/navbar-marketview-button.png)
 
@@ -66,7 +64,7 @@ When users enter the site for the first time, it is essential that the top navig
 
 ##### Sign In
 
-- The "Sign In" link will be used by users who ave already signed up to Hill Cottages.
+- The "Sign In" link will be used by users who have already signed up to Hill Cottages.
 
 ![This is an image of the sign in button in the navbar](./static/screenshots/navbar-signin-button.png)
 
@@ -78,11 +76,11 @@ When users enter the site for the first time, it is essential that the top navig
 
 #### Hero Image and Logo
 
-- The hero image used for the home page is of a valley within the peak district. This has been used to showcase the likeness of of the surrounding area the users will be staying in when visiting one of the cottages. It also demonstrates the potential of what activities are in the area, specifically walking and hiking.
+- The hero image used for the home page is of a valley within the peak district. This has been used to showcase the likenes of the surrounding area the users will be staying in when visiting one of the cottages. It also demonstrates the potential of what activities are in the area, specifically walking and hiking.
 
 ![This is an image of the home page hero image](./static/screenshots/homepage-hero-image.png)
 
-- The Text within the Hero Image "Your PerfectStay in the Peak District", immediately informs the user of roughly where the cottages are located.
+- The Text within the Hero Image "Your Perfect Stay in the Peak District", immediately informs the user of roughly where the cottages are located.
 
 ![This is an image of the home page logo](./static/screenshots/homepage-logo.png)
 
@@ -106,13 +104,13 @@ When users enter the site for the first time, it is essential that the top navig
 
 #### Reviews
 
-- Towards the end of the home page, A reviews section has been included for users to find out about the previous experiences of other Hill Cottages users. These reviews come from real people who have stayed in these cottages before. For privacy reasons, their names have been changed to generic names.
+- Towards the end of the home page, a reviews section has been included for users to find out about the previous experiences of other Hill Cottages users. These reviews come from real people who have stayed in these cottages before. For privacy reasons, their names have been changed to generic names.
 
 ![This is an image of the home page reviews](./static/screenshots/homepage-reviews.png)
 
 #### Footer
 
-- The page footer is consitent and remains the same throughout the entire site. The footer has been intentially set out to feel intuitive to users where they would normally find details like contact and social media links. The Footer includes three sections; Contact link, Social Media links and a SignuUp link.
+- The page footer is consitent and remains the same throughout the entire site. The footer has been intentially set out to feel intuitive to users where they would normally find details like contact and social media links. The Footer includes three sections; Contact link, Social Media links and a Sign Up link.
 
 ![This is an image of the footer](./static/screenshots/homepage-footer.png)
 
@@ -122,7 +120,7 @@ The respective cottage pages have been designed to showcase the cottage in its e
 
 #### Hero Image and Text
 
-- Each Cottage has their own hero image of the respective house sign. Within the Hero image, is the Cottage title along with another quote a previous user has said.
+- Each Cottage has their own hero image of the respective house sign. Within the Hero image, is the Cottage title along with another quote from a previous user.
   
 ![This is an image of the Homestead page hero image](./static/screenshots/homestead-hero-image.png)
 
@@ -146,7 +144,7 @@ The respective cottage pages have been designed to showcase the cottage in its e
 
 #### Booking Section
 
-- The Booking section gives userimportant information on how much the cottage is to book per night and provides a link to take the user to the booking form.
+- The Booking section gives users important information on how much the cottage is to book per night and provides a link to take the user to the booking form.
 
 ![This is an image of the cottage booking section](./static/screenshots/homestead-booking-link.png)
 
@@ -158,7 +156,7 @@ The respective cottage pages have been designed to showcase the cottage in its e
 
 #### Booking Confirmation
 
-- Provided that the date selected are available, the dates will be stored in the database and the user will be redirected to the booking confirmation page. Here the user will be able to view their booking details. The Home Button will redirect the user to the Home page.
+- Provided that the dates selected are available, the dates will be stored in the database and the user will be redirected to the booking confirmation page. Here the user will be able to view their booking details. The Home Button will redirect the user to the Home page.
 
 ![This is an image of the booking confirmation page](./static/screenshots/booking-confirmation.png)
 
@@ -216,7 +214,7 @@ Similar to the other site pages, the Contact page has a hero Image and a message
 
 ### Things To Do
 
-When going on a vacation, many people want to plan their time away with including a number of activities. A Thigs To Do page has been create to help and inform users of what they can do in the local area. The Things To Do page has three sections for users to view: Walks and Hikes, Pubs and Restaurants, and Local Attractions. Each item within their respective section has a description of the activity and a link out of the site to get further information.
+When going on a vacation, many people want to plan their time away with including a number of activities. A Things To Do page has been create to help and inform users of what they can do in the local area. The Things To Do page has three sections for users to view: Walks and Hikes, Pubs and Restaurants, and Local Attractions. Each item within their respective section has a description of the activity and a link out of the site to get further information.
 
 ![this is an image of the Things to Do hero image page](./static/screenshots/things-to-do-hero-image.png)
 
@@ -246,13 +244,13 @@ Users can sign up to the  Hill Cottages site via the sign up page. Here user wil
 
 ### Sign In
 
-Returning users to the site will also have the abiolity to sign in to their account via the Sign In page. Here they will enter their username and password to be authenticated. If users have not yet created an account, there is a link to the sign up page they can follow.
+Returning users to the site will also have the ability to sign in to their account via the Sign In page. Here they will enter their username and password to be authenticated. If users have not yet created an account, there is a link to the sign up page they can follow.
 
 ![This is an image of the sign in page](./static/screenshots/signin-page.png)
 
 ### Profile
 
-User who have signed in to their accounts will be able to access their own profile in which they can view their User Details, User Booking and have the ability to logout of the account. These sections have been implements into a dropdown menu for users to navigate between.
+User who have signed in to their accounts will be able to access their own profile in which they can view their User Details, User Bookings and have the ability to logout of the account. These sections have been implemented into a dropdown menu for users to navigate between.
 
 ![This is an image of the profile page](./static/screenshots/profile-page.png)
 
@@ -270,13 +268,13 @@ User who have signed in to their accounts will be able to access their own profi
 
 ##### Edit Booking
 
-- When the user click on the "edit booking" button, this will navigate the user to the Edit booking page. On the page is displayed the same form they used to make the original booking and the current booking details are autopopulated in the fields. From here users can edit the check in dates, check out dates, number of guests and the guest name. Once the user has clicked "confirm" they will be redirected back to their profile.
+- When the user clicks on the "edit booking" button, this will navigate the user to the Edit booking page. On the page is displayed the same form they used to make the original booking and the current booking details are autopopulated in the fields. From here users can edit the check in dates, check out dates, number of guests and the guest name. Once the user has clicked "confirm" they will be redirected back to their profile.
 
 ![This is an image of the edit booking page](./static/screenshots/edit-booking.png)
 
 ##### Delete Booking
 
-- If a users decides to cancel their booking, they will click "delete booking". This will direct them to the delete booking page. The page will display a warning message sking them if they are sure, along with the current booking details and a "delete" button. Once click this will redirect them back to their profile.
+- If a users decides to cancel their booking, they can click "delete booking". This will direct them to the delete booking page. The page will display a warning message asking them if they are sure, along with the current booking details and a "delete" button. Once the delete button is clicked, this will redirect them back to their profile.
 
 ![This is an image of the delete bookiong page](./static/screenshots/delete-booking.png)
 
@@ -315,7 +313,7 @@ The goal of Hill Cottages is to offer a quick and easy way to plan a short stay 
   
 ### Wireframes
 
-- Wireframes were created tt the beginning of the project to guide design chioces and layout.
+- Wireframes were created at the beginning of the project to guide design chioces and layout.
 - Wireframes were created using [Figma](www.figma.com)
 
 Home Page
@@ -343,22 +341,22 @@ More Info Page
         - Categorize key peices of information for the user to be aware of.
     - Booking
         - Assigns the user to the cottage id.
-        - Assigns the selected dates to be assigned to the selected cottage id. 
+        - Assigns the selected dates to be assigned to the selected cottage id.
     - Host Details
-        - Allow host to enter contact detaisl to be displayed. 
+        - Allow host to enter contact details to be displayed.
     - Things to do
-        - Stores a collection of local visitor attraction formthe local area to be displayed.
+        - Stores a collection of local visitor attraction from the local area to be displayed.
 
 ### Design
 
 - Colour Scheme
     - The main colour scheme is a mixture of moss green and off-white
-    - Different opacities have been used throughout the site to give, typically when used on top of background images to still allow the image to be seen.
+    - Different opacities have been used throughout the site, typically when used on top of background images to still allow the image to be seen.
 
 - Images
     - Images are a vital part of the site.
     - Property images play a huge part for the user to be able to view the cottage and get a sense not only where they will be staying but also get a general feel of the area they are in.
-    - A variety of landscape images of the surrounding area have been used with in the property images galleries but mainly used in backfround images. This helps the user understand the local environment and gives a sense of how rural the location is.
+    - A variety of landscape images of the surrounding area have been used within the property images galleries but mainly used in backfround images. This helps the user understand the local environment and gives a sense of how rural the location is.
 
 - Fonts
     - The majority of the fonts throughout the site are Roboto which provides clean reading and conveys the most important information very clearly. The "Sail" font has been used throughout logos and hero images to give a feeling of rusticness.
@@ -373,7 +371,7 @@ More Info Page
 
 ### Manual Testing
 
-- Manual testing has been carried out in Both the loacl server and live site environment.
+- Manual testing has been carried out in both the local server and live site environment.
 
 ### Home Page
 
@@ -872,7 +870,7 @@ OK
 - All python code was passed throuh the [CI Python Linter](https://pep8ci.herokuapp.com/#)
 - All clear, no errors found.
 
-#### HTML W3C
+#### HTML
 
 - All html code was cassed through the [W3C HTML Validator](https://validator.w3.org/)
 - The only warning found were for django template tags {% %}
@@ -882,9 +880,9 @@ OK
 - All CSS code was passed through the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/0)
 - No errors were found
   
-<!-- Different browsers -->
-
-<!-- Deployment -->
+#### Lighthouse Report
+  
+![This is an image of the home page lighthouse report](./static/screenshots/lighthouse-home.png)
 
 ## Project Set Up and Deployment
 
