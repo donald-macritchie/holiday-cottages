@@ -366,6 +366,21 @@ footer {
     background-color: #8e9d61;
 }
 
+.custom-modal-height{
+    max-height: 100vh;
+}
+
+.modal-body {
+    overflow-y: auto;
+}
+
+.modal_img {
+    max-width: 100%;
+    max-height: 70vh;
+    display: block;
+    margin: 0 auto;
+}
+
 
 /* Description sections */
 .cottage-description-container {
