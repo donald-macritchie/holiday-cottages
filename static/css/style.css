@@ -464,21 +464,16 @@ footer {
     border: solid 1px black;
 }
 
-
-
-#map {
-    width: 90%;
-    height: 700px;
-    margin: 50px auto;
-    }
-
 /* Cottage pages media Queries **************/
 @media screen and (max-width: 768px) {
     .location-content,
     .diretions-head,
-    .directions-content,
-    .map-content {
+    .directions-content {
         padding: 20px;
+    }
+
+    .map-container{
+        padding: 20px 0px;
     }
 }
 
@@ -488,6 +483,15 @@ footer {
         padding: 30px;
         font-size: 0.7em;
     }
+
+    .map-container{
+        padding: 20px;
+    }
+
+    .map-content{
+        padding: 20px;
+    }
+
 }
 
 /* Contact.html */
